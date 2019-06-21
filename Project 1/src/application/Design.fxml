@@ -6,9 +6,12 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane prefHeight="635.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <MenuBar layoutX="-7.0" layoutY="-4.0" prefHeight="24.0" prefWidth="551.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -29,13 +32,31 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="24.0" layoutY="67.0" text="First Name" />
-      <Label layoutX="25.0" layoutY="126.0" text="Last Name" />
-      <Label layoutX="25.0" layoutY="184.0" text="Email ID" />
-      <TextField fx:id="fname" layoutX="110.0" layoutY="63.0" />
-      <TextField fx:id="lname" layoutX="110.0" layoutY="122.0" AnchorPane.topAnchor="122.0" />
-      <Button fx:id="Generate" layoutX="250.0" layoutY="284.0" mnemonicParsing="false" onAction="#click" text="Generate" />
-      <TextField fx:id="mail" layoutX="110.0" layoutY="180.0" />
+      <Label layoutX="24.0" layoutY="205.0" text="First Name">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="25.0" layoutY="275.0" text="Last Name">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="25.0" layoutY="344.0" text="Email ID">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="fname" layoutX="110.0" layoutY="201.0">
+         <effect>
+            <Glow level="0.05" />
+         </effect></TextField>
+      <TextField fx:id="lname" layoutX="110.0" layoutY="271.0" AnchorPane.topAnchor="271.0" />
+      <Button fx:id="Generate" layoutX="403.0" layoutY="528.0" mnemonicParsing="false" onAction="#click" text="Generate" />
+      <TextField fx:id="mail" layoutX="110.0" layoutY="341.0" />
+      <Label alignment="CENTER" layoutX="338.0" layoutY="68.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="436.0" layoutY="122.0" startX="-100.0" stroke="#000000df" />
     
    </children>
 </AnchorPane>

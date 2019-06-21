@@ -39,8 +39,8 @@ public void handle(ActionEvent args) {
 	// TODO Auto-generated method stub
 	if(args.getSource()==Generate) {
 		
-		String n = fname.getText();
-		String m = lname.getText();
+		String m = fname.getText();
+		String n = lname.getText();
 		String g = mail.getText();
 		String filename = "project.html";
 		
@@ -55,17 +55,43 @@ public void handle(ActionEvent args) {
 					"    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>\r\n" + 
 					"    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>\r\n" + 
 					"    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n" + 
-					"\r\n" + 
-					"    <title></title>\r\n" + 
+					"    <link rel=\"stylesheet\" href=\"project.css\">\r\n" + 
+					"    <title>CV</title>\r\n" + 
 					"  </head>\r\n" + 
 					"\r\n" + 
-					"  <body>\r\n" + 
-					"    <div class=\"container\">\r\n" + 
-					"      <h2 id=\"fname\">First Name: " + m + "</h2>\r\n" + 
-					"      <h2 id=\"lname\">Last Name: " + n + "</h2>\r\n" + 
-					"      <h2 id=\"mail\">Email:" + g + " </h2>\r\n" + 
+					"<style media=\"screen\">\r\n" + 
 					"\r\n" + 
+					"</style>\r\n" + 
+					"\r\n" + 
+					"  <body>\r\n" + 
+					"    <div class=\"wrapper \">\r\n" + 
+					"      <h1 class=\"mt-3 lead heading\"align= center >RESUME <span class =\"i\">|</span> CV</h1>\r\n" + 
+					"      <hr color=\"silver\"  width=\"150px\">\r\n" + 
+					"      <div class=\"container-fluid mt-3 background\"></div>\r\n" + 
+					"      <div class=\"container\">\r\n" + 
+					"       <div id=\"pic\"></div>\r\n" + 
+					"       <h3 id=\"Name\" class=\"lead\"><span>" + m + ' ' + n + "</span></h3>\r\n" + 
+					"       <div id = \"info\" >\r\n" + 
+					"       <h5>MY INFO</h5>\r\n" + 
+					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
+					"       <h3 class=\"ml-5\">Full Name:  <span>"+m+n+"</span></h3>\r\n" + 
+					"       <h3 class=\"ml-5\">Email:    <span>"+g+"</span></h3>\r\n" + 
+					"       </div>\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"       </div>\r\n" + 
 					"    </div>\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
 					"\r\n" + 
 					"  </body>\r\n" + 
 					"</html>\r\n" + 
