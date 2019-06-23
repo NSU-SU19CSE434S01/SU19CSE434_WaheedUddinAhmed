@@ -8,11 +8,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="project.css">
-    <title>CV</title>
+    <title>RESUME | CV</title>
   </head>
 
 <style media="screen">
+  footer{
+          margin-bottom: 0px;
+          margin-top: 150px;
+          height:  300px;
+          background-color: #005073;
 
+
+          color: white;
+        }
+        .row{
+          display: flex;
+          flex-direction: row;
+
+        }
+        .col-md-4{
+          text-align: center;
+          margin-top: 30px;
+          letter-spacing: 4px;
+        }
+        .col-md-4 hr{
+          height:1px;
+        }
+        .col-md-4 .lead {
+          font-size: 25px;
+          font-weight: 200;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+          footer{
+            height: 550px;
+            
+
+          }
+        }
+
+        @media only screen and (max-width: 480px) {
+          footer{
+            background-color: black !important;
+          }
+        }
 </style>
 
   <body>
@@ -22,13 +62,30 @@
       <div class="container-fluid mt-3 background"></div>
       <div class="container">
        <div id="pic"></div>
-       <h3 id="Name" class="lead"><span>Waheed Uddin Ahmed</span></h3>
+       <h3 id="Name" class="lead"><span>Waheed Uddin  Ahmed</span></h3>
        <div id = "info" >
        <h5>MY INFO</h5>
        <hr color="silver"  width="80px">
-       <h3 class="ml-5">Full Name:  <span>Waheed UddinAhmed</span></h3>
-       <h3 class="ml-5">Email:    <span>waheed.ahmed@northsouth.edu</span></h3>
-      </div>
+       <h3 class="ml-5">Full Name:  <span>Waheed Uddin Ahmed</span></h3>
+       <h3 class="ml-5">Email:    <span>dmc4719@gmail.com</span></h3>
+       <h3 class="ml-5">Github:    <span></span></h3>
+       <h3 class="ml-5">LinkedIn:    <span></span></h3>
+       </div>
+       <div id = "info" >
+       <h5>EDUCATION</h5>
+       <hr color="silver"  width="115px">
+       <h3 class="ml-5">Undergraduate<span></span></h3>
+       <h3 class="ml-5">Studied Software Engineering at North South University<span></span></h3>
+       <h3 class="ml-5">CGPA: <span></span></h3>
+       </div>
+       <div id = "info" >
+       <h5>SKILLS</h5>
+       <hr color="silver"  width="45px">
+       <h3 class="ml-5">Front-end, UX,UI Developer<span></span></h3>
+       <h3 class="ml-5">Back-end Developer<span></span></h3>
+       <h3 class="ml-5">Fluency with various programming languages and frameworks such Python, R, Java, C++, Bootstrap, HTML, CSS, JS, Django, Laravel, etc.<span></span></h3>
+       </div>
+
 
 
 
@@ -41,7 +98,36 @@
 
 
 
+    <footer>
 
+      <div class="row">
+        <div class="col-md-4 ">
+          <h3 class = "lead">EDUCATION</h3>
+          <hr color="silver"  width="80px">
+          <h4>Github</h4>
+          <h4>Piazza</h4>
+
+        </div>
+        <div class="col-md-4">
+          <h3 class = "lead">SOCIAL</h3>
+          <hr color="silver"  width="80px">
+          <h4>Github</h4>
+          <h4>Piazza</h4>
+
+        </div>
+        <div class="col-md-4">
+          <h3 class = "lead">RANDOM</h3>
+          <hr color="silver"  width="80px">
+          <h4>Github</h4>
+          <h4>Piazza</h4>
+
+        </div>
+
+        </div>
+
+
+
+    </footer>
 
   </body>
 </html>

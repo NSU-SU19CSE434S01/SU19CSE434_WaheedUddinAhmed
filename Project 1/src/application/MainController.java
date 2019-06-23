@@ -40,7 +40,7 @@ public void handle(ActionEvent args) {
 	if(args.getSource()==Generate) {
 		
 		String m = fname.getText();
-		String n = lname.getText();
+		
 		String g = mail.getText();
 		String filename = "project.html";
 		
@@ -70,7 +70,7 @@ public void handle(ActionEvent args) {
 					"      <div class=\"container-fluid mt-3 background\"></div>\r\n" + 
 					"      <div class=\"container\">\r\n" + 
 					"       <div id=\"pic\"></div>\r\n" + 
-					"       <h3 id=\"Name\" class=\"lead\"><span>" + m + ' ' + n + "</span></h3>\r\n" + 
+					"       <h3 id=\"Name\" class=\"lead\"><span>" + m +  "</span></h3>\r\n" + 
 					"       <div id = \"info\" >\r\n" + 
 					"       <h5>MY INFO</h5>\r\n" + 
 					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
