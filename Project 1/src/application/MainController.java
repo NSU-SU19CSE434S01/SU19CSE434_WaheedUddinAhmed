@@ -21,11 +21,11 @@ import javafx.event.EventHandler;
 
 public class MainController implements EventHandler<ActionEvent>{
 @FXML
-public TextField fname;
+public TextField name;
+
+
 @FXML
-public TextField lname;
-@FXML
-public TextField mail;
+public TextField email;
 @FXML
 public Button Generate;
 @FXML
@@ -39,9 +39,9 @@ public void handle(ActionEvent args) {
 	// TODO Auto-generated method stub
 	if(args.getSource()==Generate) {
 		
-		String m = fname.getText();
+		String m = name.getText();
 		
-		String g = mail.getText();
+		String g = email.getText();
 		String filename = "project.html";
 		
 		try {
@@ -74,7 +74,7 @@ public void handle(ActionEvent args) {
 					"       <div id = \"info\" >\r\n" + 
 					"       <h5>MY INFO</h5>\r\n" + 
 					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
-					"       <h3 class=\"ml-5\">Full Name:  <span>"+m+n+"</span></h3>\r\n" + 
+					"       <h3 class=\"ml-5\">Full Name:  <span>"+m+"</span></h3>\r\n" + 
 					"       <h3 class=\"ml-5\">Email:    <span>"+g+"</span></h3>\r\n" + 
 					"       </div>\r\n" + 
 					"\r\n" + 
