@@ -10,8 +10,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
+=======
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
 =======
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -42,6 +47,7 @@
         </menus>
       </MenuBar>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Label layoutX="24.0" layoutY="205.0" text="First Name" AnchorPane.leftAnchor="24.0">
          <font>
             <Font size="14.0" />
@@ -64,12 +70,16 @@
 =======
       <Button fx:id="Generate" layoutX="456.0" layoutY="661.0" mnemonicParsing="false" onAction="#click" text="Generate" />
 >>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
+=======
+      <Button fx:id="Generate" layoutX="456.0" layoutY="661.0" mnemonicParsing="false" onAction="#click" text="Generate" />
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
       <Label alignment="CENTER" layoutX="391.0" layoutY="32.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Line endX="100.0" layoutX="488.0" layoutY="96.0" startX="-100.0" stroke="#000000df" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Label layoutX="24.0" layoutY="356.0" prefHeight="20.0" prefWidth="67.0" text="DOB" AnchorPane.bottomAnchor="348.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="356.0">
          <font>
@@ -137,6 +147,8 @@
       </RadioButton>
       <RadioButton fx:id="radio" layoutX="645.0" layoutY="254.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$Radio" />
 =======
+=======
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
       <RadioButton fx:id="radio" layoutX="645.0" layoutY="197.0" mnemonicParsing="false" selected="true" text="RadioButton">
          <toggleGroup>
             <ToggleGroup fx:id="Radio" />
@@ -229,6 +241,9 @@
             </HBox>
          </children>
       </VBox>
+<<<<<<< HEAD
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
+=======
 >>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
     
    </children>

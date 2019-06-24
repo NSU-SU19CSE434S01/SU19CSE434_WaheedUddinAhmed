@@ -40,9 +40,15 @@ public void handle(ActionEvent args) {
 	if(args.getSource()==Generate) {
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		String m = fname.getText();
 		
 		String g = mail.getText();
+=======
+		String m = name.getText();
+		
+		String g = email.getText();
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
 =======
 		String m = name.getText();
 		
@@ -117,6 +123,7 @@ public void handle(ActionEvent args) {
 					"      <div class=\"container\">\r\n" + 
 					"       <div id=\"pic\"></div>\r\n" + 
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"       <h3 id=\"Name\" class=\"lead\"><span>Waheed Uddin  Ahmed</span></h3>\r\n" + 
 					"       <div id = \"info\" >\r\n" + 
 					"       <h5>MY INFO</h5>\r\n" + 
@@ -144,6 +151,12 @@ public void handle(ActionEvent args) {
 					"       <div id = \"info\" >\r\n" + 
 					"       <h5>MY INFO</h5>\r\n" + 
 					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
+=======
+					"       <h3 id=\"Name\" class=\"lead\"><span>" + m +  "</span></h3>\r\n" + 
+					"       <div id = \"info\" >\r\n" + 
+					"       <h5>MY INFO</h5>\r\n" + 
+					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
 					"       <h3 class=\"ml-5\">Full Name:  <span>"+m+"</span></h3>\r\n" + 
 					"       <h3 class=\"ml-5\">Email:    <span>"+g+"</span></h3>\r\n" + 
 >>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
