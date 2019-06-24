@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="635.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <MenuBar layoutX="-7.0" layoutY="-4.0" prefHeight="24.0" prefWidth="551.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <MenuBar layoutX="-7.0" layoutY="-4.0" prefHeight="25.0" prefWidth="871.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -32,31 +36,96 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="24.0" layoutY="205.0" text="First Name">
+      <Label layoutX="24.0" layoutY="205.0" text="First Name" AnchorPane.leftAnchor="24.0">
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label layoutX="25.0" layoutY="275.0" text="Last Name">
+      <Label layoutX="25.0" layoutY="253.0" text="Address" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="253.0">
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label layoutX="25.0" layoutY="344.0" text="Email ID">
+      <Label layoutX="24.0" layoutY="295.0" prefHeight="20.0" prefWidth="67.0" text="Email ID" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="303.0">
          <font>
             <Font size="14.0" />
          </font></Label>
-      <TextField fx:id="fname" layoutX="110.0" layoutY="201.0">
+      <TextField fx:id="fname" layoutX="110.0" layoutY="201.0" prefHeight="25.0" prefWidth="239.0" AnchorPane.leftAnchor="110.0">
          <effect>
             <Glow level="0.05" />
          </effect></TextField>
-      <TextField fx:id="lname" layoutX="110.0" layoutY="271.0" AnchorPane.topAnchor="271.0" />
-      <Button fx:id="Generate" layoutX="403.0" layoutY="528.0" mnemonicParsing="false" onAction="#click" text="Generate" />
-      <TextField fx:id="mail" layoutX="110.0" layoutY="341.0" />
-      <Label alignment="CENTER" layoutX="338.0" layoutY="68.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8">
+      <TextField fx:id="lname" layoutX="110.0" layoutY="250.0" prefHeight="25.0" prefWidth="239.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="250.0" />
+      <Button fx:id="Generate" layoutX="456.0" layoutY="661.0" mnemonicParsing="false" onAction="#click" text="Generate" />
+      <TextField fx:id="mail" layoutX="110.0" layoutY="303.0" prefHeight="25.0" prefWidth="239.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="303.0" />
+      <Label alignment="CENTER" layoutX="391.0" layoutY="32.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Line endX="100.0" layoutX="436.0" layoutY="122.0" startX="-100.0" stroke="#000000df" />
+      <Line endX="100.0" layoutX="488.0" layoutY="96.0" startX="-100.0" stroke="#000000df" />
+      <Label layoutX="24.0" layoutY="356.0" prefHeight="20.0" prefWidth="67.0" text="DOB" AnchorPane.bottomAnchor="348.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="356.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mail1" layoutX="110.0" layoutY="353.0" prefHeight="25.0" prefWidth="239.0" />
+      <VBox layoutX="110.0" layoutY="461.0" prefHeight="200.0" prefWidth="239.0">
+         <children>
+            <TextField>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <TextField>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox layoutX="24.0" layoutY="461.0" prefHeight="200.0" prefWidth="83.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="79.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="79.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" top="24.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="79.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <TextField fx:id="mail11" layoutX="110.0" layoutY="405.0" prefHeight="25.0" prefWidth="239.0" />
+      <Label layoutX="24.0" layoutY="408.0" prefHeight="20.0" prefWidth="67.0" text="Phone">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="radio" layoutX="645.0" layoutY="197.0" mnemonicParsing="false" selected="true" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="Radio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radio" layoutX="645.0" layoutY="254.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$Radio" />
     
    </children>
 </AnchorPane>

@@ -44,6 +44,7 @@
         width: 100%;
         background-size:100% 45%;
       }
+
       #pic{
         margin-top: -610px;
         margin-left: 20px;
@@ -57,6 +58,7 @@
         margin-bottom: 40px !important;
         color: red;
       }
+
     }
     @media only screen  (min-width: 768px) and (max-width: 1220px) {
       /* For mobile phones: */
@@ -71,12 +73,10 @@
         width:140px;
       }
 
-
     }
 
-    @media only screen {min-width: 1280px){
 
-    }
+
 
     }
     @media only screen (max-width: 480px) {
@@ -85,25 +85,25 @@
         width: 100%;
         background-size:100% 60%;
         background:contain;
+
       }
+
       #pic{
         margin-top: -490px;
         margin-left: 20px;
         height: 130px;
         width:140px;
       }
-      #info{
-        /* display: flex;
-        flex-direction: column; */
-        margin-top: 40px;
-        margin-left:50px;
-           }
+
+
+
     }
-    #info{
-      display: flex;
-      flex-direction: column;
-      margin-top: 40px;
-      margin-left:30px;
+        #info{
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            margin-left:30px;
+
          }
          #info > h5{
            font-size: 27px;
