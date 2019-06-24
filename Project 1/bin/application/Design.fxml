@@ -9,8 +9,13 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<<<<<<< HEAD
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
+=======
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -36,6 +41,7 @@
           </Menu>
         </menus>
       </MenuBar>
+<<<<<<< HEAD
       <Label layoutX="24.0" layoutY="205.0" text="First Name" AnchorPane.leftAnchor="24.0">
          <font>
             <Font size="14.0" />
@@ -55,12 +61,16 @@
       <TextField fx:id="lname" layoutX="110.0" layoutY="250.0" prefHeight="25.0" prefWidth="239.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="250.0" />
       <Button fx:id="Generate" layoutX="456.0" layoutY="661.0" mnemonicParsing="false" onAction="#click" text="Generate" />
       <TextField fx:id="mail" layoutX="110.0" layoutY="303.0" prefHeight="25.0" prefWidth="239.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="303.0" />
+=======
+      <Button fx:id="Generate" layoutX="456.0" layoutY="661.0" mnemonicParsing="false" onAction="#click" text="Generate" />
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
       <Label alignment="CENTER" layoutX="391.0" layoutY="32.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Line endX="100.0" layoutX="488.0" layoutY="96.0" startX="-100.0" stroke="#000000df" />
+<<<<<<< HEAD
       <Label layoutX="24.0" layoutY="356.0" prefHeight="20.0" prefWidth="67.0" text="DOB" AnchorPane.bottomAnchor="348.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="356.0">
          <font>
             <Font size="14.0" />
@@ -126,6 +136,100 @@
          </toggleGroup>
       </RadioButton>
       <RadioButton fx:id="radio" layoutX="645.0" layoutY="254.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$Radio" />
+=======
+      <RadioButton fx:id="radio" layoutX="645.0" layoutY="197.0" mnemonicParsing="false" selected="true" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="Radio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radio" layoutX="645.0" layoutY="254.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$Radio" />
+      <VBox layoutX="38.0" layoutY="197.0" prefHeight="240.0" prefWidth="384.0">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Full Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" prefHeight="25.0" prefWidth="278.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="DOB">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dob" prefHeight="25.0" prefWidth="278.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Mobile">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mobile" prefHeight="25.0" prefWidth="278.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Email ID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email" prefHeight="25.0" prefWidth="278.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Address">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="address" prefHeight="25.0" prefWidth="278.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+>>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
     
    </children>
 </AnchorPane>
