@@ -3,9 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -15,39 +12,25 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <MenuBar layoutX="-7.0" layoutY="-4.0" prefHeight="25.0" prefWidth="871.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
 
       <Button fx:id="Generate" layoutX="554.0" layoutY="758.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="77.0" text="Generate" />
 
-      <Label alignment="CENTER" layoutX="491.0" layoutY="33.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8">
+      <Label alignment="CENTER" layoutX="495.0" layoutY="25.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Line endX="100.0" layoutX="592.0" layoutY="97.0" startX="-100.0" stroke="#000000df" />
       <VBox layoutX="24.0" layoutY="461.0" prefHeight="200.0" prefWidth="83.0" />
-      <VBox layoutX="24.0" layoutY="155.0" prefHeight="240.0" prefWidth="384.0">
+      <VBox layoutX="23.0" layoutY="131.0" prefHeight="240.0" prefWidth="384.0">
          <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Personal Info">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
                   <Label prefHeight="20.0" prefWidth="77.0" text="Full Name:">
@@ -61,6 +44,9 @@
                      </HBox.margin>
                   </TextField>
                </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
@@ -132,16 +118,16 @@
             </HBox>
          </children>
       </VBox>
-      <Label alignment="CENTER" layoutX="89.0" layoutY="110.0" prefHeight="32.0" prefWidth="285.0" text="Personal Info">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <VBox layoutX="24.0" layoutY="484.0" prefHeight="240.0" prefWidth="384.0">
+      <VBox layoutX="23.0" layoutY="425.0" prefHeight="240.0" prefWidth="384.0">
          <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Education Info">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
             <HBox prefHeight="36.0" prefWidth="384.0">
                <children>
-                  <Label prefHeight="34.0" prefWidth="77.0" text="Higher Sec.">
+                  <Label prefHeight="34.0" prefWidth="77.0" text="Higher Sec. :">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -161,10 +147,13 @@
                   </RadioButton>
                   <TextField prefHeight="34.0" prefWidth="103.0" />
                </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="36.0" prefWidth="384.0">
                <children>
-                  <Label prefHeight="34.0" prefWidth="77.0" text="Secondary">
+                  <Label prefHeight="34.0" prefWidth="77.0" text="Secondary :">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -189,25 +178,20 @@
                </VBox.margin>
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
-               <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="DOB:">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="dob1" prefHeight="25.0" prefWidth="278.0">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                  </TextField>
-               </children>
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="387.0" text="Graduation Info">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Mobile:">
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Major">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -224,12 +208,46 @@
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Email ID:">
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Cgpa">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="email1" prefHeight="25.0" prefWidth="278.0">
+                  <TextField fx:id="email1" prefHeight="25.0" prefWidth="104.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Year">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email11" prefHeight="25.0" prefWidth="104.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Institution">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mobile11" prefHeight="25.0" prefWidth="278.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -241,11 +259,6 @@
             </HBox>
          </children>
       </VBox>
-      <Label alignment="CENTER" layoutX="89.0" layoutY="429.0" prefHeight="32.0" prefWidth="285.0" text="Education Info">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
 
     
    </children>
