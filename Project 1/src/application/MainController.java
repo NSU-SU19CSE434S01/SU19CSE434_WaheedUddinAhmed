@@ -39,21 +39,13 @@ public void handle(ActionEvent args) {
 	// TODO Auto-generated method stub
 	if(args.getSource()==Generate) {
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-		String m = fname.getText();
-		
-		String g = mail.getText();
-=======
+
 		String m = name.getText();
 		
 		String g = email.getText();
->>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
-=======
-		String m = name.getText();
+
 		
-		String g = email.getText();
->>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
+
 		String filename = "project.html";
 		
 		try {
@@ -122,8 +114,7 @@ public void handle(ActionEvent args) {
 					"      <div class=\"container-fluid mt-3 background\"></div>\r\n" + 
 					"      <div class=\"container\">\r\n" + 
 					"       <div id=\"pic\"></div>\r\n" + 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 					"       <h3 id=\"Name\" class=\"lead\"><span>Waheed Uddin  Ahmed</span></h3>\r\n" + 
 					"       <div id = \"info\" >\r\n" + 
 					"       <h5>MY INFO</h5>\r\n" + 
@@ -146,20 +137,20 @@ public void handle(ActionEvent args) {
 					"       <h3 class=\"ml-5\">Front-end, UX,UI Developer<span></span></h3>\r\n" + 
 					"       <h3 class=\"ml-5\">Back-end Developer<span></span></h3>\r\n" + 
 					"       <h3 class=\"ml-5\">Fluency with various programming languages and frameworks such Python, R, Java, C++, Bootstrap, HTML, CSS, JS, Django, Laravel, etc.<span></span></h3>\r\n" + 
-=======
+
 					"       <h3 id=\"Name\" class=\"lead\"><span>" + m +  "</span></h3>\r\n" + 
 					"       <div id = \"info\" >\r\n" + 
 					"       <h5>MY INFO</h5>\r\n" + 
 					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
-=======
+
 					"       <h3 id=\"Name\" class=\"lead\"><span>" + m +  "</span></h3>\r\n" + 
 					"       <div id = \"info\" >\r\n" + 
 					"       <h5>MY INFO</h5>\r\n" + 
 					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
->>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
+
 					"       <h3 class=\"ml-5\">Full Name:  <span>"+m+"</span></h3>\r\n" + 
 					"       <h3 class=\"ml-5\">Email:    <span>"+g+"</span></h3>\r\n" + 
->>>>>>> 4694cd3006f9cf47a57ef9b6c7e207c8ff29e7dd
+
 					"       </div>\r\n" + 
 					"\r\n" + 
 					"\r\n" + 
