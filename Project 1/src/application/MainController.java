@@ -22,12 +22,21 @@ import javafx.event.EventHandler;
 public class MainController implements EventHandler<ActionEvent>{
 @FXML
 public TextField name;
-
+@FXML
+public TextField Dob;
+@FXML
+public TextField address;
+@FXML
+public TextField mobile;
+//@FXML
+//public TextField address;
 
 @FXML
 public TextField email;
 @FXML
 public Button Generate;
+@FXML
+public Label na;
 @FXML
 String n,m;
 public void click(ActionEvent args) {
@@ -39,13 +48,15 @@ public void handle(ActionEvent args) {
 	// TODO Auto-generated method stub
 	if(args.getSource()==Generate) {
 		
-
+		
 		String m = name.getText();
-		
+		String addr = address.getText();
+//		String mob = mobile.getText();
+//		String Db = Dob.getText();
 		String g = email.getText();
-
 		
-
+		
+			isemptyornot(m,g,addr);
 		String filename = "project.html";
 		
 		try {
@@ -200,8 +211,9 @@ public void handle(ActionEvent args) {
 					"</html>\r\n" + 
 					"");
 			outputStream.close();
-			System.out.println("Printed!" );
 			
+			System.out.println("Printed!" );
+		
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
 		};
@@ -209,6 +221,20 @@ public void handle(ActionEvent args) {
 		
 		
 	}
+}
+private void isemptyornot(String m,String g,String addr) {
+	if(m.contentEquals("")) {
+		name.setText("name field cannot be empty");
+	}
+	
+	if(g.contentEquals("")) {
+		email.setText("email field cannot be empty");
+	}
+	if(addr.contentEquals("")) {
+		address.setText("address field cannot be empty");
+	}
+	return;
+	
 }
 
 }

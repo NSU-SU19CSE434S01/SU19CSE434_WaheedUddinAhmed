@@ -30,7 +30,7 @@
       <VBox layoutX="24.0" layoutY="461.0" prefHeight="200.0" prefWidth="83.0" />
       <VBox layoutX="55.0" layoutY="144.0" prefHeight="240.0" prefWidth="384.0">
          <children>
-            <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Personal Info">
+            <Label fx:id="na" alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Personal Info">
                <font>
                   <Font size="20.0" />
                </font>
@@ -42,7 +42,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="name" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="278.0" promptText="e.g John Doe">
+                  <TextField id="na" fx:id="name" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="278.0" promptText="e.g John Doe">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
