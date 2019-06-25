@@ -27,7 +27,6 @@
          </font>
       </Label>
       <Line endX="100.0" layoutX="618.0" layoutY="89.0" startX="-100.0" stroke="#000000df" AnchorPane.leftAnchor="517.5" AnchorPane.rightAnchor="517.5" />
-      <VBox layoutX="24.0" layoutY="461.0" prefHeight="200.0" prefWidth="83.0" />
       <VBox layoutX="55.0" layoutY="144.0" prefHeight="240.0" prefWidth="384.0">
          <children>
             <Label fx:id="na" alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Personal Info">

@@ -28,8 +28,7 @@ public TextField Dob;
 public TextField address;
 @FXML
 public TextField mobile;
-//@FXML
-//public TextField address;
+
 
 @FXML
 public TextField email;
@@ -56,7 +55,7 @@ public void handle(ActionEvent args) {
 		String g = email.getText();
 		
 		
-			isemptyornot(m,g,addr);
+			isemptyornot(m,g);
 		String filename = "project.html";
 		
 		try {
@@ -222,7 +221,7 @@ public void handle(ActionEvent args) {
 		
 	}
 }
-private void isemptyornot(String m,String g,String addr) {
+private void isemptyornot(String m,String g) {
 	if(m.contentEquals("")) {
 		name.setText("name field cannot be empty");
 	}
@@ -230,9 +229,15 @@ private void isemptyornot(String m,String g,String addr) {
 	if(g.contentEquals("")) {
 		email.setText("email field cannot be empty");
 	}
-	if(addr.contentEquals("")) {
-		address.setText("address field cannot be empty");
-	}
+//	if(addr.contentEquals("")) {
+//		address.setText("address field cannot be empty");
+//	}
+//	if(mob.contentEquals("")) {
+//		mobile.setText("mobile field cannot be empty");
+//	}
+//	if(Db.contentEquals("")) {
+//		Dob.setText("Db field cannot be empty");
+//	}
 	return;
 	
 }
