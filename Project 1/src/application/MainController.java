@@ -56,17 +56,15 @@ public void handle(ActionEvent args) {
 		String g = email.getText();
 		
 		
-			isemptyornot(m,g,addr,mob);
-			if(m.contentEquals("")|| addr.contentEquals("")||mob.contentEquals("")||g.contentEquals("")) {
-				System.out.println("cannot be printed");
-			}
-			else {
+			Boolean bool = isemptyornot(m,g,addr,mob);
+			if(bool.equals(false)) {
 			
-		String filename = "project.html";
+			
+				String filename = "CV of " + m + ".html";
 		
-		try {
-			PrintWriter outputStream = new PrintWriter(filename);
-			outputStream.println("<!DOCTYPE html>\r\n" + 
+				try {
+					PrintWriter outputStream = new PrintWriter(filename);
+					outputStream.println("<!DOCTYPE html>\r\n" + 
 					"<html lang=\"en\" dir=\"ltr\">\r\n" + 
 					"  <head>\r\n" + 
 					"    <meta charset=\"utf-8\">\r\n" + 
@@ -154,20 +152,7 @@ public void handle(ActionEvent args) {
 					"       <h3 class=\"ml-5\">Back-end Developer<span></span></h3>\r\n" + 
 					"       <h3 class=\"ml-5\">Fluency with various programming languages and frameworks such Python, R, Java, C++, Bootstrap, HTML, CSS, JS, Django, Laravel, etc.<span></span></h3>\r\n" + 
 
-					"       <h3 id=\"Name\" class=\"lead\"><span>" + m +  "</span></h3>\r\n" + 
-					"       <div id = \"info\" >\r\n" + 
-					"       <h5>MY INFO</h5>\r\n" + 
-					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
-
-					"       <h3 id=\"Name\" class=\"lead\"><span>" + m +  "</span></h3>\r\n" + 
-					"       <div id = \"info\" >\r\n" + 
-					"       <h5>MY INFO</h5>\r\n" + 
-					"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
-
-					"       <h3 class=\"ml-5\">Full Name:  <span>"+m+"</span></h3>\r\n" + 
-					"       <h3 class=\"ml-5\">Email:    <span>"+g+"</span></h3>\r\n" + 
-
-					"       </div>\r\n" + 
+					
 					"\r\n" + 
 					"\r\n" + 
 					"\r\n" + 
@@ -219,43 +204,63 @@ public void handle(ActionEvent args) {
 			
 			System.out.println("Printed!" );
 		
-		}catch(FileNotFoundException e) {
+			}catch(FileNotFoundException e) {
 			e.printStackTrace();
-		};
+			};
 			}
-		
+
+			
+	
+		    else {
+		    	System.out.println("cannot be printed");
+		    }	
 		
 	}
 }
-private void isemptyornot(String m,String g,String addr,String mob) {
+private boolean isemptyornot(String m,String g,String addr,String mob) {
+	Boolean value = true;
 	if(m.contentEquals("")) {
 		name.setPromptText("name field cannot be empty");
 		name.setStyle("-fx-Prompt-text-fill: red;-fx-font-weight: bold;");
-		
+	}
+	else {
+	value = false; 
 	}
 	
 	if(g.contentEquals("")) {
 		email.setPromptText("email field cannot be empty");
 		email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	}
+	else {
+		value = false; 
+		}
+		
 	if(addr.contentEquals("")) {
 		address.setPromptText("address field cannot be empty");
 		address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	}
+	else {
+		value = false; 
+		}
+		
 	if(mob.contentEquals("")) {
 		mobile.setPromptText("mobile field cannot be empty");
 		mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	}
+	else {
+		value = false; 
+		}
+		
 
-	return;
+	return value;
 	
 }
-public void resettodefault(ActionEvent args) {
-//	name.clear();
-	System.out.println("hello World");
-//	name.setStyle("-fx-text-inner-color:black");
-	
-}
+//public void resettodefault(ActionEvent args) {
+//
+//	System.out.println("hello World");
+//
+//	
+//}
 
 
 }
