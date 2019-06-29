@@ -7,6 +7,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.fxml.FXML;
 
 import java.io.FileNotFoundException;
@@ -50,12 +51,17 @@ public void handle(ActionEvent args) {
 		
 		String m = name.getText();
 		String addr = address.getText();
-//		String mob = mobile.getText();
+		String mob = mobile.getText();
 //		String Db = Dob.getText();
 		String g = email.getText();
 		
 		
-			isemptyornot(m,g);
+			isemptyornot(m,g,addr,mob);
+			if(m.contentEquals("")|| addr.contentEquals("")||mob.contentEquals("")||g.contentEquals("")) {
+				System.out.println("cannot be printed");
+			}
+			else {
+			
 		String filename = "project.html";
 		
 		try {
@@ -216,30 +222,40 @@ public void handle(ActionEvent args) {
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
 		};
-		
+			}
 		
 		
 	}
 }
-private void isemptyornot(String m,String g) {
+private void isemptyornot(String m,String g,String addr,String mob) {
 	if(m.contentEquals("")) {
-		name.setText("name field cannot be empty");
+		name.setPromptText("name field cannot be empty");
+		name.setStyle("-fx-Prompt-text-fill: red;-fx-font-weight: bold;");
+		
 	}
 	
 	if(g.contentEquals("")) {
-		email.setText("email field cannot be empty");
+		email.setPromptText("email field cannot be empty");
+		email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	}
-//	if(addr.contentEquals("")) {
-//		address.setText("address field cannot be empty");
-//	}
-//	if(mob.contentEquals("")) {
-//		mobile.setText("mobile field cannot be empty");
-//	}
-//	if(Db.contentEquals("")) {
-//		Dob.setText("Db field cannot be empty");
-//	}
+	if(addr.contentEquals("")) {
+		address.setPromptText("address field cannot be empty");
+		address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+	}
+	if(mob.contentEquals("")) {
+		mobile.setPromptText("mobile field cannot be empty");
+		mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+	}
+
 	return;
 	
 }
+public void resettodefault(ActionEvent args) {
+//	name.clear();
+	System.out.println("hello World");
+//	name.setStyle("-fx-text-inner-color:black");
+	
+}
+
 
 }
