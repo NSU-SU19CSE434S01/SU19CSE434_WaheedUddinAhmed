@@ -55,9 +55,11 @@ public void handle(ActionEvent args) {
 //		String Db = Dob.getText();
 		String g = email.getText();
 		
-		
-			Boolean bool = isemptyornot(m,g,addr,mob);
-			if(bool.equals(false)) {
+			Boolean g_check = email_isValid(g);
+//			Boolean m_check = name_check(m);
+//			Boolean mob_check = mobile_check(mob);
+			Boolean bool = isempty(m,g,addr,mob);
+			    if(bool.equals(false) && g_check.equals(true)) {
 			
 			
 				String filename = "CV of " + m + ".html";
@@ -211,13 +213,37 @@ public void handle(ActionEvent args) {
 
 			
 	
-		    else {
-		    	System.out.println("cannot be printed");
-		    }	
+			    else {
+			    	System.out.println("cannot be printed");
+			    	}	
 		
 	}
 }
-private boolean isemptyornot(String m,String g,String addr,String mob) {
+
+
+
+static boolean email_isValid(String email) {
+    String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+    return email.matches(regex);
+ }
+//
+//private boolean name_check(String m) {
+//	Boolean value = true;
+//	
+//	
+//	
+//	return value;
+//}
+//private boolean mobile_check(String mob) {
+//	Boolean value = true;
+//	
+//	
+//	
+//	return value;
+//}
+
+
+private boolean isempty(String m,String g,String addr,String mob) {
 	Boolean value = true;
 	if(m.contentEquals("")) {
 		name.setPromptText("name field cannot be empty");

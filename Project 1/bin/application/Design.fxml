@@ -297,7 +297,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox layoutX="791.0" layoutY="151.0" prefHeight="240.0" prefWidth="384.0">
+      <VBox layoutX="792.0" layoutY="144.0" prefHeight="240.0" prefWidth="384.0">
          <children>
             <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Skills">
                <font>
@@ -306,7 +306,7 @@
             </Label>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Full Name:">
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #1">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -315,6 +315,9 @@
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </TextField>
                </children>
                <VBox.margin>
@@ -323,16 +326,19 @@
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="DOB:">
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #2">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="dob1" prefHeight="25.0" prefWidth="278.0">
+                  <TextField fx:id="name11" prefHeight="25.0" prefWidth="278.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
-                  </DatePicker>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
@@ -340,7 +346,7 @@
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Mobile:">
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #3">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -349,6 +355,9 @@
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </TextField>
                </children>
                <VBox.margin>
@@ -357,7 +366,7 @@
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Email ID:">
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #4">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -366,6 +375,9 @@
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </TextField>
                </children>
                <VBox.margin>
@@ -374,7 +386,7 @@
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Address:">
+                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #5">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -383,6 +395,9 @@
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </TextField>
                </children>
                <VBox.margin>
@@ -391,7 +406,7 @@
             </HBox>
          </children>
       </VBox>
-      <ImageView fitHeight="191.0" fitWidth="170.0" layoutX="533.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
+      <ImageView fitHeight="191.0" fitWidth="170.0" layoutX="533.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
          <effect>
             <DropShadow />
          </effect>
