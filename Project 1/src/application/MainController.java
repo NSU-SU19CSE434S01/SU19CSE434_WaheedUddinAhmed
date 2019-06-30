@@ -57,9 +57,9 @@ public void handle(ActionEvent args) {
 		
 			Boolean g_check = email_isValid(g);
 //			Boolean m_check = name_check(m);
-//			Boolean mob_check = mobile_check(mob);
+			Boolean mob_check = mobile_check(mob);
 			Boolean bool = isempty(m,g,addr,mob);
-			    if(bool.equals(false) && g_check.equals(true)) {
+			    if(bool.equals(false) && g_check.equals(true) && mob_check.equals(true)) {
 			
 			
 				String filename = "CV of " + m + ".html";
@@ -222,9 +222,14 @@ public void handle(ActionEvent args) {
 
 
 
-static boolean email_isValid(String email) {
+private boolean email_isValid(String g) {
     String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-    return email.matches(regex);
+    if(g.matches(regex)==false) {
+    	email.clear();
+    	email.setPromptText("Not a correct email format");
+		email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+    }
+    return g.matches(regex);
  }
 //
 //private boolean name_check(String m) {
@@ -234,13 +239,17 @@ static boolean email_isValid(String email) {
 //	
 //	return value;
 //}
-//private boolean mobile_check(String mob) {
-//	Boolean value = true;
-//	
-//	
-//	
-//	return value;
-//}
+private boolean mobile_check(String mob) {
+if(mob.matches("^[0-9]*$") && mob.length() == 11){
+	
+    return true;
+}
+else {
+	mobile.clear();
+	mobile.setPromptText("Cannot contain letters or characters");
+	mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+	return false;}
+}
 
 
 private boolean isempty(String m,String g,String addr,String mob) {
