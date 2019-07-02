@@ -7,14 +7,18 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.fxml.FXML;
-
+import javafx.stage.Stage;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.event.EventHandler;
 
@@ -34,16 +38,31 @@ public TextField mobile;
 @FXML
 public TextField email;
 @FXML
+public TextField skill5;
+@FXML
 public Button Generate;
 @FXML
 public Label na;
 @FXML
-String n,m;
+public Button newskill;
+@FXML
+public VBox dood;
+@FXML
+public HBox next[] = new HBox[10];
+@FXML
+public Label sk[] = new Label[10];
+@FXML
+public TextField textField[] = new TextField[15];
+ int j=6;
+@FXML
+String n,m,l;
+int i = 0;
 public void click(ActionEvent args) {
 //	 n = fname.getText();
 	Generate.setOnAction(this);
 	
 }
+
 public void handle(ActionEvent args) {
 	// TODO Auto-generated method stub
 	if(args.getSource()==Generate) {
@@ -218,10 +237,46 @@ public void handle(ActionEvent args) {
 			    	}	
 		
 	}
+	
+	
+
+	
+
 }
 
 
+public void new_skill(ActionEvent args) {
+//	 n = fname.getText();
+//	newskill.setOnAction(this);
+	if(args.getSource()==newskill) {
+		
+//      textField = new TextField();
+//      TextField newField = new TextField();
+//      newField = textField;
+//      
+//      dood.getChildren().add(newField);
+     
+     next[i]=new HBox();
+     next[i].setPrefWidth(309);
+     next[i].setId("skill"+j);
+     sk[i]=new Label();
+     sk[i].setText("Skill# "+j);
+     sk[i].setPrefWidth(77);
+      textField[i] = new TextField();
+      textField[i].setPrefWidth(278);
+      next[i].getChildren().addAll(sk[i],textField[i]);
+//      textField[i].
+      dood.getChildren().add(next[i]);
+      System.out.println(next[i].getId());
+      i = i+1;
+      j=j+1;
+  
+	
+	
+}
+	
 
+}
 private boolean email_isValid(String g) {
     String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     if(g.matches(regex)==false) {
@@ -260,6 +315,10 @@ private boolean isempty(String m,String g,String addr,String mob) {
 	}
 	else {
 	value = false; 
+	}
+	
+	for(int k = 0;k<10;k++) {
+		
 	}
 	
 	if(g.contentEquals("")) {

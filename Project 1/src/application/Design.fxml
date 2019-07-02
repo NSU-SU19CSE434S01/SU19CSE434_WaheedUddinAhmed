@@ -297,7 +297,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox layoutX="792.0" layoutY="144.0" prefHeight="240.0" prefWidth="384.0">
+      <VBox fx:id="dood" layoutX="792.0" layoutY="144.0" prefHeight="240.0" prefWidth="384.0">
          <children>
             <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Skills">
                <font>
@@ -311,7 +311,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="name1" prefHeight="25.0" prefWidth="278.0">
+                  <TextField fx:id="skill1" prefHeight="25.0" prefWidth="278.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -331,7 +331,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="name11" prefHeight="25.0" prefWidth="278.0">
+                  <TextField fx:id="skill2" prefHeight="25.0" prefWidth="278.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -351,7 +351,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="mobile2" prefHeight="25.0" prefWidth="278.0">
+                  <TextField fx:id="skill3" prefHeight="25.0" prefWidth="278.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -371,7 +371,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="email2" prefHeight="25.0" prefWidth="278.0">
+                  <TextField fx:id="skill4" prefHeight="25.0" prefWidth="278.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -391,9 +391,9 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="address1" prefHeight="25.0" prefWidth="278.0">
+                  <TextField fx:id="skill5" prefHeight="25.0" prefWidth="278.0">
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets bottom="20.0" left="20.0" />
                      </HBox.margin>
                      <effect>
                         <DropShadow />
@@ -405,15 +405,19 @@
                </VBox.margin>
             </HBox>
          </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
       </VBox>
       <ImageView fitHeight="191.0" fitWidth="170.0" layoutX="533.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
          <effect>
             <DropShadow />
          </effect>
          <image>
-            <Image url="@../../../../profile.jpg" />
+            <Image url="@../../download.png" />
          </image>
       </ImageView>
+      <Button fx:id="newskill" layoutX="968.0" layoutY="452.0" mnemonicParsing="false" onAction="#new_skill" text="Add Another skill" />
 
     
    </children>
