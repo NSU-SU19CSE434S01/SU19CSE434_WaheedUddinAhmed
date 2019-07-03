@@ -48,12 +48,12 @@ public Button newskill;
 @FXML
 public VBox dood;
 @FXML
-public HBox next[] = new HBox[10];
+public HBox next[] = new HBox[20];
 @FXML
-public Label sk[] = new Label[10];
+public Label sk[] = new Label[20];
 @FXML
-public TextField textField[] = new TextField[15];
- int j=6;
+public TextField textField[] = new TextField[20];
+ int j=3;
 @FXML
 String n,m,l;
 int i = 0;
@@ -249,6 +249,7 @@ public void new_skill(ActionEvent args) {
 //	 n = fname.getText();
 //	newskill.setOnAction(this);
 	if(args.getSource()==newskill) {
+		if(i<11) {
 		
 //      textField = new TextField();
 //      TextField newField = new TextField();
@@ -258,20 +259,23 @@ public void new_skill(ActionEvent args) {
      
      next[i]=new HBox();
      next[i].setPrefWidth(309);
-     next[i].setId("skill"+j);
+    
      sk[i]=new Label();
      sk[i].setText("Skill# "+j);
      sk[i].setPrefWidth(77);
       textField[i] = new TextField();
       textField[i].setPrefWidth(278);
+      
+      
       next[i].getChildren().addAll(sk[i],textField[i]);
 //      textField[i].
       dood.getChildren().add(next[i]);
-      System.out.println(next[i].getId());
+      
       i = i+1;
       j=j+1;
   
-	
+		}
+		else {}
 	
 }
 	
