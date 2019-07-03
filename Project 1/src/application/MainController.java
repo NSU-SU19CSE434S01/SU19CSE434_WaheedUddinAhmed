@@ -53,7 +53,9 @@ public HBox next[] = new HBox[20];
 public Label sk[] = new Label[20];
 @FXML
 public TextField textField[] = new TextField[20];
+public static String textextract[] = new String[20];
  int j=3;
+ int last=0;
 @FXML
 String n,m,l;
 int i = 0;
@@ -73,6 +75,14 @@ public void handle(ActionEvent args) {
 		String mob = mobile.getText();
 //		String Db = Dob.getText();
 		String g = email.getText();
+		
+		for(int k = 0;k<last;k++) {
+			
+			 textextract[k] = textField[k].getText();
+		      System.out.println("text is " + textextract[k]);
+		
+		
+	}
 		
 			Boolean g_check = email_isValid(g);
 //			Boolean m_check = name_check(m);
@@ -228,6 +238,9 @@ public void handle(ActionEvent args) {
 			}catch(FileNotFoundException e) {
 			e.printStackTrace();
 			};
+			
+			
+			
 			}
 
 			
@@ -238,24 +251,10 @@ public void handle(ActionEvent args) {
 		
 	}
 	
-	
-
-	
-
-}
-
-
-public void new_skill(ActionEvent args) {
-//	 n = fname.getText();
-//	newskill.setOnAction(this);
 	if(args.getSource()==newskill) {
 		if(i<11) {
 		
-//      textField = new TextField();
-//      TextField newField = new TextField();
-//      newField = textField;
-//      
-//      dood.getChildren().add(newField);
+
      
      next[i]=new HBox();
      next[i].setPrefWidth(309);
@@ -266,18 +265,29 @@ public void new_skill(ActionEvent args) {
       textField[i] = new TextField();
       textField[i].setPrefWidth(278);
       
-      
+     
       next[i].getChildren().addAll(sk[i],textField[i]);
 //      textField[i].
       dood.getChildren().add(next[i]);
       
       i = i+1;
+      last = i;
       j=j+1;
   
 		}
 		else {}
 	
 }
+
+	
+
+}
+
+
+public void new_skill(ActionEvent args) {
+//	 n = fname.getText();
+	newskill.setOnAction(this);
+
 	
 
 }
