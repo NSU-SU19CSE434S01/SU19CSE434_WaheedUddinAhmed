@@ -53,7 +53,7 @@ public HBox next[] = new HBox[20];
 public Label sk[] = new Label[20];
 @FXML
 public TextField textField[] = new TextField[20];
-public static String textextract[] = new String[20];
+public static String tex[] = new String[20];
  int j=3;
  int last=0;
 @FXML
@@ -78,17 +78,16 @@ public void handle(ActionEvent args) {
 		
 		for(int k = 0;k<last;k++) {
 			
-			 textextract[k] = textField[k].getText();
-		      System.out.println("text is " + textextract[k]);
-		
-		
+			 tex[k] = textField[k].getText();
+		      System.out.println("text is " + tex[k]);
 	}
 		
 			Boolean g_check = email_isValid(g);
 //			Boolean m_check = name_check(m);
 			Boolean mob_check = mobile_check(mob);
 			Boolean bool = isempty(m,g,addr,mob);
-			    if(bool.equals(false) && g_check.equals(true) && mob_check.equals(true)) {
+			Boolean dy = dycheck(tex,last,textField);
+			    if(bool.equals(false) && g_check.equals(true) && mob_check.equals(true) && dy.equals(true)) {
 			
 			
 				String filename = "CV of " + m + ".html";
@@ -285,11 +284,25 @@ public void handle(ActionEvent args) {
 
 
 public void new_skill(ActionEvent args) {
-//	 n = fname.getText();
+
 	newskill.setOnAction(this);
 
-	
+}
 
+
+private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
+	
+	Boolean value = true;
+	for(int h=0;h<last;h++) {
+		if(tex2[h].contentEquals("")) {
+			textField[h].setPromptText("Cannot be left empty");
+			textField[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+			value = false;
+		}
+	}
+
+	
+return value;
 }
 private boolean email_isValid(String g) {
     String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
