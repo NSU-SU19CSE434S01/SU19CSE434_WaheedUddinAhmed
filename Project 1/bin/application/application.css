@@ -27,5 +27,26 @@
 	-fx-text-fill:white;
 }
 
+.doodm{
+	-fx-padding: 20px 0px 0px 0px;
+}
+.dy-hbox{
+	 -fx-padding: 20px 0px 0px 0px;
+    -fx-border-insets: 20p 0px 0px 0px;
+    -fx-background-insets: 20px 0px 0px 0px;
+    -fx-pref-width: 309px;
+    
+    
+}
+.dy-text{
+	-fx-padding:4px 0px 4px 30px;
+	 -fx-min-width: 296px;
+	  -fx-max-width: 296px;
+	  -fx-border-insets: 0p 0px 0px 20px;
+    -fx-background-insets: 0px 0px 0px 20px;
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 0);
+}
 
-
+.dy-label{
+	-fx-font-size:14px;
+}

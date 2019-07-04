@@ -251,24 +251,29 @@ public void handle(ActionEvent args) {
 	}
 	
 	if(args.getSource()==newskill) {
-		if(i<11) {
+		if(i<7) {
 		
 
      
      next[i]=new HBox();
      next[i].setPrefWidth(309);
+     next[i].setStyle("-fx-margin:20px 0px 0px 0px;");
+     next[i].getStyleClass().add("dy-hbox");
+     
     
      sk[i]=new Label();
      sk[i].setText("Skill# "+j);
      sk[i].setPrefWidth(77);
+     sk[i].getStyleClass().add("dy-label");
       textField[i] = new TextField();
-      textField[i].setPrefWidth(278);
       
-     
+      textField[i].getStyleClass().add("dy-text");
+      
+      textField[i].setPromptText("Add a skill");
       next[i].getChildren().addAll(sk[i],textField[i]);
-//      textField[i].
-      dood.getChildren().add(next[i]);
       
+      dood.getChildren().add(next[i]);
+      dood.setStyle("-fx-padding:0px 0px 20px 0px");
       i = i+1;
       last = i;
       j=j+1;
