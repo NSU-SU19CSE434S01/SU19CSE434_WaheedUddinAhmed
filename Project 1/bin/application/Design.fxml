@@ -168,13 +168,13 @@
                         <DropShadow />
                      </effect>
                   </TextField>
-                  <TextField promptText="Institution" style="-fx-background-color: white;">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
+                  <TextField alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="150.0" promptText="Institution">
                      <effect>
                         <DropShadow />
                      </effect>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
                   </TextField>
                </children>
                <VBox.margin>
@@ -206,13 +206,13 @@
                         <DropShadow />
                      </effect>
                   </TextField>
-                  <TextField promptText="Institution" style="-fx-background-color: white;">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
+                  <TextField alignment="CENTER_RIGHT" layoutX="284.0" layoutY="10.0" prefHeight="25.0" prefWidth="150.0" promptText="Institution">
                      <effect>
                         <DropShadow />
                      </effect>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
                   </TextField>
                </children>
                <VBox.margin>
@@ -315,11 +315,23 @@
       </VBox>
       <VBox fx:id="dood" layoutX="797.0" layoutY="144.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
          <children>
-            <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Skills">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
+            <HBox prefHeight="51.0" prefWidth="343.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="139.0" text="Skills">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="newskill" mnemonicParsing="false" onAction="#new_skill" prefHeight="35.0" prefWidth="78.0" styleClass="margin" text="Add">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
                   <TextField fx:id="skill1" prefHeight="25.0" prefWidth="150.0" promptText="Add a skill">
@@ -389,7 +401,6 @@
             <Image url="@../../download.png" />
          </image>
       </ImageView>
-      <Button fx:id="newskill" layoutX="915.0" layoutY="478.0" mnemonicParsing="false" onAction="#new_skill" styleClass="margin" text="Add Another skill" AnchorPane.topAnchor="478.0" />
 
     
    </children>

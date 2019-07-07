@@ -46,8 +46,7 @@ public Button Generate;
 public Label na;
 @FXML
 public Button newskill;
-@FXML
-public VBox dood;
+
 @FXML
 public HBox next[] = new HBox[20];
 @FXML
@@ -290,16 +289,7 @@ public void handle(ActionEvent args) {
 	      dyvbox1.setSpacing(20);
 	}
 	else {
-//     next[i]=new HBox();
-//     next[i].setPrefWidth(309);
-//     next[i].setStyle("-fx-margin:20px 0px 0px 0px;");
-//     next[i].getStyleClass().add("dy-hbox");
-     
-    
-//     sk[i]=new Label();
-//     sk[i].setText("Skill# "+j);
-//     sk[i].setPrefWidth(77);
-//     sk[i].getStyleClass().add("dy-label");
+
       textField[i] = new TextField();
       
       textField[i].getStyleClass().add("dy-text");
@@ -307,9 +297,9 @@ public void handle(ActionEvent args) {
       textField[i].setPromptText("Add a skill");
       dyvbox2.getChildren().addAll(textField[i]);
       
-//      dood.getChildren().add(next[i]);
+
       dyvbox2.setSpacing(20);
-//      dood.setStyle("-fx-padding:0px 0px 20px 0px");
+
      
 	}
 	 i = i+1;
@@ -414,12 +404,7 @@ private boolean isempty(String m,String g,String addr,String mob) {
 	return value;
 	
 }
-//public void resettodefault(ActionEvent args) {
-//
-//	System.out.println("hello World");
-//
-//	
-//}
+
 
 
 }
