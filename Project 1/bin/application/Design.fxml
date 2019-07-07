@@ -19,7 +19,7 @@
 <AnchorPane id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
 
-      <Button fx:id="Generate" layoutX="554.0" layoutY="758.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="77.0" text="Generate" />
+      <Button fx:id="Generate" layoutX="563.0" layoutY="791.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="77.0" text="Generate" />
 
       <Label alignment="CENTER" layoutX="534.0" layoutY="26.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="520.0">
          <font>
@@ -136,7 +136,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox layoutX="55.0" layoutY="436.0" prefHeight="240.0" prefWidth="384.0">
+      <VBox layoutX="55.0" layoutY="436.0" prefHeight="345.0" prefWidth="664.0">
          <children>
             <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Education Info">
                <font>
@@ -168,6 +168,14 @@
                         <DropShadow />
                      </effect>
                   </TextField>
+                  <TextField promptText="Institution" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
@@ -194,6 +202,14 @@
                      </HBox.margin>
                   </RadioButton>
                   <TextField alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="103.0" promptText="Cgpa">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
+                  <TextField promptText="Institution" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
                      <effect>
                         <DropShadow />
                      </effect>
@@ -297,7 +313,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="dood" layoutX="792.0" layoutY="144.0" prefHeight="125.0" prefWidth="384.0" styleClass="doodm">
+      <VBox fx:id="dood" layoutX="792.0" layoutY="144.0" prefHeight="140.0" prefWidth="348.0" styleClass="doodm">
          <children>
             <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Skills">
                <font>
@@ -306,14 +322,17 @@
             </Label>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #1">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="skill1" prefHeight="25.0" prefWidth="278.0" promptText="Add a skill">
+                  <TextField fx:id="skill1" prefHeight="25.0" prefWidth="150.0" promptText="Add a skill">
+                     <effect>
+                        <DropShadow />
+                     </effect>
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="skill2" prefHeight="25.0" prefWidth="150.0" promptText="Add a skill">
+                     <HBox.margin>
+                        <Insets left="40.0" />
                      </HBox.margin>
                      <effect>
                         <DropShadow />
@@ -326,14 +345,14 @@
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #2">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="skill2" prefHeight="25.0" prefWidth="278.0" promptText="Add a skill">
+                  <TextField fx:id="skill3" promptText="Add a skill">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="skill4" prefHeight="25.0" prefWidth="150.0" promptText="Add a skill">
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets left="40.0" />
                      </HBox.margin>
                      <effect>
                         <DropShadow />

@@ -313,7 +313,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="dood" layoutX="792.0" layoutY="144.0" prefHeight="125.0" prefWidth="384.0" styleClass="doodm">
+      <VBox fx:id="dood" layoutX="792.0" layoutY="144.0" prefHeight="140.0" prefWidth="348.0" styleClass="doodm">
          <children>
             <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Skills">
                <font>
@@ -322,14 +322,17 @@
             </Label>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #1">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="skill1" prefHeight="25.0" prefWidth="278.0" promptText="Add a skill">
+                  <TextField fx:id="skill1" prefHeight="25.0" prefWidth="150.0" promptText="Add a skill">
+                     <effect>
+                        <DropShadow />
+                     </effect>
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="skill2" prefHeight="25.0" prefWidth="150.0" promptText="Add a skill">
+                     <HBox.margin>
+                        <Insets left="40.0" />
                      </HBox.margin>
                      <effect>
                         <DropShadow />
@@ -342,14 +345,14 @@
             </HBox>
             <HBox prefHeight="32.0" prefWidth="309.0">
                <children>
-                  <Label prefHeight="20.0" prefWidth="77.0" text="Skill #2">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="skill2" prefHeight="25.0" prefWidth="278.0" promptText="Add a skill">
+                  <TextField fx:id="skill3" promptText="Add a skill">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="skill4" prefHeight="25.0" prefWidth="150.0" promptText="Add a skill">
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets left="40.0" />
                      </HBox.margin>
                      <effect>
                         <DropShadow />
