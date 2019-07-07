@@ -30,23 +30,14 @@
 .doodm{
 
 }
-.dy-hbox{
-	 -fx-padding: 15px 0px 0px 0px;
-    -fx-border-insets: 20px 0px 0px 0px;
-    -fx-background-insets: 20px 0px 0px 0px;
-    -fx-pref-width: 309px;
-    
-    
-}
+
 .dy-text{
-	-fx-padding:4px 0px 4px 27px;
-	 -fx-min-width: 296px;
-	  -fx-max-width: 296px;
-	  -fx-border-insets: 0px 0px 0px 20px;
-    -fx-background-insets: 0px 0px 0px 20px;
+	-fx-padding:4px 0px 4px 7px;
+	 -fx-min-width: 150px;
+	  -fx-max-width: 150px;
+	  -fx-border-insets: 10px 0px 0px 0px;
+    -fx-background-insets: 0px 0px 0px 0px;
     -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 0);
 }
 
-.dy-label{
-	-fx-font-size:14px;
-}
+
