@@ -196,9 +196,10 @@ public void handle(ActionEvent args) {
 									String mid1;
 									for(int w = 0;w<last;w++) {
 										mid1 =  "<h3 class=\"ml-5\">"+ textField[w].getText() + "</h3>\r\n"  ;
-										
 										mid = mid + mid1;
 									}			
+									
+									
 						String lp=	"       <h3 class=\"ml-5\">Front-end, UX,UI Developer<span></span></h3>\r\n" + 
 									"       <h3 class=\"ml-5\">Back-end Developer<span></span></h3>\r\n" + 
 									"       <h3 class=\"ml-5\">Fluency with various programming languages and frameworks such Python, R, Java, C++, Bootstrap, HTML, CSS, JS, Django, Laravel, etc.<span></span></h3>\r\n" + 
@@ -342,13 +343,13 @@ private boolean email_isValid(String g) {
     return g.matches(regex);
  }
 //
-//private boolean name_check(String m) {
-//	Boolean value = true;
-//	
-//	
-//	
-//	return value;
-//}
+private boolean name_check(String m) {
+	Boolean value = true;
+	
+	
+	
+	return value;
+}
 private boolean mobile_check(String mob) {
 if(mob.matches("^[0-9]*$") && mob.length() == 11){
 	
