@@ -95,11 +95,11 @@ public void handle(ActionEvent args) {
 	}
 		
 			Boolean g_check = email_isValid(g);
-//			Boolean m_check = name_check(m);
+			Boolean m_check = name_check(m);
 			Boolean mob_check = mobile_check(mob);
 			Boolean bool = isempty(m,g,addr,mob);
 			Boolean dy = dycheck(tex,last,textField);
-			    if(bool.equals(false) && g_check.equals(true) && mob_check.equals(true) ) {
+			    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) ) {
 			
 			
 				String filename = "CV of " + m + ".html";
@@ -342,11 +342,19 @@ private boolean email_isValid(String g) {
     }
     return g.matches(regex);
  }
-//
+
 private boolean name_check(String m) {
 	Boolean value = true;
 	
-	
+	if (m != null && m.matches("^[a-zA-Z]*$")) {
+		value =true;
+	}
+	else {
+		value = false;
+		name.clear();
+		name.setPromptText("Cannot contain numbers or symbols!");
+		name.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+		}
 	
 	return value;
 }
