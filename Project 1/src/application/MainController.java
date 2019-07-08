@@ -323,7 +323,7 @@ private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
 	Boolean value = true;
 	for(int h=0;h<last;h++) {
 		if(tex2[h].contentEquals("")) {
-			textField[h].setPromptText("Cannot be left empty");
+			textField[h].setPromptText("Cannot be left empty!");
 			textField[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
 			value = false;
 		}
@@ -336,7 +336,7 @@ private boolean email_isValid(String g) {
     String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     if(g.matches(regex)==false) {
     	email.clear();
-    	email.setPromptText("Not a correct email format");
+    	email.setPromptText("Not a correct email format!");
 		email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
     }
     return g.matches(regex);
@@ -356,7 +356,7 @@ if(mob.matches("^[0-9]*$") && mob.length() == 11){
 }
 else {
 	mobile.clear();
-	mobile.setPromptText("Cannot contain letters or characters");
+	mobile.setPromptText("Cannot contain letters or characters!");
 	mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	return false;}
 }
@@ -365,7 +365,7 @@ else {
 private boolean isempty(String m,String g,String addr,String mob) {
 	Boolean value = true;
 	if(m.contentEquals("")) {
-		name.setPromptText("name field cannot be empty");
+		name.setPromptText("name field cannot be empty!");
 		name.setStyle("-fx-Prompt-text-fill: red;-fx-font-weight: bold;");
 	}
 	else {
@@ -377,7 +377,7 @@ private boolean isempty(String m,String g,String addr,String mob) {
 	}
 	
 	if(g.contentEquals("")) {
-		email.setPromptText("email field cannot be empty");
+		email.setPromptText("email field cannot be empty!");
 		email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	}
 	else {
@@ -385,7 +385,7 @@ private boolean isempty(String m,String g,String addr,String mob) {
 		}
 		
 	if(addr.contentEquals("")) {
-		address.setPromptText("address field cannot be empty");
+		address.setPromptText("address field cannot be empty!");
 		address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	}
 	else {
@@ -393,7 +393,7 @@ private boolean isempty(String m,String g,String addr,String mob) {
 		}
 		
 	if(mob.contentEquals("")) {
-		mobile.setPromptText("mobile field cannot be empty");
+		mobile.setPromptText("mobile field cannot be empty!");
 		mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 	}
 	else {
