@@ -19,7 +19,7 @@
 <AnchorPane id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
 
-      <Button fx:id="Generate" layoutX="563.0" layoutY="791.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="77.0" text="Generate" />
+      <Button fx:id="Generate" layoutX="580.0" layoutY="792.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="77.0" text="Generate" />
 
       <Label alignment="CENTER" layoutX="534.0" layoutY="26.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="520.0">
          <font>
@@ -372,7 +372,7 @@
                   </TextField>
                </children>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="15.0" />
                </VBox.margin>
             </HBox>
             <HBox prefHeight="125.0" prefWidth="343.0">
@@ -385,13 +385,10 @@
                   </VBox>
                </children>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="15.0" />
                </VBox.margin>
             </HBox>
          </children>
-         <padding>
-            <Insets bottom="20.0" />
-         </padding>
       </VBox>
       <ImageView fitHeight="191.0" fitWidth="170.0" layoutX="533.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
          <effect>
@@ -401,7 +398,7 @@
             <Image url="@../../download.png" />
          </image>
       </ImageView>
-      <VBox fx:id="dood1" layoutX="797.0" layoutY="491.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
+      <VBox fx:id="dood3" layoutX="797.0" layoutY="491.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
          <children>
             <HBox prefHeight="51.0" prefWidth="343.0">
                <children>
@@ -413,56 +410,37 @@
                         <Insets left="80.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="newskill1" mnemonicParsing="false" onAction="#new_skill" prefHeight="35.0" prefWidth="78.0" styleClass="margin" text="Add">
+                  <Button fx:id="newjobexp" mnemonicParsing="false" onAction="#new_jobexp" prefHeight="35.0" prefWidth="78.0" styleClass="margin" text="Add">
                      <HBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </HBox.margin>
                   </Button>
                </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </HBox>
-            <HBox prefHeight="32.0" prefWidth="309.0">
-               <children>
-                  <TextField prefHeight="25.0" prefWidth="278.0" promptText="Add a job ">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets left="35.0" />
-                     </HBox.margin>
-                  </TextField>
-               </children>
+            <TextField maxWidth="-Infinity" prefWidth="275.0" promptText="Add a job">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="35.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="278.0" promptText="Add a job ">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="35.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <VBox fx:id="dood1" prefHeight="168.0" prefWidth="295.0">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
-            </HBox>
-            <HBox prefHeight="32.0" prefWidth="309.0">
-               <children>
-                  <TextField prefWidth="278.0" promptText="Add a job">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                     <HBox.margin>
-                        <Insets left="35.0" />
-                     </HBox.margin>
-                  </TextField>
-               </children>
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox prefHeight="125.0" prefWidth="343.0">
-               <children>
-                  <VBox fx:id="dyvbox11" prefHeight="148.0" prefWidth="161.0" />
-                  <VBox fx:id="dyvbox21" prefHeight="148.0" prefWidth="167.0">
-                     <HBox.margin>
-                        <Insets left="40.0" />
-                     </HBox.margin>
-                  </VBox>
-               </children>
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-            </HBox>
+            </VBox>
          </children>
          <padding>
             <Insets bottom="20.0" />

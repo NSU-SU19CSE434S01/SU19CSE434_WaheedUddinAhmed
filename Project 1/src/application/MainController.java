@@ -46,6 +46,8 @@ public Button Generate;
 public Label na;
 @FXML
 public Button newskill;
+@FXML
+public Button newjobexp;
 
 @FXML
 public HBox next[] = new HBox[20];
@@ -56,9 +58,21 @@ public VBox dyvbox2;;
 
 @FXML
 public TextField textField[] = new TextField[20];
+
+
 public static String tex[] = new String[20];
- int j=3;
+
+@FXML
+public TextField textField1[] = new TextField[20];
+public static String tex1[] = new String[20];
+
+
+@FXML
+public VBox dood1;
+
+ int j=0;
  int last=0;
+ int last1 = 0;
 @FXML
 String n,m,l;
 int i = 0;
@@ -73,6 +87,11 @@ public void click(ActionEvent args) {
 public void new_skill(ActionEvent args) {
 
 	newskill.setOnAction(this);
+
+}
+public void new_jobexp(ActionEvent args) {
+
+	newjobexp.setOnAction(this);
 
 }
 
@@ -93,12 +112,18 @@ public void handle(ActionEvent args) {
 			 tex[k] = textField[k].getText();
 		      System.out.println("text is " + tex[k]);
 	}
+		for(int k = 0;k<last1;k++) {
+			
+			 tex1[k] = textField1[k].getText();
+		      System.out.println("text is " + tex1[k]);
+	}
 		
 			Boolean g_check = email_isValid(g);
 			Boolean m_check = name_check(m);
 			Boolean mob_check = mobile_check(mob);
 			Boolean bool = isempty(m,g,addr,mob);
 			Boolean dy = dycheck(tex,last,textField);
+			Boolean dy1 = dycheck1(tex1,last1,textField1);
 			    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) ) {
 			
 			
@@ -302,14 +327,40 @@ public void handle(ActionEvent args) {
       dyvbox2.setSpacing(20);
 
      
-	}
+		}
 	 i = i+1;
      last = i;
-     j=j+1;
 		}
 		else {}
 	
 }
+	
+	
+	if(args.getSource()==newjobexp) {
+		System.out.println("hello world");
+		if(j<4) {
+	
+		
+		
+		  textField1[j] = new TextField();
+	      
+	      textField1[j].getStyleClass().add("dy-text1");
+	      
+	      textField1[j].setPromptText("Add a job");
+	      dood1.getChildren().add(textField1[j]);
+	      dood1.setSpacing(20);
+	
+	 
+    
+     j=j+1;
+     last1 = j;
+		}
+		else {}
+	
+}
+	
+	
+	
 
 	
 
@@ -331,8 +382,26 @@ private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
 	}
 
 	
+	
 return value;
 }
+
+
+
+private boolean dycheck1(String[] tex2,int last,TextField[] tex3) {
+	
+	Boolean value = true;
+	for(int h=0;h<last1;h++) {
+		if(tex1[h].contentEquals("")) {
+			textField1[h].setPromptText("Cannot be left empty!");
+			textField1[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+			value = false;
+		}
+		
+	}
+	return value;}
+
+
 private boolean email_isValid(String g) {
     String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     if(g.matches(regex)==false) {
