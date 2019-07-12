@@ -110,7 +110,44 @@ public void new_jobexp(ActionEvent args) {
 
 }
 
+public void choose_pic(ActionEvent args) throws IOException {
 
+	FileChooser fc = new FileChooser();
+	File selectedFile = fc.showOpenDialog(null);
+	String working_dir = System.getProperty("user.dir");
+
+	working_dir = working_dir+ "\\";
+	String path = selectedFile.getAbsolutePath();
+	
+	working_dir = working_dir.replace("\\", "\\\\");
+	
+	working_dir = working_dir+"Waheed.png";
+	System.out.println(working_dir);	
+
+	try {
+		
+		FileInputStream in = new FileInputStream(path);
+		FileOutputStream out = new FileOutputStream(working_dir);
+	
+		BufferedInputStream bin = new BufferedInputStream(in);
+		BufferedOutputStream bout = new BufferedOutputStream(out);
+		
+		int b=0;
+		while(b!= -1) {
+			b = bin.read();
+			bout.write(b);
+		}
+		bin.close();
+		bout.close();
+		
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		System.out.println("Could not copy to destination");
+	}
+	
+	
+	
+}
 
 
 public void handle(ActionEvent args) {
