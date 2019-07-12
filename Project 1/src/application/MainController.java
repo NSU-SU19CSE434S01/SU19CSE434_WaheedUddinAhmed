@@ -6,15 +6,26 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;
+
+import java.nio.file.Paths;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 import javafx.event.ActionEvent;
@@ -48,13 +59,17 @@ public Label na;
 public Button newskill;
 @FXML
 public Button newjobexp;
+@FXML
+public Button propic;
 
 @FXML
 public HBox next[] = new HBox[20];
 @FXML
 public VBox dyvbox1;
 @FXML
-public VBox dyvbox2;;
+public VBox dyvbox2;
+@FXML 
+public ImageView Dp;
 
 @FXML
 public TextField textField[] = new TextField[20];
@@ -94,6 +109,8 @@ public void new_jobexp(ActionEvent args) {
 	newjobexp.setOnAction(this);
 
 }
+
+
 
 
 public void handle(ActionEvent args) {
@@ -358,6 +375,13 @@ public void handle(ActionEvent args) {
 		else {}
 	
 }
+	
+	if(args.getSource()==propic) {
+		
+		
+		
+		
+	}
 	
 	
 	

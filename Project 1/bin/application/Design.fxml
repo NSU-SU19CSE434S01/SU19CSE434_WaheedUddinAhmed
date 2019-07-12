@@ -390,7 +390,7 @@
             </HBox>
          </children>
       </VBox>
-      <ImageView fitHeight="191.0" fitWidth="170.0" layoutX="467.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
+      <ImageView fx:id="Dp" fitHeight="191.0" fitWidth="170.0" layoutX="467.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
          <effect>
             <DropShadow />
          </effect>
@@ -398,7 +398,7 @@
             <Image url="@../../download.png" />
          </image>
       </ImageView>
-      <VBox fx:id="dood3" layoutX="657.0" layoutY="474.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
+      <VBox fx:id="dood3" layoutX="657.0" layoutY="493.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
          <children>
             <HBox prefHeight="51.0" prefWidth="343.0">
                <children>
@@ -446,6 +446,79 @@
             <Insets bottom="20.0" />
          </padding>
       </VBox>
+      <VBox fx:id="RefVbox" layoutX="1135.0" layoutY="144.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="343.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="181.0" text="References">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="newjobexp1" mnemonicParsing="false" onAction="#new_jobexp" prefHeight="35.0" prefWidth="78.0" styleClass="margin" text="Add">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <TextField maxWidth="-Infinity" prefWidth="275.0" promptText="Ref #1 Name">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="35.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="180.0" promptText="Institution">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="35.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="140.0" promptText="Post">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="35.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="140.0" promptText="Email">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="35.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="140.0" promptText="Contact No.">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="35.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <VBox fx:id="dood11" prefHeight="168.0" prefWidth="295.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="propic" layoutX="486.0" layoutY="374.0" mnemonicParsing="false" onAction="#choose_pic" text="Choose Profile Picture" />
 
     
    </children>

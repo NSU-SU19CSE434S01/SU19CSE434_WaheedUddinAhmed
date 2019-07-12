@@ -390,7 +390,7 @@
             </HBox>
          </children>
       </VBox>
-      <ImageView fitHeight="191.0" fitWidth="170.0" layoutX="467.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
+      <ImageView fx:id="Dp" fitHeight="191.0" fitWidth="170.0" layoutX="467.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
          <effect>
             <DropShadow />
          </effect>
@@ -518,6 +518,7 @@
             <Insets bottom="20.0" />
          </padding>
       </VBox>
+      <Button fx:id="propic" layoutX="486.0" layoutY="374.0" mnemonicParsing="false" onAction="#choose_pic" text="Choose Profile Picture" />
 
     
    </children>
