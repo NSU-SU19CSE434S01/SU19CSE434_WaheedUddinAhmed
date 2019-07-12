@@ -6,6 +6,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -123,7 +124,7 @@ public void choose_pic(ActionEvent args) throws IOException {
 	
 	working_dir = working_dir+"Waheed.png";
 	System.out.println(working_dir);	
-
+	
 	try {
 		
 		FileInputStream in = new FileInputStream(path);
@@ -144,6 +145,9 @@ public void choose_pic(ActionEvent args) throws IOException {
 		// TODO Auto-generated catch block
 		System.out.println("Could not copy to destination");
 	}
+	 File file1 = new File("waheed.png");
+     Image image = new Image(file1.toURI().toString());
+     Dp.setImage(image);
 	
 	
 	
