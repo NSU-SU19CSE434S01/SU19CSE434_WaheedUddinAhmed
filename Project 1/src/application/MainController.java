@@ -84,7 +84,7 @@ public static String tex1[] = new String[20];
 
 
 @FXML
-public VBox dood1;
+public VBox JobExpVbox2;
 
  int j=0;
  int last=0;
@@ -93,18 +93,21 @@ public VBox dood1;
 String n,m,l;
 int i = 0;
 
-
+//Main Generate Button Function//
 public void click(ActionEvent args) {
 //	 n = fname.getText();
 	Generate.setOnAction(this);
 	
 }
 
+//To Generate Dynamic Skills Fields//
 public void new_skill(ActionEvent args) {
 
 	newskill.setOnAction(this);
 
 }
+
+//To Generate Dynamic Job Experience Fields//
 public void new_jobexp(ActionEvent args) {
 
 	newjobexp.setOnAction(this);
@@ -141,7 +144,7 @@ public void choose_pic(ActionEvent args) throws IOException {
 		bin.close();
 		bout.close();
 		
-	} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		System.out.println("Could not copy to destination");
 	}
@@ -395,40 +398,25 @@ public void handle(ActionEvent args) {
 	
 	
 	if(args.getSource()==newjobexp) {
+		
 		System.out.println("hello world");
+	
 		if(j<4) {
 	
-		
-		
 		  textField1[j] = new TextField();
 	      
 	      textField1[j].getStyleClass().add("dy-text1");
 	      
 	      textField1[j].setPromptText("Add a job");
-	      dood1.getChildren().add(textField1[j]);
-	      dood1.setSpacing(20);
-	
-	 
-    
-     j=j+1;
-     last1 = j;
-		}
+	      JobExpVbox2.getChildren().add(textField1[j]);
+	      JobExpVbox2.setSpacing(20);
+	      j=j+1;
+	      last1 = j;
+				}
 		else {}
 	
 }
 	
-	if(args.getSource()==propic) {
-		
-		
-		
-		
-	}
-	
-	
-	
-
-	
-
 }
 
 
