@@ -82,6 +82,10 @@ public static String tex[] = new String[20];
 public TextField textField1[] = new TextField[20];
 public static String tex1[] = new String[20];
 
+@FXML
+public TextField cgpa_HS;
+@FXML
+public TextField cgpa_S;
 
 @FXML
 public VBox JobExpVbox2;
@@ -167,6 +171,10 @@ public void handle(ActionEvent args) {
 		String mob = mobile.getText();
 //		String Db = Dob.getText();
 		String g = email.getText();
+		String cg_HS= cgpa_HS.getText();
+		String cg_S= cgpa_S.getText();
+		
+		
 		
 		for(int k = 0;k<last;k++) {
 			
@@ -185,7 +193,9 @@ public void handle(ActionEvent args) {
 			Boolean bool = isempty(m,g,addr,mob);
 			Boolean dy = dycheck(tex,last,textField);
 			Boolean dy1 = dycheck1(tex1,last1,textField1);
-			    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) ) {
+			Boolean AN = All_numbers(cg_HS,cg_S);
+			
+			    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) && AN.equals(true)) {
 			
 			
 				String filename = "CV of " + m + ".html";
@@ -420,7 +430,24 @@ public void handle(ActionEvent args) {
 }
 
 
-
+private boolean All_numbers(String cg_HS, String cg_S) {
+	Boolean value = true;
+	String regex = "/^[0-4]\\.\\d\\d$/";
+//	String p = cgpa_HS.getText();
+	if(!cg_HS.matches(regex) && !cg_HS.contentEquals("")) {
+		cgpa_HS.clear();
+		cgpa_HS.setPromptText("wrong input!");
+		cgpa_HS.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+		value = false;
+	}
+	 if(!cg_S.matches(regex) && !cg_S.contentEquals("")) {
+		cgpa_S.clear();
+		cgpa_S.setPromptText("wrong input!");
+		cgpa_S.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+		value = false;
+	}
+	return value;
+}
 
 
 private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
