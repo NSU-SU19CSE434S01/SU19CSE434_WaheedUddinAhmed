@@ -24,7 +24,7 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
-    #pic{
+  //  #pic{
       height: 200px;
       width: 220px;
       border: 8px solid white;
@@ -37,7 +37,7 @@
       background-repeat: no-repeat;
       box-shadow: 5px red;
 
-    }
+    }//
     @media only screen and (max-width: 768px) {
       /* For mobile phones: */
       .background {

@@ -27,6 +27,9 @@
 	-fx-text-fill:white;
 }
 
+.img{
+	-fx-border-color: solid royalblue 5px;
+}
 
 .dy-text{
 	-fx-padding:4px 0px 4px 7px;

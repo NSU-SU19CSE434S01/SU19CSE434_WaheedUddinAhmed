@@ -19,6 +19,7 @@ import javafx.geometry.Insets;
 import javafx.stage.Stage;
 
 import java.nio.file.Paths;
+import java.time.format.DateTimeFormatter;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -33,6 +34,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.event.EventHandler;
 
 
@@ -41,7 +43,7 @@ public class MainController implements EventHandler<ActionEvent>{
 @FXML
 public TextField name;
 @FXML
-public TextField Dob;
+public DatePicker Dob;
 @FXML
 public TextField address;
 @FXML
@@ -51,7 +53,7 @@ public TextField mobile;
 @FXML
 public TextField email;
 @FXML
-public TextField skill5;
+public TextField skill1,skill2;
 @FXML
 public Button Generate;
 @FXML
@@ -152,6 +154,7 @@ public void choose_pic(ActionEvent args) throws IOException {
 	working_dir = working_dir.replace("\\", "\\\\");
 	
 	working_dir = working_dir+"user."+filetype;
+	String file2 = "user."+filetype;
 	System.out.println(working_dir);	
 	
 	try {
@@ -174,7 +177,7 @@ public void choose_pic(ActionEvent args) throws IOException {
 		// TODO Auto-generated catch block
 		System.out.println("Could not copy to destination");
 	}
-	 File file1 = new File("waheed.png");
+	 File file1 = new File(file2);
      Image image = new Image(file1.toURI().toString());
      Dp.setImage(image);
 	
@@ -191,10 +194,12 @@ public void handle(ActionEvent args) {
 		String m = name.getText();
 		String addr = address.getText();
 		String mob = mobile.getText();
-		//String Db = Dob.getText();
+//		String Db = ((TextField)Dob.getEditor()).getText();
 		String g = email.getText();
 		String cg_HS= cgpa_HS.getText();
 		String cg_S= cgpa_S.getText();
+		String sk1 = skill1.getText();
+		String sk2 = skill2.getText();
 		
 		
 		
@@ -241,6 +246,22 @@ public void handle(ActionEvent args) {
 							"  </head>\r\n" + 
 							"\r\n" + 
 							"<style media=\"screen\">\r\n" + 
+							
+								"#pic{ " +
+							      "height: 200px;" +
+							      "width: 220px;" + 
+							      "border: 8px solid white;" +
+							      "margin-top: -210px;" +
+							      "margin-left:100px;" +
+							      "padding: 20px;" +
+							      "background-color: yellow;" +
+							      "background: url('prof.jpg') 0px -20px;" +
+							      "background-size: 100%;" +
+							      "background-repeat: no-repeat;" +
+							      "box-shadow: 5px red;" +
+
+							    "}" +
+							
 							"  footer{\r\n" + 
 							"          margin-bottom: 0px;\r\n" + 
 							"          margin-top: 150px;\r\n" + 
@@ -311,11 +332,12 @@ public void handle(ActionEvent args) {
 							"       <h5>SKILLS</h5>\r\n" + 
 							"       <hr color=\"silver\"  width=\"45px\">\r\n" ) ;
 									
-									String skills = "";
-									String mid1;
+									String mid = "";
+									String skills =  "<h3 class=\"ml-5\">"+ sk1 + "</h3>\r\n" +
+											 "<h3 class=\"ml-5\">"+ sk2 + "</h3>\r\n";
 									for(int w = 0;w<last;w++) {
-										mid1 =  "<h3 class=\"ml-5\">"+ textField[w].getText() + "</h3>\r\n"  ;
-										skills = skills + mid1;
+										mid =  "<h3 class=\"ml-5\">"+ textField[w].getText() + "</h3>\r\n"  ;
+										skills = skills + mid;
 									}			
 									
 									
@@ -396,7 +418,7 @@ public void handle(ActionEvent args) {
 	}
 	
 	if(args.getSource()==newskill) {
-		if(i<8) {
+		if(i<10) {
 	if(i==0 || i%2==0) {
 		
 		
@@ -518,7 +540,7 @@ private boolean email_isValid(String g) {
 private boolean name_check(String m) {
 	Boolean value = true;
 	
-	if (m != null && m.matches("^[a-zA-Z]*$")) {
+	if (m != null && m.matches("^[a-z A-Z]*$")) {
 		value =true;
 	}
 	else {
