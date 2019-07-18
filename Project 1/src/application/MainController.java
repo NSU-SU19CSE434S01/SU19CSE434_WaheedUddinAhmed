@@ -94,8 +94,16 @@ public VBox JobExpVbox2;
  int last=0;
  int last1 = 0;
 @FXML
-String n,m,l;
+String n,l;
 int i = 0;
+
+
+
+
+
+
+
+
 
 //Main Generate Button Function//
 public void click(ActionEvent args) {
@@ -126,10 +134,24 @@ public void choose_pic(ActionEvent args) throws IOException {
 
 	working_dir = working_dir+ "\\";
 	String path = selectedFile.getAbsolutePath();
+	String name = selectedFile.getName();
+	String temp = "";
+	
+	for (int i = name.length()-1; i >= 0; i--) {
+		if(name.charAt(i)!='.') {
+			temp += name.charAt(i);
+		}
+		else
+			break;
+		
+	}
+	StringBuffer filetype = new StringBuffer(temp);
+    filetype.reverse();
+	System.out.println(filetype);
 	
 	working_dir = working_dir.replace("\\", "\\\\");
 	
-	working_dir = working_dir+"Waheed.png";
+	working_dir = working_dir+"user."+filetype;
 	System.out.println(working_dir);	
 	
 	try {
@@ -169,10 +191,11 @@ public void handle(ActionEvent args) {
 		String m = name.getText();
 		String addr = address.getText();
 		String mob = mobile.getText();
-//		String Db = Dob.getText();
+		//String Db = Dob.getText();
 		String g = email.getText();
 		String cg_HS= cgpa_HS.getText();
 		String cg_S= cgpa_S.getText();
+		
 		
 		
 		
@@ -288,11 +311,11 @@ public void handle(ActionEvent args) {
 							"       <h5>SKILLS</h5>\r\n" + 
 							"       <hr color=\"silver\"  width=\"45px\">\r\n" ) ;
 									
-									String mid = "";
+									String skills = "";
 									String mid1;
 									for(int w = 0;w<last;w++) {
 										mid1 =  "<h3 class=\"ml-5\">"+ textField[w].getText() + "</h3>\r\n"  ;
-										mid = mid + mid1;
+										skills = skills + mid1;
 									}			
 									
 									
@@ -347,7 +370,7 @@ public void handle(ActionEvent args) {
 									"\r\n" + 
 									"  </body>\r\n" + 
 									"</html>\r\n";
-					outputStream.println(fp + mid+lp);	
+					outputStream.println(fp + skills +lp);	
 							
 							
 						
