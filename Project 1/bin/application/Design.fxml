@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
@@ -18,15 +17,15 @@
 <AnchorPane id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="948.0" prefWidth="1544.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
 
-      <Button fx:id="Generate" layoutX="600.0" layoutY="889.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="77.0" text="Generate" />
+      <Button fx:id="Generate" layoutX="608.0" layoutY="819.0" mnemonicParsing="false" onAction="#click" prefHeight="45.0" prefWidth="77.0" text="Generate" />
 
       <Label alignment="CENTER" layoutX="374.0" layoutY="25.0" prefHeight="64.0" prefWidth="195.0" text="CV  Form" textAlignment="CENTER" textFill="#281d1db8" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="666.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Line endX="100.0" layoutX="618.0" layoutY="89.0" startX="-100.0" stroke="#000000df" AnchorPane.leftAnchor="517.5" AnchorPane.rightAnchor="517.5" />
-      <VBox layoutX="55.0" layoutY="144.0" prefHeight="398.0" prefWidth="387.0" spacing="20.0">
+      <Line endX="100.0" layoutX="634.0" layoutY="88.0" startX="-100.0" stroke="#000000df" AnchorPane.leftAnchor="533.5" AnchorPane.rightAnchor="809.5" />
+      <VBox layoutX="55.0" layoutY="144.0" prefHeight="345.0" prefWidth="387.0" spacing="20.0">
          <children>
             <Label fx:id="na" alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Personal Info">
                <font>
@@ -49,7 +48,7 @@
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="address1" prefHeight="25.0" prefWidth="278.0" promptText="Address">
+            <TextField fx:id="nationality" prefHeight="25.0" prefWidth="278.0" promptText="Nationality">
                <effect>
                   <DropShadow />
                </effect>
@@ -73,17 +72,17 @@
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
             </TextField>
-            <DatePicker fx:id="dob" prefHeight="25.0" prefWidth="287.0">
+            <TextField fx:id="email1" prefHeight="25.0" prefWidth="332.0" promptText="Date Of Birth">
                <effect>
                   <DropShadow />
                </effect>
                <VBox.margin>
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
-            </DatePicker>
+            </TextField>
          </children>
       </VBox>
-      <VBox layoutX="48.0" layoutY="544.0" prefHeight="345.0" prefWidth="557.0">
+      <VBox layoutX="43.0" layoutY="496.0" prefHeight="345.0" prefWidth="557.0">
          <children>
             <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Education Info">
                <font>
@@ -110,12 +109,12 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <TextField fx:id="cgpa_HS" alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="103.0" promptText="Cgpa  e.g 3.53">
+                  <TextField fx:id="cgpa_HS" prefHeight="34.0" prefWidth="103.0" promptText="Cgpa  (out of 4)">
                      <effect>
                         <DropShadow />
                      </effect>
                   </TextField>
-                  <TextField alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="150.0" promptText="Institution">
+                  <TextField prefHeight="25.0" prefWidth="150.0" promptText="Institution">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -148,12 +147,12 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <TextField fx:id="cgpa_S" alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="103.0" promptText="Cgpa  e.g 3.53">
+                  <TextField fx:id="cgpa_S" prefHeight="34.0" prefWidth="103.0" promptText="Cgpa  (out of 4)">
                      <effect>
                         <DropShadow />
                      </effect>
                   </TextField>
-                  <TextField alignment="CENTER_RIGHT" layoutX="284.0" layoutY="10.0" prefHeight="25.0" prefWidth="150.0" promptText="Institution">
+                  <TextField layoutX="284.0" layoutY="10.0" prefHeight="25.0" prefWidth="150.0" promptText="Institution">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -171,7 +170,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
                <children>
-                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="387.0" text="Graduation Info">
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="387.0" text="Bachelors Degree">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -317,7 +316,7 @@
             </HBox>
          </children>
       </VBox>
-      <ImageView fx:id="Dp" fitHeight="191.0" fitWidth="170.0" layoutX="634.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;" styleClass="img">
+      <ImageView fx:id="Dp" fitHeight="191.0" fitWidth="170.0" layoutX="515.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;" styleClass="img">
          <effect>
             <DropShadow />
          </effect>
@@ -370,7 +369,7 @@
             <Insets bottom="20.0" />
          </padding>
       </VBox>
-      <VBox fx:id="RefVbox" layoutX="1201.0" layoutY="144.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
+      <VBox fx:id="RefVbox" layoutX="1201.0" layoutY="134.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
          <children>
             <HBox prefHeight="51.0" prefWidth="343.0">
                <children>
@@ -442,7 +441,7 @@
             <Insets bottom="20.0" />
          </padding>
       </VBox>
-      <Button fx:id="propic" layoutX="653.0" layoutY="833.0" mnemonicParsing="false" onAction="#choose_pic" text="Choose Profile Picture" />
+      <Button fx:id="propic" layoutX="534.0" layoutY="383.0" mnemonicParsing="false" onAction="#choose_pic" text="Choose Profile Picture" />
 
     
    </children>
