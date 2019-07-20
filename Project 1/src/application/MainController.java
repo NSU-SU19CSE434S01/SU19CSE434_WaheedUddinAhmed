@@ -140,7 +140,7 @@ public void click(ActionEvent args) {
 		Boolean dy1 = dycheck1(tex1,last1,textField1);
 		Boolean AN = All_numbers(cg_HS,cg_S);
 		
-		    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) && AN.equals(true)) {
+		    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) ) {
 		
 		
 			String filename = "CV of " + m + ".html";
@@ -149,7 +149,7 @@ public void click(ActionEvent args) {
 				PrintWriter outputStream = new PrintWriter(filename);
 
 				
-				String fp = ("<!DOCTYPE html>\r\n" + 
+				String fp = "<!DOCTYPE html>\r\n" + 
 						"<html lang=\"en\" dir=\"ltr\">\r\n" + 
 						"  <head>\r\n" + 
 						"    <meta charset=\"utf-8\">\r\n" + 
@@ -158,158 +158,203 @@ public void click(ActionEvent args) {
 						"    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>\r\n" + 
 						"    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>\r\n" + 
 						"    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n" + 
-						"    <link rel=\"stylesheet\" href=\"project.css\">\r\n" + 
-						"    <title>RESUME | CV</title>\r\n" + 
+						"    <link rel=\"stylesheet\" href=\"css/master.css\">\r\n" + 
+						"    <title></title>\r\n" + 
 						"  </head>\r\n" + 
 						"\r\n" + 
 						"<style media=\"screen\">\r\n" + 
-						
-							"#pic{ " +
-						      "height: 200px;" +
-						      "width: 220px;" + 
-						      "border: 8px solid white;" +
-						      "margin-top: -210px;" +
-						      "margin-left:100px;" +
-						      "padding: 20px;" +
-						      "background-color: yellow;" +
-						      "background: url('prof.jpg') 0px -20px;" +
-						      "background-size: 100%;" +
-						      "background-repeat: no-repeat;" +
-						      "box-shadow: 5px red;" +
-
-						    "}" +
-						
-						"  footer{\r\n" + 
-						"          margin-bottom: 0px;\r\n" + 
-						"          margin-top: 150px;\r\n" + 
-						"          height:  300px;\r\n" + 
-						"          background-color: #005073;\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"          color: white;\r\n" + 
-						"        }\r\n" + 
-						"        .row{\r\n" + 
-						"          display: flex;\r\n" + 
-						"          flex-direction: row;\r\n" + 
-						"\r\n" + 
-						"        }\r\n" + 
-						"        .col-md-4{\r\n" + 
-						"          text-align: center;\r\n" + 
-						"          margin-top: 30px;\r\n" + 
-						"          letter-spacing: 4px;\r\n" + 
-						"        }\r\n" + 
-						"        .col-md-4 hr{\r\n" + 
-						"          height:1px;\r\n" + 
-						"        }\r\n" + 
-						"        .col-md-4 .lead {\r\n" + 
-						"          font-size: 25px;\r\n" + 
-						"          font-weight: 200;\r\n" + 
-						"        }\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"        @media only screen and (max-width: 768px) {\r\n" + 
-						"          footer{\r\n" + 
-						"            height: 550px;\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"          }\r\n" + 
-						"        }\r\n" + 
-						"\r\n" + 
-						"        @media only screen and (max-width: 480px) {\r\n" + 
-						"          footer{\r\n" + 
-						"            background-color: black !important;\r\n" + 
-						"          }\r\n" + 
-						"        }\r\n" + 
+						".cont{\r\n" + 
+						"  width: 1000px;\r\n" + 
+						"}\r\n" + 
 						"</style>\r\n" + 
 						"\r\n" + 
 						"  <body>\r\n" + 
-						"    <div class=\"wrapper \">\r\n" + 
-						"      <h1 class=\"mt-3 lead heading\"align= center >RESUME <span class =\"i\">|</span> CV</h1>\r\n" + 
-						"      <hr color=\"silver\"  width=\"150px\">\r\n" + 
-						"      <div class=\"container-fluid mt-3 background\"></div>\r\n" + 
-						"      <div class=\"container\">\r\n" + 
-						"       <div id=\"pic\"></div>\r\n" + 
-	
-						"       <h3 id=\"Name\" class=\"lead\"><span>Waheed Uddin  Ahmed</span></h3>\r\n" + 
-						"       <div id = \"info\" >\r\n" + 
-						"       <h5>MY INFO</h5>\r\n" + 
-						"       <hr color=\"silver\"  width=\"80px\">\r\n" + 
-						"       <h3 class=\"ml-5\">Full Name:  <span>"+ m + "</span></h3>\r\n" + 
-						"       <h3 class=\"ml-5\">Email:    <span>"+ g +"</span></h3>\r\n" + 
-						"       <h3 class=\"ml-5\">Github:    <span></span></h3>\r\n" + 
-						"       <h3 class=\"ml-5\">LinkedIn:    <span></span></h3>\r\n" +
-						"       </div><div id = \"info\" >\r\n" + 
-						"       <h5>EDUCATION</h5>\r\n" + 
-						"       <hr color=\"silver\"  width=\"115px\">\r\n" + 
-						"       <h3 class=\"ml-5\">Undergraduate<span></span></h3>\r\n" + 
-						"       <h3 class=\"ml-5\">Studied Software Engineering at North South University<span></span></h3>\r\n" + 
-						"       <h3 class=\"ml-5\">CGPA: <span></span></h3>\r\n" + 
-						"       </div>\r\n" + 
-						"       <div id = \"info\" >\r\n" +
-						"       <h5>SKILLS</h5>\r\n" + 
-						"       <hr color=\"silver\"  width=\"45px\">\r\n" ) ;
-								
-								String mid = "";
-								String skills =  "<h3 class=\"ml-5\">"+ sk1 + "</h3>\r\n" +
-										 "<h3 class=\"ml-5\">"+ sk2 + "</h3>\r\n";
-								for(int w = 0;w<last;w++) {
-									mid =  "<h3 class=\"ml-5\">"+ textField[w].getText() + "</h3>\r\n"  ;
-									skills = skills + mid;
-								}			
-								
-								
-					String lp=	"       <h3 class=\"ml-5\">Front-end, UX,UI Developer<span></span></h3>\r\n" + 
-								"       <h3 class=\"ml-5\">Back-end Developer<span></span></h3>\r\n" + 
-								"       <h3 class=\"ml-5\">Fluency with various programming languages and frameworks such Python, R, Java, C++, Bootstrap, HTML, CSS, JS, Django, Laravel, etc.<span></span></h3>\r\n" + 
-			
-								
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"       </div>\r\n" + 
-								"    </div>\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"    <footer>\r\n" + 
-								"\r\n" + 
-								"      <div class=\"row\">\r\n" + 
-								"        <div class=\"col-md-4 \">\r\n" + 
-								"          <h3 class = \"lead\">EDUCATION</h3>\r\n" + 
-								"          <hr color=\"silver\"  width=\"80px\">\r\n" + 
-								"          <h4>Github</h4>\r\n" + 
-								"          <h4>Piazza</h4>\r\n" + 
-								"\r\n" + 
-								"        </div>\r\n" + 
-								"        <div class=\"col-md-4\">\r\n" + 
-								"          <h3 class = \"lead\">SOCIAL</h3>\r\n" + 
-								"          <hr color=\"silver\"  width=\"80px\">\r\n" + 
-								"          <h4>Github</h4>\r\n" + 
-								"          <h4>Piazza</h4>\r\n" + 
-								"\r\n" + 
-								"        </div>\r\n" + 
-								"        <div class=\"col-md-4\">\r\n" + 
-								"          <h3 class = \"lead\">RANDOM</h3>\r\n" + 
-								"          <hr color=\"silver\"  width=\"80px\">\r\n" + 
-								"          <h4>Github</h4>\r\n" + 
-								"          <h4>Piazza</h4>\r\n" + 
-								"\r\n" + 
-								"        </div>\r\n" + 
-								"\r\n" + 
-								"        </div>\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"\r\n" + 
-								"    </footer>\r\n" + 
-								"\r\n" + 
-								"  </body>\r\n" + 
-								"</html>\r\n";
-				outputStream.println(fp + skills +lp);	
+						"    <div class=\"container\">\r\n" + 
+						"      <div class=\"cont\">\r\n" + 
+						"        <div class=\"row\">\r\n" + 
+						"          <div class=\"col-md-5 col-sm-5\">\r\n" + 
+						"\r\n" + 
+						"            <div class=\"img-border rounded-circle\">\r\n" + 
+						"              <img src=\"prof.jpg\" class=\"rounded-circle\"  alt=\"\">\r\n" + 
+						"            </div>\r\n" + 
+						"            <div id=\"Name-Title\">\r\n" + 
+						"              <h2>" + m + "</h2>\r\n" + 
+						"              <h3>Software Engineer</h3>\r\n" + 
+						"\r\n" + 
+						"            </div>\r\n" + 
+						"            <div id=\"personal\" class=\"box\">\r\n" + 
+						"              <h3 class = \"lead\"><span>Personal</span></h3>\r\n" + 
+						"              <div class=\"row\">\r\n" + 
+						"                <div class=\"col-md-4\">\r\n" + 
+						"                  <h5>Name: </h5>\r\n" + 
+						"                  <h5>Date Of Birth: </h5>\r\n" + 
+						"                  <h5>Nationality: </h5>\r\n" + 
+						"                  <h5>Language: </h5>\r\n" + 
+						"                  <h5>Sex: </h5>\r\n" + 
+						"                </div>\r\n" + 
+						"                <div class=\"col-md-8\">\r\n" + 
+						"                  <h5>" + m + "</h5>\r\n" + 
+						"                  <h5>13th Sept, 1995</h5>\r\n" + 
+						"                  <h5>Bangladeshi</h5>\r\n" + 
+						"                  <h5>Bengali, English</h5>\r\n" + 
+						"                  <h5>Male</h5>\r\n" + 
+						"                </div>\r\n" + 
+						"              </div>\r\n" + 
+						"            </div>\r\n" + 
+						"\r\n" + 
+						"            <div id = \"contact\" class=\"box\">\r\n" + 
+						"              <h3 class = \"lead\"><span>Contact</span></h3>\r\n" + 
+						"              <div class=\"row\">\r\n" + 
+						"                <div class=\"col-md-4\">\r\n" + 
+						"                  <h5>Email: </h5>\r\n" + 
+						"                  <h5>Mobile: </h5>\r\n" + 
+						"                  <h5>LinkedIn: </h5>\r\n" + 
+						"                  <h5>Github: </h5>\r\n" + 
+						"                  <h5>Facebook: </h5>\r\n" + 
+						"                </div>\r\n" + 
+						"                <div class=\"col-md-8\">\r\n" + 
+						"                  <h5>" + g + " </h5>\r\n" + 
+						"                  <h5>" + mob + " </h5>\r\n" + 
+						"                  <h5>Blank </h5>\r\n" + 
+						"                  <h5>Blank </h5>\r\n" + 
+						"                  <h5>Waheed Ahmed </h5>\r\n" + 
+						"                </div>\r\n" + 
+						"              </div>\r\n" + 
+						"            </div>\r\n" + 
+						"\r\n" + 
+						"            <div id=\"Skills\" class=\"box\">\r\n" + 
+						"              <h3 class = \"lead\"><span>Skills</span></h3>\r\n" + 
+						"              <div class=\"row\">\r\n" + 
+						"                <div class=\"col-md-4\">\r\n" + 
+						"                  <h5>1) Name: </h5>\r\n" + 
+						"                  <h5>2) Date Of Birth: </h5>\r\n" + 
+						"                  <h5>3) Nationality: </h5>\r\n" + 
+						"                  <h5>4) Language: </h5>\r\n" + 
+						"                  <h5>5) Sex: </h5>\r\n" + 
+						"                  <h5>6) Name: </h5>\r\n" + 
+						"                  <h5>7) Date Of Birth: </h5>\r\n" + 
+						"                  <h5>8) Nationality: </h5>\r\n" + 
+						"                  <h5>9) Language: </h5>\r\n" + 
+						"                  <h5>10) Sex: </h5>\r\n" + 
+						"                </div>\r\n" + 
+						"                <div class=\"col-md-8\">\r\n" + 
+						"                  <h5>Name: </h5>\r\n" + 
+						"                  <h5>Date Of Birth: </h5>\r\n" + 
+						"                  <h5>Nationality: </h5>\r\n" + 
+						"                  <h5>Language: </h5>\r\n" + 
+						"                  <h5>Sex: </h5>\r\n" + 
+						"                  <h5>Name: </h5>\r\n" + 
+						"                  <h5>Date Of Birth: </h5>\r\n" + 
+						"                  <h5>Nationality: </h5>\r\n" + 
+						"                  <h5>Language: </h5>\r\n" + 
+						"                  <h5>Sex: </h5>\r\n" + 
+						"                </div>\r\n" + 
+						"              </div>\r\n" + 
+						"            </div>\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"          </div>\r\n" + 
+						"\r\n" + 
+						"          <div class=\"col-md-7 col-sm-7\">\r\n" + 
+						"             <div id=\"\" class=\"box\">\r\n" + 
+						"\r\n" + 
+						"               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
+						"              <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n" + 
+						"                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n" + 
+						"                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\r\n" + 
+						"                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"                 <h3 class = \"lead\"><span>Education</span></h3>\r\n" + 
+						"                 <h4 class= \"lead\">Bachelor's Degree</h4>\r\n" + 
+						"                 <div class=\"row\" id = \"Education\">\r\n" + 
+						"                   <div class=\"col-md-5\" >\r\n" + 
+						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
+						"\r\n" + 
+						"                   </div>\r\n" + 
+						"                   <div class=\"col-md-7\">\r\n" + 
+						"                     <h5>North South University </h5>\r\n" + 
+						"                     <h5>3.45</h5>\r\n" + 
+						"                     <h5>2019 </h5>\r\n" + 
+						"\r\n" + 
+						"                   </div>\r\n" + 
+						"                 </div>\r\n" + 
+						"\r\n" + 
+						"                 <h4 class= \"lead\">Higher Secondary Degree</h4>\r\n" + 
+						"                 <div class=\"row\" id = \"Education\">\r\n" + 
+						"                   <div class=\"col-md-5\" >\r\n" + 
+						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
+						"\r\n" + 
+						"                   </div>\r\n" + 
+						"                   <div class=\"col-md-7\">\r\n" + 
+						"                     <h5>European Standard School</h5>\r\n" + 
+						"                     <h5>3.45</h5>\r\n" + 
+						"                     <h5>2019 </h5>\r\n" + 
+						"\r\n" + 
+						"                   </div>\r\n" + 
+						"                 </div>\r\n" + 
+						"\r\n" + 
+						"                 <h4 class= \"lead\">Secondary Degree</h4>\r\n" + 
+						"                 <div class=\"row\" id = \"Education\">\r\n" + 
+						"                   <div class=\"col-md-5\" >\r\n" + 
+						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
+						"\r\n" + 
+						"                   </div>\r\n" + 
+						"                   <div class=\"col-md-7\">\r\n" + 
+						"                     <h5>European Standard School</h5>\r\n" + 
+						"                     <h5>3.45</h5>\r\n" + 
+						"                     <h5>2019 </h5>\r\n" + 
+						"\r\n" + 
+						"                   </div>\r\n" + 
+						"                 </div>\r\n" + 
+						"\r\n" + 
+						"                 <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
+						"                 <div class=\"row\" id = \"Education\">\r\n" + 
+						"                 <div class=\"col-md-5\" >\r\n" + 
+						"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+						"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+						"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+						"\r\n" + 
+						"                   <br>\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"                 </div>\r\n" + 
+						"                 <div class=\"col-md-7\">\r\n" + 
+						"                   <h5>Captain Underpants Burger Joint</h5>\r\n" + 
+						"                   <h5>3 months</h5>\r\n" + 
+						"                   <h5>Waiter</h5>\r\n" + 
+						"\r\n" + 
+						"                   <br>\r\n" + 
+						"                 </div>\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"            </div>\r\n" + 
+						"          </div>\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"          </div>\r\n" + 
+						"\r\n" + 
+						"        </div>\r\n" + 
+						"\r\n" + 
+						"      </div>\r\n" + 
+						"    </div>\r\n" + 
+						"\r\n" + 
+						"\r\n" + 
+						"  </body>\r\n" + 
+						"</html>\r\n" ;
+				outputStream.println(fp);	
 						
 						
 					
@@ -585,6 +630,11 @@ private boolean isempty(String m,String g,String addr,String mob) {
 		
 
 	return value;
+	
+}
+
+public void handle(ActionEvent arg0) {
+	// TODO Auto-generated method stub
 	
 }
 
