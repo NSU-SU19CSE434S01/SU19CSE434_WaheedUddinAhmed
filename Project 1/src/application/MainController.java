@@ -39,7 +39,7 @@ import javafx.event.EventHandler;
 
 
 
-public class MainController implements EventHandler<ActionEvent>{
+public class MainController {
 @FXML
 public TextField name;
 @FXML
@@ -136,9 +136,40 @@ public void click(ActionEvent args) {
 		Boolean m_check = name_check(m);
 		Boolean mob_check = mobile_check(mob);
 		Boolean bool = isempty(m,g,addr,mob);
+		
+		
 		Boolean dy = dycheck(tex,last,textField);
 		Boolean dy1 = dycheck1(tex1,last1,textField1);
 		Boolean AN = All_numbers(cg_HS,cg_S);
+		
+		if(m_check.equals(false)) {
+			name.clear();
+			name.setPromptText("Cannot contain numbers or symbols!");
+			name.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+		}
+		
+		if(g_check.equals(false)) {
+		 	email.clear();
+	    	email.setPromptText("Not a correct email format!");
+			email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+		}
+		
+		if(mob_check.equals(false)) {
+			mobile.clear();
+			mobile.setPromptText("Cannot contain letters or characters!");
+			mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) ) {
 		
@@ -553,39 +584,35 @@ private boolean dycheck1(String[] tex2,int last,TextField[] tex3) {
 
 
 private boolean email_isValid(String g) {
+	Boolean value = true;
     String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     if(g.matches(regex)==false) {
-    	email.clear();
-    	email.setPromptText("Not a correct email format!");
-		email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+    	value = false;
     }
-    return g.matches(regex);
+    return value;
  }
 
-private boolean name_check(String m) {
+public boolean name_check(String m) {
 	Boolean value = true;
 	
-	if (m != null && m.matches("^[a-z A-Z]*$")) {
+	if (m != null && m!= "" && m.matches("^[a-z A-Z]*$")) {
 		value =true;
 	}
 	else {
 		value = false;
-		name.clear();
-		name.setPromptText("Cannot contain numbers or symbols!");
-		name.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+		
 		}
 	
 	return value;
 }
 private boolean mobile_check(String mob) {
-if(mob.matches("^[0-9]*$") && mob.length() == 11){
+String regex = "^[0-9]*$";
+if(mob.matches(regex) && mob.length() == 11){
 	
     return true;
 }
 else {
-	mobile.clear();
-	mobile.setPromptText("Cannot contain letters or characters!");
-	mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+	
 	return false;}
 }
 
@@ -633,10 +660,7 @@ private boolean isempty(String m,String g,String addr,String mob) {
 	
 }
 
-public void handle(ActionEvent arg0) {
-	// TODO Auto-generated method stub
-	
-}
+
 
 
 
