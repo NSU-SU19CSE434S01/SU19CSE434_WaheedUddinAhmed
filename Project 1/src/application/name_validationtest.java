@@ -33,6 +33,12 @@ public class name_validationtest  {
 	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
 
 	
+	@Test			//Case3
+	public void testCase3() {
+		Boolean value = mcont.name_check(":'//.");
+		assertFalse(value);
+	} 			//Checking whether the output is false as special characters are not a valid name input.
+	
 	
 	
 	
