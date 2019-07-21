@@ -47,7 +47,11 @@ public class name_validationtest  {
 	}			//Checking whether the output is false as 'numbers' are not a valid name input.
 	
 	
-	
+	@Test			//Case5
+	public void testCase5() {
+		Boolean value = mcont.name_check("Hello World");
+		assertTrue(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
+	}
 	
 	
 	
