@@ -39,6 +39,14 @@ public class name_validationtest  {
 		assertFalse(value);
 	} 			//Checking whether the output is false as special characters are not a valid name input.
 	
+
+	@Test			//Case4
+	public void testCase4() {
+		Boolean value = mcont.name_check("123");
+		assertFalse(value);
+	}			//Checking whether the output is false as 'numbers' are not a valid name input.
+	
+	
 	
 	
 	
