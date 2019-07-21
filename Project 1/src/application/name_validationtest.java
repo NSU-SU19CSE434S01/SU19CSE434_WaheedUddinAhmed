@@ -26,7 +26,14 @@ public class name_validationtest  {
 	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
 	
 	
+	@Test			//Case2
+	public void testCase2() {
+		Boolean value = mcont.name_check("");
+		assertFalse(value);
+	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
 
+	
+	
 	
 	
 	
