@@ -131,11 +131,11 @@ public void click(ActionEvent args) {
 		 tex1[k] = textField1[k].getText();
 	      System.out.println("text is " + tex1[k]);
 }
-	
-		Boolean g_check = email_isValid(g);
-		Boolean m_check = name_check(m);
+		Boolean empty = isempty(m,g,addr,mob);
+		Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method
+		Boolean m_check = name_isValid(m);			//m_check makes a call to name validation method
 		Boolean mob_check = mobile_check(mob);
-		Boolean bool = isempty(m,g,addr,mob);
+		
 		
 		
 		Boolean dy = dycheck(tex,last,textField);
@@ -148,7 +148,7 @@ public void click(ActionEvent args) {
 			name.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 		}
 		
-		if(g_check.equals(false)) {
+		if(email_check.equals(false)) {
 		 	email.clear();
 	    	email.setPromptText("Not a correct email format!");
 			email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
@@ -156,7 +156,7 @@ public void click(ActionEvent args) {
 		
 		if(mob_check.equals(false)) {
 			mobile.clear();
-			mobile.setPromptText("Cannot contain letters or characters!");
+			mobile.setPromptText("Mobile cannot contain letters or characters!");
 			mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 		}
 		
@@ -167,11 +167,11 @@ public void click(ActionEvent args) {
 		
 		
 		
+		if(empty.equals(false)) {
 		
 		
 		
-		
-		    if(m_check.equals(true) && bool.equals(false) && g_check.equals(true) && mob_check.equals(true) ) {
+		    if(m_check.equals(true)  && email_check.equals(true) && mob_check.equals(true) ) {
 		
 		
 			String filename = "CV of " + m + ".html";
@@ -387,7 +387,8 @@ public void click(ActionEvent args) {
 						"</html>\r\n" ;
 				outputStream.println(fp);	
 						
-						
+				
+			
 					
 				
 		outputStream.close();
@@ -406,7 +407,7 @@ public void click(ActionEvent args) {
 
 		    else {
 		    	System.out.println("cannot be printed");
-		    	}	
+		    	}	}
 	
 	
 }
@@ -448,220 +449,235 @@ public void new_skill(ActionEvent args) {
 
 }
 
-//To Generate Dynamic Job Experience Fields//
-public void new_jobexp(ActionEvent args) {
-	System.out.println("hello world");
+	//To Generate Dynamic Job Experience Fields//
+	public void new_jobexp(ActionEvent args) {
+		System.out.println("hello world");
+		
+		if(j<4) {
 	
-	if(j<4) {
+		  textField1[j] = new TextField();
+	      
+	      textField1[j].getStyleClass().add("dy-text1");
+	      
+	      textField1[j].setPromptText("Add a job");
+	      JobExpVbox2.getChildren().add(textField1[j]);
+	      JobExpVbox2.setSpacing(20);
+	      j=j+1;
+	      last1 = j;
+				}
+		else {}
+	//	newjobexp.setOnAction(this);
+	
+	}
 
-	  textField1[j] = new TextField();
-      
-      textField1[j].getStyleClass().add("dy-text1");
-      
-      textField1[j].setPromptText("Add a job");
-      JobExpVbox2.getChildren().add(textField1[j]);
-      JobExpVbox2.setSpacing(20);
-      j=j+1;
-      last1 = j;
+
+	//To Choose picture to insert in the CV
+	public void choose_pic(ActionEvent args) throws IOException {
+	
+		FileChooser fc = new FileChooser();
+		File selectedFile = fc.showOpenDialog(null);
+		 working_dir = System.getProperty("user.dir");
+	
+		working_dir = working_dir+ "\\";
+		String path = selectedFile.getAbsolutePath();
+		String name = selectedFile.getName();
+		String temp = "";
+		
+		for (int i = name.length()-1; i >= 0; i--) {
+			if(name.charAt(i)!='.') {
+				temp += name.charAt(i);
 			}
-	else {}
-//	newjobexp.setOnAction(this);
-
-}
-
-//To Choose picture to insert in the CV
-public void choose_pic(ActionEvent args) throws IOException {
-
-	FileChooser fc = new FileChooser();
-	File selectedFile = fc.showOpenDialog(null);
-	 working_dir = System.getProperty("user.dir");
-
-	working_dir = working_dir+ "\\";
-	String path = selectedFile.getAbsolutePath();
-	String name = selectedFile.getName();
-	String temp = "";
-	
-	for (int i = name.length()-1; i >= 0; i--) {
-		if(name.charAt(i)!='.') {
-			temp += name.charAt(i);
+			else
+				break;
+			
 		}
-		else
-			break;
+		StringBuffer filetype = new StringBuffer(temp);
+	    filetype.reverse();
+		System.out.println(filetype);
 		
-	}
-	StringBuffer filetype = new StringBuffer(temp);
-    filetype.reverse();
-	System.out.println(filetype);
-	
-	working_dir = working_dir.replace("\\", "\\\\");
-	
-	working_dir = working_dir+"user."+filetype;
-	String file2 = "user."+filetype;
-//	System.out.println(working_dir);	
-	
-	try {
+		working_dir = working_dir.replace("\\", "\\\\");
 		
-		FileInputStream in = new FileInputStream(path);
-		FileOutputStream out = new FileOutputStream(working_dir);
-	
-		BufferedInputStream bin = new BufferedInputStream(in);
-		BufferedOutputStream bout = new BufferedOutputStream(out);
+		working_dir = working_dir+"user."+filetype;
+		String file2 = "user."+filetype;
+	//	System.out.println(working_dir);	
 		
-		int b=0;
-		while(b!= -1) {
-			b = bin.read();
-			bout.write(b);
+		try {
+			
+			FileInputStream in = new FileInputStream(path);
+			FileOutputStream out = new FileOutputStream(working_dir);
+		
+			BufferedInputStream bin = new BufferedInputStream(in);
+			BufferedOutputStream bout = new BufferedOutputStream(out);
+			
+			int b=0;
+			while(b!= -1) {
+				b = bin.read();
+				bout.write(b);
+			}
+			bin.close();
+			bout.close();
+			
+			} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Could not copy to destination");
 		}
-		bin.close();
-		bout.close();
+		 File file1 = new File(file2);
+	     Image image = new Image(file1.toURI().toString());
+	     Dp.setImage(image);
 		
-		} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
-		System.out.println("Could not copy to destination");
+		
+		
 	}
-	 File file1 = new File(file2);
-     Image image = new Image(file1.toURI().toString());
-     Dp.setImage(image);
-	
-	
-	
-}
 
 
 
 
 
-private boolean All_numbers(String cg_HS, String cg_S) {
-	Boolean value = true;
-	String regex = "/^[0-4]\\.\\d\\d$/";
-//	String p = cgpa_HS.getText();
-	if(!cg_HS.matches(regex) && !cg_HS.contentEquals("")) {
-		cgpa_HS.clear();
-		cgpa_HS.setPromptText("wrong input!");
-		cgpa_HS.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-		value = false;
-	}
-	 if(!cg_S.matches(regex) && !cg_S.contentEquals("")) {
-		cgpa_S.clear();
-		cgpa_S.setPromptText("wrong input!");
-		cgpa_S.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-		value = false;
-	}
-	return value;
-}
-
-
-private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
-	
-	Boolean value = true;
-	for(int h=0;h<last;h++) {
-		if(tex2[h].contentEquals("")) {
-			textField[h].setPromptText("Cannot be left empty!");
-			textField[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+	private boolean All_numbers(String cg_HS, String cg_S) {
+		Boolean value = true;
+		String regex = "/^[0-4]\\.\\d\\d$/";
+	//	String p = cgpa_HS.getText();
+		if(!cg_HS.matches(regex) && !cg_HS.contentEquals("")) {
+			cgpa_HS.clear();
+			cgpa_HS.setPromptText("wrong input!");
+			cgpa_HS.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
 			value = false;
 		}
-	}
-
-	
-	
-return value;
-}
-
-
-
-private boolean dycheck1(String[] tex2,int last,TextField[] tex3) {
-	
-	Boolean value = true;
-	for(int h=0;h<last1;h++) {
-		if(tex1[h].contentEquals("")) {
-			textField1[h].setPromptText("Cannot be left empty!");
-			textField1[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+		 if(!cg_S.matches(regex) && !cg_S.contentEquals("")) {
+			cgpa_S.clear();
+			cgpa_S.setPromptText("wrong input!");
+			cgpa_S.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
 			value = false;
 		}
-		
+		return value;
 	}
-	return value;}
 
 
-private boolean email_isValid(String g) {
-	Boolean value = true;
-    String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-    if(g.matches(regex)==false) {
-    	value = false;
-    }
-    return value;
- }
-
-public boolean name_check(String m) {
-	Boolean value = true;
-	
-	if (m != null && m!= "" && m.matches("^[a-z A-Z]*$")) {
-		value =true;
-	}
-	else {
-		value = false;
+	private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
 		
+		Boolean value = true;
+		for(int h=0;h<last;h++) {
+			if(tex2[h].contentEquals("")) {
+				textField[h].setPromptText("Cannot be left empty!");
+				textField[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+				value = false;
+			}
 		}
 	
+		
+		
 	return value;
-}
-private boolean mobile_check(String mob) {
-String regex = "^[0-9]*$";
-if(mob.matches(regex) && mob.length() == 11){
-	
-    return true;
-}
-else {
-	
-	return false;}
-}
+	}
 
 
-private boolean isempty(String m,String g,String addr,String mob) {
-	Boolean value = true;
-	if(m.contentEquals("")) {
-		name.setPromptText("name field cannot be empty!");
-		name.setStyle("-fx-Prompt-text-fill: red;-fx-font-weight: bold;");
-	}
-	else {
-	value = false; 
-	}
-	
-	for(int k = 0;k<10;k++) {
+
+	private boolean dycheck1(String[] tex2,int last,TextField[] tex3) {
 		
+		Boolean value = true;
+		for(int h=0;h<last1;h++) {
+			if(tex1[h].contentEquals("")) {
+				textField1[h].setPromptText("Cannot be left empty!");
+				textField1[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+				value = false;
+			}
+			
+		}
+		return value;}
+
+
+	private boolean email_isValid(String g) {
+		Boolean value = true;
+	    String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+	    if(g.matches(regex)==false) {
+	    	value = false;
+	    }
+	    return value;
+	 }
+	
+
+	public boolean name_isValid(String m) {
+		Boolean value = true;
+		
+		if (m != null && m!= "" && m.matches("^[a-z A-Z]*$")) {
+			value =true;
+		}
+		else {
+			value = false;
+			
+			}
+		
+		return value;
 	}
 	
-	if(g.contentEquals("")) {
-		email.setPromptText("email field cannot be empty!");
-		email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+	
+	private boolean mobile_check(String mob) {
+	
+	
+		String regex = "^[0-9]*$";
+	
+		if(mob.matches(regex) && mob.length() == 11){
+		
+	    return true;
+	
+		}
+		else 
+		
+		return false;
 	}
-	else {
-		value = false; 
+	
+	
+	private boolean isempty(String m,String g,String addr,String mob) {
+		
+		Boolean value = true;
+		
+		if(m.contentEquals("")) {
+		
+			name.setPromptText("name field cannot be empty!");
+		
+			name.setStyle("-fx-Prompt-text-fill: red;-fx-font-weight: bold;");
+		
 		}
 		
-	if(addr.contentEquals("")) {
-		address.setPromptText("address field cannot be empty!");
-		address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
-	}
-	else {
-		value = false; 
+		else {
+		
+			value = false; 
 		}
 		
-	if(mob.contentEquals("")) {
-		mobile.setPromptText("mobile field cannot be empty!");
-		mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
-	}
-	else {
-		value = false; 
+		for(int k = 0;k<10;k++) {
+			
 		}
 		
-
-	return value;
+		if(g.contentEquals("")) {
+			email.setPromptText("email field cannot be empty!");
+			email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+		}
+		else {
+			value = false; 
+			}
+			
+		if(addr.contentEquals("")) {
+			address.setPromptText("address field cannot be empty!");
+			address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+		}
+		else {
+			value = false; 
+			}
+			
+		if(mob.contentEquals("")) {
+			mobile.setPromptText("mobile field cannot be empty!");
+			mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+		}
+		else {
+			value = false; 
+			}
+			
 	
-}
-
-
-
-
-
-}
+		return value;
+		
+	}
+	
+	
+	
+	
+	
+	}
