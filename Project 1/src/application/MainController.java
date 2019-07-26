@@ -144,7 +144,7 @@ public void click(ActionEvent args) {
 		Boolean dy = dycheck(tex,last,textField);
 		Boolean dy1 = dycheck1(tex1,last1,textField1);
 		
-		
+		if(empty.equals(false)) {
 		if(m_check.equals(false)) {
 			name.clear();
 			name.setPromptText("Cannot contain numbers or symbols!");
@@ -161,7 +161,7 @@ public void click(ActionEvent args) {
 			mobile.clear();
 			mobile.setPromptText("Mobile cannot contain letters or characters!");
 			mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
-		}
+		}}
 		
 		
 		
@@ -532,26 +532,21 @@ public void new_skill(ActionEvent args) {
 
 
 
-
-
-	public boolean All_numbers(String cg_HS) {
-		Boolean value = true;
-		String regex = "/^[0-4]\\.\\d{2}$/";
-	
-		if(!cg_HS.matches(regex) && !cg_HS.contentEquals("")) {
-//			cgpa_HS.clear();
-//			cgpa_HS.setPromptText("wrong input!");
-//			cgpa_HS.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-			value = false;
+	public String skillhtmlGenerator(String skills) {
+		String mp = null,mid;
+		
+		for(int k=0;k<last;k++) {
+			if(k==5) {
+				break;
+			}
+			mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
+			mp = mp+ mid;
+			
 		}
-//		 if(!cg_S.matches(regex) && !cg_S.contentEquals("")) {
-//			cgpa_S.clear();
-//			cgpa_S.setPromptText("wrong input!");
-//		cgpa_S.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-//			value = false;
-//		}
-		return value;
+		return mp;
 	}
+
+
 
 
 	private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
@@ -611,12 +606,12 @@ public void new_skill(ActionEvent args) {
 	}
 	
 	
-	private boolean mobile_check(String mob) {
+	public boolean mobile_check(String mob) {
 	
 	
 		String regex = "^[0-9]*$";
 	
-		if(mob.matches(regex) && mob.length() == 11){
+		if(mob.matches(regex) && mob.length() < 14 && mob.length() > 8 && !mob.matches("") && mob!="" && mob!= null){
 		
 	    return true;
 	
