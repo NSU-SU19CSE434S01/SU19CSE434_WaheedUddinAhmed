@@ -11,17 +11,15 @@ public class name_validationtest  {
 	
 	
 	/*
-	 *Characteristics 1: Is the input value null
+	 *Characteristics 1: Is the input value null (Case1)
 	 *-------block 1->true( value= {null} )
-	 *-------block 2->false( value= {"Apple") => Base block )
+	 *-------block 2->false( value= {"Apple"} => Base block )
 	 
-	 *Characteristics 2: Is the input value empty
+	 *Characteristics 2: Is the input value empty (Case2)
 	 *-------block 1->true( value= {""} )
 	 *-------block 2->false( value= {"Apple"} => Base block )
 	 *
-	 *Characteristics 3:
-	 *Case1: Null input check
-	 *Case2: Empty String input check
+	 *Characteristics 3: Not empty or null
 	 *Case3: Special Characters input check
 	 *Case4: Number input check
 	 *Case5: Alphabets check
@@ -62,8 +60,7 @@ public class name_validationtest  {
 		assertTrue(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
 	}
 	
-	
-	
+
 
 
 }

@@ -141,12 +141,9 @@ public void click(ActionEvent args) {
 		Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method
 		Boolean m_check = name_isValid(m);			//m_check makes a call to name validation method
 		Boolean mob_check = mobile_check(mob);
-		
-		
-		
 		Boolean dy = dycheck(tex,last,textField);
 		Boolean dy1 = dycheck1(tex1,last1,textField1);
-		Boolean AN = All_numbers(cg_HS,cg_S);
+		
 		
 		if(m_check.equals(false)) {
 			name.clear();
@@ -262,30 +259,31 @@ public void click(ActionEvent args) {
 						"            <div id=\"Skills\" class=\"box\">\r\n" + 
 						"              <h3 class = \"lead\"><span>Skills</span></h3>\r\n" + 
 						"              <div class=\"row\">\r\n" + 
-						"                <div class=\"col-md-4\">\r\n" + 
-						"                  <h5>1) Name: </h5>\r\n" + 
-						"                  <h5>2) Date Of Birth: </h5>\r\n" + 
-						"                  <h5>3) Nationality: </h5>\r\n" + 
-						"                  <h5>4) Language: </h5>\r\n" + 
-						"                  <h5>5) Sex: </h5>\r\n" + 
-						"                  <h5>6) Name: </h5>\r\n" + 
-						"                  <h5>7) Date Of Birth: </h5>\r\n" + 
-						"                  <h5>8) Nationality: </h5>\r\n" + 
-						"                  <h5>9) Language: </h5>\r\n" + 
-						"                  <h5>10) Sex: </h5>\r\n" + 
-						"                </div>\r\n" + 
-						"                <div class=\"col-md-8\">\r\n" + 
-						"                  <h5>Name: </h5>\r\n" + 
-						"                  <h5>Date Of Birth: </h5>\r\n" + 
-						"                  <h5>Nationality: </h5>\r\n" + 
-						"                  <h5>Language: </h5>\r\n" + 
-						"                  <h5>Sex: </h5>\r\n" + 
-						"                  <h5>Name: </h5>\r\n" + 
-						"                  <h5>Date Of Birth: </h5>\r\n" + 
-						"                  <h5>Nationality: </h5>\r\n" + 
-						"                  <h5>Language: </h5>\r\n" + 
-						"                  <h5>Sex: </h5>\r\n" + 
-						"                </div>\r\n" + 
+						"                <div class=\"col-md-4\">\r\n"+
+						"                  <h5> --"+skill1.getText()+"</h5>\r\n" + 
+						"                  <h5> --"+skill2.getText()+"</h5>\r\n";
+						String mp = null,mid;
+							
+						for(int k=0;k<last;k++) {
+							if(k==5) {
+								break;
+							}
+							mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
+							mp = mp+ mid;
+							
+						}
+						
+						mp = mp + "                </div>\r\n" + 
+						"                <div class=\"col-md-8\">\r\n";
+						
+						for(int k=5;k<last;k++) {
+							mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
+							mp = mp+ mid;
+							
+						}
+						
+						 
+						String lp = "           </div>\r\n" + 
 						"              </div>\r\n" + 
 						"            </div>\r\n" + 
 						"\r\n" + 
@@ -388,7 +386,7 @@ public void click(ActionEvent args) {
 						"\r\n" + 
 						"  </body>\r\n" + 
 						"</html>\r\n" ;
-				outputStream.println(fp);	
+				outputStream.println(fp+mp+lp);	
 						
 				
 			
@@ -536,22 +534,22 @@ public void new_skill(ActionEvent args) {
 
 
 
-	private boolean All_numbers(String cg_HS, String cg_S) {
+	public boolean All_numbers(String cg_HS) {
 		Boolean value = true;
-		String regex = "/^[0-4]\\.\\d\\d$/";
-	//	String p = cgpa_HS.getText();
+		String regex = "/^[0-4]\\.\\d{2}$/";
+	
 		if(!cg_HS.matches(regex) && !cg_HS.contentEquals("")) {
-			cgpa_HS.clear();
-			cgpa_HS.setPromptText("wrong input!");
-			cgpa_HS.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+//			cgpa_HS.clear();
+//			cgpa_HS.setPromptText("wrong input!");
+//			cgpa_HS.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
 			value = false;
 		}
-		 if(!cg_S.matches(regex) && !cg_S.contentEquals("")) {
-			cgpa_S.clear();
-			cgpa_S.setPromptText("wrong input!");
-			cgpa_S.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-			value = false;
-		}
+//		 if(!cg_S.matches(regex) && !cg_S.contentEquals("")) {
+//			cgpa_S.clear();
+//			cgpa_S.setPromptText("wrong input!");
+//		cgpa_S.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+//			value = false;
+//		}
 		return value;
 	}
 
