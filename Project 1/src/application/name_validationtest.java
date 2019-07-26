@@ -18,6 +18,7 @@ public class name_validationtest  {
 	 *Characteristics 2: Is the input value empty
 	 *-------block 1->true( value= {""} )
 	 *-------block 2->false( value= {"Apple"} => Base block )
+	 *
 	 *Characteristics 3:
 	 *Case1: Null input check
 	 *Case2: Empty String input check

@@ -6,6 +6,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -73,7 +74,10 @@ public VBox dyvbox1;
 public VBox dyvbox2;
 @FXML 
 public ImageView Dp;
-
+@FXML 
+public TextField nationality;
+@FXML 
+public TextArea aboutme;
 @FXML
 public TextField textField[] = new TextField[20];
 
@@ -117,8 +121,8 @@ public void click(ActionEvent args) {
 	String cg_S= cgpa_S.getText();
 	String sk1 = skill1.getText();
 	String sk2 = skill2.getText();
-	
-	
+	String TA = aboutme.getText();
+	String Nat = nationality.getText();
 	
 	System.out.println(working_dir);
 	for(int k = 0;k<last;k++) {
@@ -131,6 +135,8 @@ public void click(ActionEvent args) {
 		 tex1[k] = textField1[k].getText();
 	      System.out.println("text is " + tex1[k]);
 }
+	
+	System.out.println(TA);
 		Boolean empty = isempty(m,g,addr,mob);
 		Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method
 		Boolean m_check = name_isValid(m);			//m_check makes a call to name validation method
@@ -226,7 +232,7 @@ public void click(ActionEvent args) {
 						"                <div class=\"col-md-8\">\r\n" + 
 						"                  <h5>" + m + "</h5>\r\n" + 
 						"                  <h5>13th Sept, 1995</h5>\r\n" + 
-						"                  <h5>Bangladeshi</h5>\r\n" + 
+						"                  <h5>"+Nat+"</h5>\r\n" + 
 						"                  <h5>Bengali, English</h5>\r\n" + 
 						"                  <h5>Male</h5>\r\n" + 
 						"                </div>\r\n" + 
@@ -292,10 +298,7 @@ public void click(ActionEvent args) {
 						"             <div id=\"\" class=\"box\">\r\n" + 
 						"\r\n" + 
 						"               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
-						"              <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n" + 
-						"                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n" + 
-						"                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\r\n" + 
-						"                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\r\n" + 
+						"              <p >"+ TA + "</p>\r\n" + 
 						"\r\n" + 
 						"\r\n" + 
 						"                 <h3 class = \"lead\"><span>Education</span></h3>\r\n" + 
@@ -655,13 +658,13 @@ public void new_skill(ActionEvent args) {
 			value = false; 
 			}
 			
-		if(addr.contentEquals("")) {
-			address.setPromptText("address field cannot be empty!");
-			address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
-		}
-		else {
-			value = false; 
-			}
+//		if(addr.contentEquals("")) {
+//			address.setPromptText("address field cannot be empty!");
+//			address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+//		}
+//		else {
+//			value = false; 
+//			}
 			
 		if(mob.contentEquals("")) {
 			mobile.setPromptText("mobile field cannot be empty!");
