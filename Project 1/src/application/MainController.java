@@ -145,28 +145,36 @@ public void click(ActionEvent args) {
 		Boolean dy1 = dycheck1(tex1,last1,textField1);
 		
 		if(empty.equals(false)) {
+			
 		if(m_check.equals(false)) {
+			
 			name.clear();
+			
 			name.setPromptText("Cannot contain numbers or symbols!");
+			
 			name.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+			
 		}
 		
 		if(email_check.equals(false)) {
+			
 		 	email.clear();
+		 	
 	    	email.setPromptText("Not a correct email format!");
+	    	
 			email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+			
 		}
 		
 		if(mob_check.equals(false)) {
+			
 			mobile.clear();
+			
 			mobile.setPromptText("Mobile cannot contain letters or characters!");
+			
 			mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+			
 		}}
-		
-		
-		
-		
-		
 		
 		
 		
@@ -180,6 +188,7 @@ public void click(ActionEvent args) {
 			String filename = "CV of " + m + ".html";
 	
 			try {
+				
 				PrintWriter outputStream = new PrintWriter(filename);
 
 				
@@ -262,13 +271,14 @@ public void click(ActionEvent args) {
 						"                <div class=\"col-md-4\">\r\n"+
 						"                  <h5> --"+skill1.getText()+"</h5>\r\n" + 
 						"                  <h5> --"+skill2.getText()+"</h5>\r\n";
-						String mp = null,mid;
+						String mp = "",mid;
 							
 						for(int k=0;k<last;k++) {
 							if(k==5) {
 								break;
 							}
-							mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
+
+							mid = skillhtmlGenerator(textField[k].getText(),k);
 							mp = mp+ mid;
 							
 						}
@@ -277,7 +287,8 @@ public void click(ActionEvent args) {
 						"                <div class=\"col-md-8\">\r\n";
 						
 						for(int k=5;k<last;k++) {
-							mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
+
+							mid = skillhtmlGenerator(textField[k].getText(),k);
 							mp = mp+ mid;
 							
 						}
@@ -386,6 +397,7 @@ public void click(ActionEvent args) {
 						"\r\n" + 
 						"  </body>\r\n" + 
 						"</html>\r\n" ;
+						
 				outputStream.println(fp+mp+lp);	
 						
 				
@@ -397,7 +409,9 @@ public void click(ActionEvent args) {
 		System.out.println("Printed!" );
 	
 		}catch(FileNotFoundException e) {
+			
 		e.printStackTrace();
+		
 		};
 		
 		
@@ -407,17 +421,21 @@ public void click(ActionEvent args) {
 		
 
 		    else {
+		    	
 		    	System.out.println("cannot be printed");
+		    	
 		    	}	}
 	
 	
 }
 
-//To Generate Dynamic Skills Fields//
+/*To Generate Dynamic Skills Fields*/
+
 public void new_skill(ActionEvent args) {
 
-//	newskill.setOnAction(this);
+	
 	if(i<10) {
+		
 		if(i==0 || i%2==0) {
 			
 			
@@ -426,7 +444,9 @@ public void new_skill(ActionEvent args) {
 		      textField[i].getStyleClass().add("dy-text");
 		      
 		      textField[i].setPromptText("Add a skill");
+		      
 		      dyvbox1.getChildren().add(textField[i]);
+		      
 		      dyvbox1.setSpacing(20);
 		}
 		else {
@@ -436,6 +456,7 @@ public void new_skill(ActionEvent args) {
 	      textField[i].getStyleClass().add("dy-text");
 	      
 	      textField[i].setPromptText("Add a skill");
+	      
 	      dyvbox2.getChildren().addAll(textField[i]);
 	      
 
@@ -444,14 +465,18 @@ public void new_skill(ActionEvent args) {
 	     
 			}
 		 i = i+1;
+		 
 	     last = i;
+	     
 			}
 			else {}
 
 }
 
-	//To Generate Dynamic Job Experience Fields//
-	public void new_jobexp(ActionEvent args) {
+	/*To Generate Dynamic Job Experience Fields*/
+
+	public void new_jobexp(ActionEvent args) { 
+		
 		System.out.println("hello world");
 		
 		if(j<4) {
@@ -461,69 +486,101 @@ public void new_skill(ActionEvent args) {
 	      textField1[j].getStyleClass().add("dy-text1");
 	      
 	      textField1[j].setPromptText("Add a job");
+	      
 	      JobExpVbox2.getChildren().add(textField1[j]);
+	      
 	      JobExpVbox2.setSpacing(20);
+	      
 	      j=j+1;
+	      
 	      last1 = j;
 				}
 		else {}
-	//	newjobexp.setOnAction(this);
+	
 	
 	}
 
 
-	//To Choose picture to insert in the CV
+	/*To Choose picture to insert in the CV*/
+	
 	public void choose_pic(ActionEvent args) throws IOException {
 	
 		FileChooser fc = new FileChooser();
+		
 		File selectedFile = fc.showOpenDialog(null);
+		
 		 working_dir = System.getProperty("user.dir");
 	
 		working_dir = working_dir+ "\\";
+		
 		String path = selectedFile.getAbsolutePath();
+		
 		String name = selectedFile.getName();
+		
 		String temp = "";
 		
 		for (int i = name.length()-1; i >= 0; i--) {
+			
 			if(name.charAt(i)!='.') {
+				
 				temp += name.charAt(i);
+				
 			}
 			else
+				
 				break;
 			
 		}
+		
 		StringBuffer filetype = new StringBuffer(temp);
+		
 	    filetype.reverse();
+	    
 		System.out.println(filetype);
 		
 		working_dir = working_dir.replace("\\", "\\\\");
 		
 		working_dir = working_dir+"user."+filetype;
+		
 		String file2 = "user."+filetype;
+		
 	//	System.out.println(working_dir);	
 		
 		try {
 			
 			FileInputStream in = new FileInputStream(path);
+			
 			FileOutputStream out = new FileOutputStream(working_dir);
+			
 		
 			BufferedInputStream bin = new BufferedInputStream(in);
+			
 			BufferedOutputStream bout = new BufferedOutputStream(out);
 			
 			int b=0;
+			
 			while(b!= -1) {
+				
 				b = bin.read();
+				
 				bout.write(b);
+				
 			}
 			bin.close();
+			
 			bout.close();
 			
 			} catch (FileNotFoundException e) {
+				
 			// TODO Auto-generated catch block
+				
 			System.out.println("Could not copy to destination");
+			
 		}
 		 File file1 = new File(file2);
+		 
 	     Image image = new Image(file1.toURI().toString());
+	     
 	     Dp.setImage(image);
 		
 		
@@ -532,78 +589,102 @@ public void new_skill(ActionEvent args) {
 
 
 
-	public String skillhtmlGenerator(String skills) {
+	public String skillhtmlGenerator(String skills,int k) {
+		
 		String mp = null,mid;
 		
-		for(int k=0;k<last;k++) {
-			if(k==5) {
-				break;
-			}
 			mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
-			mp = mp+ mid;
 			
-		}
-		return mp;
-	}
-
-
-
-
-	private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
-		
-		Boolean value = true;
-		for(int h=0;h<last;h++) {
-			if(tex2[h].contentEquals("")) {
-				textField[h].setPromptText("Cannot be left empty!");
-				textField[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-				value = false;
-			}
+			return mid;
+			
 		}
 	
-		
-		
-	return value;
-	}
 
 
 
-	private boolean dycheck1(String[] tex2,int last,TextField[] tex3) {
-		
-		Boolean value = true;
-		for(int h=0;h<last1;h++) {
-			if(tex1[h].contentEquals("")) {
-				textField1[h].setPromptText("Cannot be left empty!");
-				textField1[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-				value = false;
-			}
-			
-		}
-		return value;}
 
+//	private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
+//		
+//		Boolean value = true;
+//		
+//		for(int h=0;h<last;h++) {
+//			
+//			if( tex2[h].contentEquals("") ) {
+//				
+//				textField[h].setPromptText("Cannot be left empty!");
+//				
+//				textField[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+//				
+//				value = false;
+//				
+//			}
+//		}
+//	
+//		
+//		
+//	return value;
+//	}
+//
+//
+//
+//	private boolean dycheck1(String[] tex2,int last,TextField[] tex3) {
+//		
+//		for(int h=0;h<last1;h++) {
+//			
+//			if( tex1[h].contentEquals("") ) {
+//				
+//				textField1[h].setPromptText("Cannot be left empty!");
+//				
+//				textField1[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+//				
+//				value = false;
+//			}
+//			
+//		}
+//		
+//		return value;}
+
+	
+	
 
 	private boolean email_isValid(String g) {
+		
 		Boolean value = true;
+		
 	    String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-	    if(g.matches(regex)==false) {
+	    
+	    if ( g.matches(regex) ==false ) {
+	    	
 	    	value = false;
+	    	
 	    }
 	    return value;
+	    
 	 }
 	
 
+	
+	
 	public boolean name_isValid(String m) {
+		
 		Boolean value = true;
 		
 		if (m != null && m!= "" && m.matches("^[a-z A-Z]*$")) {
+			
 			value =true;
 		}
+		
 		else {
+			
 			value = false;
 			
 			}
 		
 		return value;
+		
 	}
+	
+	
 	
 	
 	public boolean mobile_check(String mob) {
@@ -620,6 +701,8 @@ public void new_skill(ActionEvent args) {
 		
 		return false;
 	}
+	
+	
 	
 	
 	private boolean isempty(String m,String g,String addr,String mob) {
@@ -644,11 +727,15 @@ public void new_skill(ActionEvent args) {
 		}
 		
 		if(g.contentEquals("")) {
+			
 			email.setPromptText("email field cannot be empty!");
+			
 			email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
 		}
 		else {
+			
 			value = false; 
+			
 			}
 			
 //		if(addr.contentEquals("")) {
@@ -660,11 +747,17 @@ public void new_skill(ActionEvent args) {
 //			}
 			
 		if(mob.contentEquals("")) {
+			
 			mobile.setPromptText("mobile field cannot be empty!");
+			
 			mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+			
 		}
+		
 		else {
+			
 			value = false; 
+			
 			}
 			
 	
