@@ -326,38 +326,42 @@ public void click(ActionEvent args) {
 						"          <div class=\"col-md-7 col-sm-7\">\r\n" + 
 						"             <div id=\"\" class=\"box\">\r\n" + 
 						"\r\n" ; 
-						String About_Me = "";
-						if(!TA.contentEquals("")) {
-							 About_Me = generateAboutMe(TA);
-						}
+						String About_Me = generateAboutMe(TA);
 						
+					
+						String Edu_label,Edu_inst,Edu_GPA,Edu_year,Edu_Major, Edu = " <h3 class = \"lead\"><span>Education</span></h3>\r\n";
+						/* For Bachelor's Degree info injection */
 						
-						String Edu_label,Edu_inst,Edu_GPA,Edu_year, Edu = " <h3 class = \"lead\"><span>Education</span></h3>\r\n";
-						if(!U_m.contentEquals("")) {
 							Edu_label = "Bachelor's degree";
 							Edu_inst = U_institute;
 							Edu_GPA = cg_U;
 							Edu_year = U_y;
-							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year);
-						}
+							Edu_Major = U_m;
+							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,Edu_Major);
+							
+							
+							Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
 						
 								
-						if(!hs_institute.contentEquals("")) {
+						
 							Edu_label = "Alevels/HSC Degree";
 							Edu_inst = hs_institute;
 							Edu_GPA = cg_HS;
 							Edu_year = hs_py;
-							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year);
-						}
+							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,"");
+							
 						
-						if(!s_institute.contentEquals("")) {
+							Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
+						
+							
 							Edu_label = "Olevels/SSC Degree";
 							Edu_inst = s_institute;
 							Edu_GPA = cg_S;
 							Edu_year = s_py;
-							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year);
-						}
+							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,"");
 						
+							
+							Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
 						
 						
 						
@@ -433,8 +437,8 @@ public void click(ActionEvent args) {
 	
 }
 
-	public String generateEduInfo(String Edu_label,String Edu_inst, String Edu_gpa, String Edu_year) {
-		
+	public String generateEduInfo(String Edu_label,String Edu_inst, String Edu_gpa, String Edu_year, String Edu_Major) {
+		if(!Edu_inst.contentEquals("")) {
 		String Edu = "                 <h4 class= \"lead\">"+Edu_label+"</h4>\r\n" + 
 				"                 <div class=\"row\" id = \"Education\">\r\n" + 
 				"                   <div class=\"col-md-5\" >\r\n" + 
@@ -453,13 +457,19 @@ public void click(ActionEvent args) {
 				"\r\n" ;
 		
 		return Edu;
+		
+		}
+		else 
+			return "";
 }
 
 	public String generateAboutMe(String TA) {
-	
+		if(!TA.contentEquals("")) {
 		String About_Me = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
 				"              <p >"+ TA + "</p>\r\n" ;
-		return About_Me;
+		return About_Me;}
+		else 
+			return "";
 }
 
 	/*To Generate Dynamic Skills Fields*/

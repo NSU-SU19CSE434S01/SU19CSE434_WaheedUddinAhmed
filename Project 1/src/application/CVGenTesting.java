@@ -11,13 +11,14 @@ public class CVGenTesting {
 	
 	/*Interface-Based testing*/
 	
-	 /*Characteristics 1: Is the input value null 
-	 *-------block 1->true( value= {null} )  (Case1)
-	 *-------block 2->false( value= {"Apple"}  )  (Case2)
+	/*Can be applied for both name and email test cases*/
+	/*Characteristics 1: Is the input value null 
+	 *-------block 1->true  (Case1)
+	 *-------block 2->false  (Case2)
 	 
 	 *Characteristics 2: Is the input value empty 
-	 *-------block 1->true( value= {""} )  (Case3)
-	 *-------block 2->false( value= {"Apple"} )  (Case4)
+	 *-------block 1->true  (Case3)
+	 *-------block 2->false  (Case4)
 	 *
 	 *Characteristics 3: Not empty or null
 	 *Case5: Special Characters input check 
@@ -90,7 +91,7 @@ public class CVGenTesting {
 	
 	
 	
-	
+	/* Email input Test Cases  */
 	
 	
 	
