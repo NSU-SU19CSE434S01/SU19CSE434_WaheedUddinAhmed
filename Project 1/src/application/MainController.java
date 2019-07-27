@@ -112,330 +112,11 @@ public String n,l;
 public int i = 0;
 
 
-public String working_dir;
+public String working_dir,file2,fl;
 
 
 
-//Main Generate Button Function//
-public void click(ActionEvent args) {
 
-	/*Basic Info Fields Extraction */
-	String m = name.getText();
-	String t = Title.getText();
-	String addr = address.getText();
-	String mob = mobile.getText();
-	String g = email.getText();
-	
-	/*Educational Info Fields Extraction */
-	String cg_HS= cgpa_HS.getText();
-	String cg_S= cgpa_S.getText();
-	String s_institute = s_inst.getText();
-	String hs_institute = hs_inst.getText();
-	String cg_U = cgpa_U.getText();
-	String U_institute = U_inst.getText();
-	String U_m = U_major.getText();
-	String U_y = U_year.getText();
-	String hs_py = hs_year.getText();
-	String s_py = s_year.getText();
-	
-	
-	
-	String sk1 = skill1.getText();
-	String sk2 = skill2.getText();
-	String TA = aboutme.getText();
-	String Nat = nationality.getText();
-	
-//	System.out.println(working_dir);
-//	for(int k = 0;k<last;k++) {
-//		
-//		 tex[k] = textField[k].getText();
-//	      System.out.println("text is " + tex[k]);
-//}
-//	for(int k = 0;k<last1;k++) {
-//		
-//		 tex1[k] = textField1[k].getText();
-//	      System.out.println("text is " + tex1[k]);
-//}
-	
-	System.out.println(TA);
-		Boolean empty = isempty(m,g,addr,mob);			//empty makes a call to required fields validation method isempty()
-		Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method email_isValid()
-		Boolean m_check = name_isValid(m);				//m_check makes a call to name validation method name_isValid()
-		Boolean mob_check = mobile_check(mob);			//mob_check makes a call to mobile validation method mobile_check()
-//		Boolean dy = dycheck(tex,last,textField);
-//		Boolean dy1 = dycheck1(tex1,last1,textField1);
-		
-		if(empty.equals(false)) {
-			
-		if(m_check.equals(false)) {
-			
-			name.clear();
-			
-			name.setPromptText("Cannot contain numbers or symbols!");
-			
-			name.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
-			
-		}
-		
-		if(email_check.equals(false)) {
-			
-		 	email.clear();
-		 	
-	    	email.setPromptText("Not a correct email format!");
-	    	
-			email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-			
-		}
-		
-		if(mob_check.equals(false)) {
-			
-			mobile.clear();
-			
-			mobile.setPromptText("Mobile cannot contain letters or characters!");
-			
-			mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
-			
-		}}
-		
-		
-		
-		if(empty.equals(false)) {
-		
-		
-		
-		    if(m_check.equals(true)  && email_check.equals(true) && mob_check.equals(true) ) {
-		
-		
-			String filename = "CV of " + m + ".html";
-	
-			try {
-				
-				PrintWriter outputStream = new PrintWriter(filename);
-
-				
-				String fp = "<!DOCTYPE html>\r\n" + 
-						"<html lang=\"en\" dir=\"ltr\">\r\n" + 
-						"  <head>\r\n" + 
-						"    <meta charset=\"utf-8\">\r\n" + 
-						"    <link href=\"https://fonts.googleapis.com/css?family=Nunito:200,600\" rel=\"stylesheet\">\r\n" + 
-						"    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">\r\n" + 
-						"    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>\r\n" + 
-						"    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>\r\n" + 
-						"    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n" + 
-						"    <link rel=\"stylesheet\" href=\"css/master.css\">\r\n" + 
-						"    <title></title>\r\n" + 
-						"  </head>\r\n" + 
-						"\r\n" + 
-						"<style media=\"screen\">\r\n" + 
-						".cont{\r\n" + 
-						"  width: 1000px;\r\n" + 
-						"}\r\n" + 
-						"</style>\r\n" + 
-						"\r\n" + 
-						"  <body>\r\n" + 
-						"    <div class=\"container\">\r\n" + 
-						"      <div class=\"cont\">\r\n" + 
-						"        <div class=\"row\">\r\n" + 
-						"          <div class=\"col-md-5 col-sm-5\">\r\n" + 
-						"\r\n" + 
-						"            <div class=\"img-border rounded-circle\">\r\n" + 
-						"              <img src=\"prof.jpg\" class=\"rounded-circle\"  alt=\"\">\r\n" + 
-						"            </div>\r\n" + 
-						"            <div id=\"Name-Title\">\r\n" + 
-						"              <h2>" + m + "</h2>\r\n" + 
-						"              <h3>"+t+"</h3>\r\n" + 
-						"\r\n" + 
-						"            </div>\r\n" + 
-						"            <div id=\"personal\" class=\"box\">\r\n" + 
-						"              <h3 class = \"lead\"><span>Personal</span></h3>\r\n" + 
-						"              <div class=\"row\">\r\n" + 
-						"                <div class=\"col-md-4\">\r\n" + 
-						"                  <h5>Name: </h5>\r\n" + 
-						"                  <h5>Date Of Birth: </h5>\r\n" + 
-						"                  <h5>Nationality: </h5>\r\n" + 
-						"                  <h5>Language: </h5>\r\n" + 
-						"                  <h5>Sex: </h5>\r\n" + 
-						"                </div>\r\n" + 
-						"                <div class=\"col-md-8\">\r\n" + 
-						"                  <h5>" + m + "</h5>\r\n" + 
-						"                  <h5>13th Sept, 1995</h5>\r\n" + 
-						"                  <h5>"+Nat+"</h5>\r\n" + 
-						"                  <h5>Bengali, English</h5>\r\n" + 
-						"                  <h5>Male</h5>\r\n" + 
-						"                </div>\r\n" + 
-						"              </div>\r\n" + 
-						"            </div>\r\n" + 
-						"\r\n" + 
-						"            <div id = \"contact\" class=\"box\">\r\n" + 
-						"              <h3 class = \"lead\"><span>Contact</span></h3>\r\n" + 
-						"              <div class=\"row\">\r\n" + 
-						"                <div class=\"col-md-4\">\r\n" + 
-						"                  <h5>Email: </h5>\r\n" + 
-						"                  <h5>Mobile: </h5>\r\n" + 
-						"                  <h5>LinkedIn: </h5>\r\n" + 
-						"                  <h5>Github: </h5>\r\n" + 
-						"                </div>\r\n" + 
-						"                <div class=\"col-md-8\">\r\n" + 
-						"                  <h5>" + g + " </h5>\r\n" + 
-						"                  <h5>" + mob + " </h5>\r\n" + 
-						"                  <h5>Blank </h5>\r\n" + 
-						"                  <h5>Blank </h5>\r\n" + 
-						"                  <h5>Waheed Ahmed </h5>\r\n" + 
-						"                </div>\r\n" + 
-						"              </div>\r\n" + 
-						"            </div>\r\n" + 
-						"\r\n" + 
-						"            <div id=\"Skills\" class=\"box\">\r\n" + 
-						"              <h3 class = \"lead\"><span>Skills</span></h3>\r\n" + 
-						"              <div class=\"row\">\r\n" + 
-						"                <div class=\"col-md-4\">\r\n"+
-						"                  <h5> --"+sk1+"</h5>\r\n" + 
-						"                  <h5> --"+sk2+"</h5>\r\n";
-						String mp = "",mid;
-							
-						for(int k=0;k<last;k++) {
-							if(k==5) {
-								break;
-							}
-
-							mid = skillhtmlGenerator(textField[k].getText(),k);
-							mp = mp+ mid;
-							
-						}
-						
-						mp = mp + "                </div>\r\n" + 
-						"                <div class=\"col-md-8\">\r\n";
-						
-						for(int k=5;k<last;k++) {
-
-							mid = skillhtmlGenerator(textField[k].getText(),k);
-							mp = mp+ mid;
-							
-						}
-						
-						 
-						String lp = "           </div>\r\n" + 
-						"              </div>\r\n" + 
-						"            </div>\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"          </div>\r\n" + 
-						"\r\n" + 
-						"          <div class=\"col-md-7 col-sm-7\">\r\n" + 
-						"             <div id=\"\" class=\"box\">\r\n" + 
-						"\r\n" ; 
-						String About_Me = generateAboutMe(TA);
-						
-					
-						String Edu_label,Edu_inst,Edu_GPA,Edu_year,Edu_Major, Edu = " <h3 class = \"lead\"><span>Education</span></h3>\r\n";
-						/* For Bachelor's Degree info injection */
-						
-							Edu_label = "Bachelor's degree";
-							Edu_inst = U_institute;
-							Edu_GPA = cg_U;
-							Edu_year = U_y;
-							Edu_Major = U_m;
-							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,Edu_Major);
-							
-							
-							Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
-						
-								
-						
-							Edu_label = "Alevels/HSC Degree";
-							Edu_inst = hs_institute;
-							Edu_GPA = cg_HS;
-							Edu_year = hs_py;
-							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,"");
-							
-						
-							Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
-						
-							
-							Edu_label = "Olevels/SSC Degree";
-							Edu_inst = s_institute;
-							Edu_GPA = cg_S;
-							Edu_year = s_py;
-							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,"");
-						
-							
-							Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
-						
-						
-						
-						
-					String Work_E =	"\r\n" + 
-						"                 <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
-						"                 <div class=\"row\" id = \"Education\">\r\n" + 
-						"                 <div class=\"col-md-5\" >\r\n" + 
-						"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
-						"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
-						"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
-						"\r\n" + 
-						"                   <br>\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"                 </div>\r\n" + 
-						"                 <div class=\"col-md-7\">\r\n" + 
-						"                   <h5>Captain Underpants Burger Joint</h5>\r\n" + 
-						"                   <h5>3 months</h5>\r\n" + 
-						"                   <h5>Waiter</h5>\r\n" + 
-						"\r\n" + 
-						"                   <br>\r\n" + 
-						"                 </div>\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"            </div>\r\n" + 
-						"          </div>\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"          </div>\r\n" + 
-						"\r\n" + 
-						"        </div>\r\n" + 
-						"\r\n" + 
-						"      </div>\r\n" + 
-						"    </div>\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"  </body>\r\n" + 
-						"</html>\r\n" ;
-						
-				outputStream.println(fp+mp+lp+About_Me+Edu+Work_E);	
-						
-				
-			
-					
-				
-		outputStream.close();
-		
-		System.out.println("Printed!" );
-	
-		}catch(FileNotFoundException e) {
-			
-		e.printStackTrace();
-		
-		};
-		
-		
-		
-		}
-
-		
-
-		    else {
-		    	
-		    	System.out.println("cannot be printed");
-		    	
-		    	}	}
-	
-	
-}
 
 	public String generateEduInfo(String Edu_label,String Edu_inst, String Edu_gpa, String Edu_year, String Edu_Major) {
 		if(!Edu_inst.contentEquals("")) {
@@ -472,7 +153,7 @@ public void click(ActionEvent args) {
 			return "";
 }
 
-	/*To Generate Dynamic Skills Fields*/
+	/*To Generate Dynamic Skills Fields in CV Form*/
 
 	public void new_skill(ActionEvent args) {
 
@@ -516,7 +197,7 @@ public void click(ActionEvent args) {
 
 	}
 
-	/*To Generate Dynamic Job Experience Fields*/
+	/*To Generate Dynamic Job Experience Fields in CV Form*/
 
 	public void new_jobexp(ActionEvent args) { 
 		
@@ -585,9 +266,9 @@ public void click(ActionEvent args) {
 		
 		working_dir = working_dir+"user."+filetype;
 		
-		String file2 = "user."+filetype;
-		
-	
+		file2 = "user."+filetype;
+		fl = file2;
+		System.out.println(file2);
 		
 		try {
 			
@@ -809,6 +490,335 @@ public void click(ActionEvent args) {
 			
 	
 		return value;
+		
+	}
+	
+	
+	
+	
+	//Main Generate Button Function//
+	public void click(ActionEvent args) {
+
+		/*Basic Info Fields Extraction */
+		String m = name.getText();
+		String t = Title.getText();
+		String addr = address.getText();
+		String mob = mobile.getText();
+		String g = email.getText();
+		
+		/*Educational Info Fields Extraction */
+		String cg_HS= cgpa_HS.getText();
+		String cg_S= cgpa_S.getText();
+		String s_institute = s_inst.getText();
+		String hs_institute = hs_inst.getText();
+		String cg_U = cgpa_U.getText();
+		String U_institute = U_inst.getText();
+		String U_m = U_major.getText();
+		String U_y = U_year.getText();
+		String hs_py = hs_year.getText();
+		String s_py = s_year.getText();
+		
+		
+		
+		String sk1 = skill1.getText();
+		String sk2 = skill2.getText();
+		String TA = aboutme.getText();
+		String Nat = nationality.getText();
+		
+//		System.out.println(working_dir);
+//		for(int k = 0;k<last;k++) {
+//			
+//			 tex[k] = textField[k].getText();
+//		      System.out.println("text is " + tex[k]);
+	//}
+//		for(int k = 0;k<last1;k++) {
+//			
+//			 tex1[k] = textField1[k].getText();
+//		      System.out.println("text is " + tex1[k]);
+	//}
+		
+		System.out.println(TA);
+			Boolean empty = isempty(m,g,addr,mob);			//empty makes a call to required fields validation method isempty()
+			Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method email_isValid()
+			Boolean m_check = name_isValid(m);				//m_check makes a call to name validation method name_isValid()
+			Boolean mob_check = mobile_check(mob);			//mob_check makes a call to mobile validation method mobile_check()
+//			Boolean dy = dycheck(tex,last,textField);
+//			Boolean dy1 = dycheck1(tex1,last1,textField1);
+			
+			if(empty.equals(false)) {
+				
+			if(m_check.equals(false)) {
+				
+				name.clear();
+				
+				name.setPromptText("Cannot contain numbers or symbols!");
+				
+				name.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+				
+			}
+			
+			if(email_check.equals(false)) {
+				
+			 	email.clear();
+			 	
+		    	email.setPromptText("Not a correct email format!");
+		    	
+				email.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
+				
+			}
+			
+			if(mob_check.equals(false)) {
+				
+				mobile.clear();
+				
+				mobile.setPromptText("Mobile cannot contain letters or characters!");
+				
+				mobile.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
+				
+			}}
+			
+			
+			
+			if(empty.equals(false)) {
+			
+			
+			
+			    if(m_check.equals(true)  && email_check.equals(true) && mob_check.equals(true) ) {
+			
+			
+				String filename = "CV of " + m + ".html";
+		
+				try {
+					
+					System.out.println(fl);
+					PrintWriter outputStream = new PrintWriter(filename);
+
+					
+					String fp = "<!DOCTYPE html>\r\n" + 
+							"<html lang=\"en\" dir=\"ltr\">\r\n" + 
+							"  <head>\r\n" + 
+							"    <meta charset=\"utf-8\">\r\n" + 
+							"    <link href=\"https://fonts.googleapis.com/css?family=Nunito:200,600\" rel=\"stylesheet\">\r\n" + 
+							"    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">\r\n" + 
+							"    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>\r\n" + 
+							"    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>\r\n" + 
+							"    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n" + 
+							"    <link rel=\"stylesheet\" href=\"css/master.css\">\r\n" + 
+							"    <title></title>\r\n" + 
+							"  </head>\r\n" + 
+							"\r\n" + 
+							"<style media=\"screen\">\r\n" + 
+							".cont{\r\n" + 
+							"  width: 1000px;\r\n" + 
+							"}\r\n" + 
+							"</style>\r\n" + 
+							"\r\n" + 
+							"  <body>\r\n" + 
+							"    <div class=\"container\">\r\n" + 
+							"      <div class=\"cont\">\r\n" + 
+							"        <div class=\"row\">\r\n" + 
+							"          <div class=\"col-md-5 col-sm-5\">\r\n" + 
+							"\r\n" + 
+							"            <div class=\"img-border rounded-circle\">\r\n" + 
+							"              <img src=\""+ fl + "\" class=\"rounded-circle\"  alt=\"\">\r\n" + 
+							"            </div>\r\n" + 
+							"            <div id=\"Name-Title\">\r\n" + 
+							"              <h2>" + m + "</h2>\r\n" + 
+							"              <h3>"+t+"</h3>\r\n" + 
+							"\r\n" + 
+							"            </div>\r\n" + 
+							"            <div id=\"personal\" class=\"box\">\r\n" + 
+							"              <h3 class = \"lead\"><span>Personal</span></h3>\r\n" + 
+							"              <div class=\"row\">\r\n" + 
+							"                <div class=\"col-md-4\">\r\n" + 
+							"                  <h5>Name: </h5>\r\n" + 
+							"                  <h5>Date Of Birth: </h5>\r\n" + 
+							"                  <h5>Nationality: </h5>\r\n" + 
+							"                  <h5>Language: </h5>\r\n" + 
+							"                  <h5>Sex: </h5>\r\n" + 
+							"                </div>\r\n" + 
+							"                <div class=\"col-md-8\">\r\n" + 
+							"                  <h5>" + m + "</h5>\r\n" + 
+							"                  <h5>13th Sept, 1995</h5>\r\n" + 
+							"                  <h5>"+Nat+"</h5>\r\n" + 
+							"                  <h5>Bengali, English</h5>\r\n" + 
+							"                  <h5>Male</h5>\r\n" + 
+							"                </div>\r\n" + 
+							"              </div>\r\n" + 
+							"            </div>\r\n" + 
+							"\r\n" + 
+							"            <div id = \"contact\" class=\"box\">\r\n" + 
+							"              <h3 class = \"lead\"><span>Contact</span></h3>\r\n" + 
+							"              <div class=\"row\">\r\n" + 
+							"                <div class=\"col-md-4\">\r\n" + 
+							"                  <h5>Email: </h5>\r\n" + 
+							"                  <h5>Mobile: </h5>\r\n" + 
+							"                  <h5>LinkedIn: </h5>\r\n" + 
+							"                  <h5>Github: </h5>\r\n" + 
+							"                </div>\r\n" + 
+							"                <div class=\"col-md-8\">\r\n" + 
+							"                  <h5>" + g + " </h5>\r\n" + 
+							"                  <h5>" + mob + " </h5>\r\n" + 
+							"                  <h5>Blank </h5>\r\n" + 
+							"                  <h5>Blank </h5>\r\n" + 
+							"                  <h5>Waheed Ahmed </h5>\r\n" + 
+							"                </div>\r\n" + 
+							"              </div>\r\n" + 
+							"            </div>\r\n" + 
+							"\r\n" + 
+							"            <div id=\"Skills\" class=\"box\">\r\n" + 
+							"              <h3 class = \"lead\"><span>Skills</span></h3>\r\n" + 
+							"              <div class=\"row\">\r\n" + 
+							"                <div class=\"col-md-4\">\r\n"+
+							"                  <h5> --"+sk1+"</h5>\r\n" + 
+							"                  <h5> --"+sk2+"</h5>\r\n";
+							String mp = "",mid;
+								
+							for(int k=0;k<last;k++) {
+								if(k==5) {
+									break;
+								}
+
+								mid = skillhtmlGenerator(textField[k].getText(),k);
+								mp = mp+ mid;
+								
+							}
+							
+							mp = mp + "                </div>\r\n" + 
+							"                <div class=\"col-md-8\">\r\n";
+							
+							for(int k=5;k<last;k++) {
+
+								mid = skillhtmlGenerator(textField[k].getText(),k);
+								mp = mp+ mid;
+								
+							}
+							
+							 
+							String lp = "           </div>\r\n" + 
+							"              </div>\r\n" + 
+							"            </div>\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"          </div>\r\n" + 
+							"\r\n" + 
+							"          <div class=\"col-md-7 col-sm-7\">\r\n" + 
+							"             <div id=\"\" class=\"box\">\r\n" + 
+							"\r\n" ; 
+							
+							
+							String About_Me = generateAboutMe(TA);
+							
+						
+							String Edu_label,Edu_inst,Edu_GPA,Edu_year,Edu_Major, Edu = " <h3 class = \"lead\"><span>Education</span></h3>\r\n";
+							/* For Bachelor's Degree info injection */
+							
+								Edu_label = "Bachelor's degree";
+								Edu_inst = U_institute;
+								Edu_GPA = cg_U;
+								Edu_year = U_y;
+								Edu_Major = U_m;
+								Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,Edu_Major);
+								
+								
+								Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
+							
+									
+							
+								Edu_label = "Alevels/HSC Degree";
+								Edu_inst = hs_institute;
+								Edu_GPA = cg_HS;
+								Edu_year = hs_py;
+								Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,"");
+								
+							
+								Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
+							
+								
+								Edu_label = "Olevels/SSC Degree";
+								Edu_inst = s_institute;
+								Edu_GPA = cg_S;
+								Edu_year = s_py;
+								Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year,"");
+							
+								
+								Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
+							
+							
+							
+							
+						String Work_E =	"\r\n" + 
+							"                 <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
+							"                 <div class=\"row\" id = \"Education\">\r\n" + 
+							"                 <div class=\"col-md-5\" >\r\n" + 
+							"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+							"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+							"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+							"\r\n" + 
+							"                   <br>\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"                 </div>\r\n" + 
+							"                 <div class=\"col-md-7\">\r\n" + 
+							"                   <h5>Captain Underpants Burger Joint</h5>\r\n" + 
+							"                   <h5>3 months</h5>\r\n" + 
+							"                   <h5>Waiter</h5>\r\n" + 
+							"\r\n" + 
+							"                   <br>\r\n" + 
+							"                 </div>\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"            </div>\r\n" + 
+							"          </div>\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"          </div>\r\n" + 
+							"\r\n" + 
+							"        </div>\r\n" + 
+							"\r\n" + 
+							"      </div>\r\n" + 
+							"    </div>\r\n" + 
+							"\r\n" + 
+							"\r\n" + 
+							"  </body>\r\n" + 
+							"</html>\r\n" ;
+						String Educ = "";
+						
+							
+					outputStream.println(fp+mp+lp+About_Me+Edu+Work_E);	
+							
+					
+				
+						
+					
+			outputStream.close();
+			
+			System.out.println("Printed!" );
+		
+			}catch(FileNotFoundException e) {
+				
+			e.printStackTrace();
+			
+			};
+			
+			
+			
+			}
+
+			
+
+			    else {
+			    	
+			    	System.out.println("cannot be printed");
+			    	
+			    	}	}
+		
 		
 	}
 	
