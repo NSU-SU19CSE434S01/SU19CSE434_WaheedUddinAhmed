@@ -91,10 +91,60 @@ public class CVGenTesting {
 	
 	
 	
+	
+	
+	
+	
+	
+	
 	/* Email input Test Cases  */
 	
+	@Test			//Case1
+	public void email_input_null() {
+		Boolean value = mcont.email_isValid(null);
+		assertFalse(value);
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
+	
+	@Test			//Case2
+	public void email_input_is_not_null() {
+		Boolean value = mcont.email_isValid("www@email.com");
+		assertTrue(value);
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
 	
 	
+	@Test			//Case3
+	public void email_input_is_empty() {
+		Boolean value = mcont.email_isValid("");
+		assertFalse(value);
+	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
+
+	
+	@Test			//Case4
+	public void email_input_is_not_empty_check() {
+		Boolean value = mcont.email_isValid("www@email.com");
+		assertTrue(value);
+	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
+	
+	
+	@Test			//Case5
+	public void email_input_only_special_character_check() {
+		Boolean value = mcont.email_isValid(":'//.");
+		assertFalse(value);
+	} 			//Checking whether the output is false using assertFalse as 'special characters' are not a valid name input.
+	
+
+	@Test			//Case6
+	public void email_input_only_number_check() {
+		Boolean value = mcont.email_isValid("123");
+		assertFalse(value);
+	}			//Checking whether the output is false using assertFalse as 'numbers' are not a valid name input.
+	
+	
+	@Test			//Case5
+	public void email_input_only_alphabets_check() {
+		Boolean value = mcont.email_isValid("Hello_World");
+		assertFalse(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
+	}
 	
 	
 }

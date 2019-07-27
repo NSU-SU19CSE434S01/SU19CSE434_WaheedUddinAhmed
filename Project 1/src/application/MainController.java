@@ -690,17 +690,21 @@ public void click(ActionEvent args) {
 	
 	
 
-	private boolean email_isValid(String g) {
+	public boolean email_isValid(String g) {
 		
 		Boolean value = true;
 		
 	    String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 	    
-	    if ( g.matches(regex) ==false ) {
+	    
+	    
+	    if ( g== null ||  g.matches(regex) ==false ) {
 	    	
 	    	value = false;
 	    	
 	    }
+	    
+	    
 	    return value;
 	    
 	 }
