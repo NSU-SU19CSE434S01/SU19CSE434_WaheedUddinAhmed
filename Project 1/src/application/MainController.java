@@ -322,12 +322,14 @@ public void click(ActionEvent args) {
 						"\r\n" + 
 						"          <div class=\"col-md-7 col-sm-7\">\r\n" + 
 						"             <div id=\"\" class=\"box\">\r\n" + 
-						"\r\n" + 
-						"               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
-						"              <p >"+ TA + "</p>\r\n" + 
-						"\r\n" + 
-						"\r\n" + 
-						"                 <h3 class = \"lead\"><span>Education</span></h3>\r\n" + 
+						"\r\n" ; 
+						String AM = "";
+						if(!TA.contentEquals("")) {
+							 AM = generateAboutMe(TA);
+						}
+						
+						
+						String Edu = "                 <h3 class = \"lead\"><span>Education</span></h3>\r\n" + 
 						"                 <h4 class= \"lead\">Bachelor's Degree</h4>\r\n" + 
 						"                 <div class=\"row\" id = \"Education\">\r\n" + 
 						"                   <div class=\"col-md-5\" >\r\n" + 
@@ -420,7 +422,7 @@ public void click(ActionEvent args) {
 						"  </body>\r\n" + 
 						"</html>\r\n" ;
 						
-				outputStream.println(fp+mp+lp);	
+				outputStream.println(fp+mp+lp+AM+Edu);	
 						
 				
 			
@@ -449,6 +451,13 @@ public void click(ActionEvent args) {
 		    	}	}
 	
 	
+}
+
+	public String generateAboutMe(String TA) {
+	
+		String About_Me = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
+				"              <p >"+ TA + "</p>\r\n" ;
+		return About_Me;
 }
 
 	/*To Generate Dynamic Skills Fields*/
