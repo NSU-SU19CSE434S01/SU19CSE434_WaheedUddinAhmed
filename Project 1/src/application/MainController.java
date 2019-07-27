@@ -42,7 +42,7 @@ import javafx.event.EventHandler;
 
 public class MainController {
 @FXML
-public TextField name;
+public TextField name,Title;
 @FXML
 public DatePicker Dob;
 @FXML
@@ -53,35 +53,45 @@ public TextField mobile;
 
 @FXML
 public TextField email;
+
 @FXML
 public TextField skill1,skill2;
+
 @FXML
 public Button Generate;
+
 @FXML
 public Label na;
+
 @FXML
 public Button newskill;
+
 @FXML
 public Button newjobexp;
+
 @FXML
 public Button propic;
 
 @FXML
 public HBox next[] = new HBox[20];
+
 @FXML
 public VBox dyvbox1;
+
 @FXML
 public VBox dyvbox2;
+
 @FXML 
 public ImageView Dp;
+
 @FXML 
 public TextField nationality;
+
 @FXML 
 public TextArea aboutme;
+
 @FXML
 public TextField textField[] = new TextField[20];
-
-
 public static String tex[] = new String[20];
 
 @FXML
@@ -89,9 +99,7 @@ public TextField textField1[] = new TextField[20];
 public static String tex1[] = new String[20];
 
 @FXML
-public TextField cgpa_HS;
-@FXML
-public TextField cgpa_S;
+public TextField cgpa_HS, cgpa_S, hs_inst, s_inst, hs_year, s_year;
 
 @FXML
 public VBox JobExpVbox2;
@@ -111,38 +119,47 @@ public String working_dir;
 //Main Generate Button Function//
 public void click(ActionEvent args) {
 
-//	Generate.setOnAction(this);
+	/*Basic Info Fields Extraction */
 	String m = name.getText();
+	String t = Title.getText();
 	String addr = address.getText();
 	String mob = mobile.getText();
-
 	String g = email.getText();
+	
+	/*Educational Info Fields Extraction */
 	String cg_HS= cgpa_HS.getText();
 	String cg_S= cgpa_S.getText();
+	String s_institute = s_inst.getText();
+	String hs_institute = hs_inst.getText();
+	String hs_py = hs_year.getText();
+	String s_py = s_year.getText();
+	
+	
+	
 	String sk1 = skill1.getText();
 	String sk2 = skill2.getText();
 	String TA = aboutme.getText();
 	String Nat = nationality.getText();
 	
-	System.out.println(working_dir);
-	for(int k = 0;k<last;k++) {
-		
-		 tex[k] = textField[k].getText();
-	      System.out.println("text is " + tex[k]);
-}
-	for(int k = 0;k<last1;k++) {
-		
-		 tex1[k] = textField1[k].getText();
-	      System.out.println("text is " + tex1[k]);
-}
+//	System.out.println(working_dir);
+//	for(int k = 0;k<last;k++) {
+//		
+//		 tex[k] = textField[k].getText();
+//	      System.out.println("text is " + tex[k]);
+//}
+//	for(int k = 0;k<last1;k++) {
+//		
+//		 tex1[k] = textField1[k].getText();
+//	      System.out.println("text is " + tex1[k]);
+//}
 	
 	System.out.println(TA);
-		Boolean empty = isempty(m,g,addr,mob);
-		Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method
-		Boolean m_check = name_isValid(m);			//m_check makes a call to name validation method
-		Boolean mob_check = mobile_check(mob);
-		Boolean dy = dycheck(tex,last,textField);
-		Boolean dy1 = dycheck1(tex1,last1,textField1);
+		Boolean empty = isempty(m,g,addr,mob);			//empty makes a call to required fields validation method isempty()
+		Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method email_isValid()
+		Boolean m_check = name_isValid(m);				//m_check makes a call to name validation method name_isValid()
+		Boolean mob_check = mobile_check(mob);			//mob_check makes a call to mobile validation method mobile_check()
+//		Boolean dy = dycheck(tex,last,textField);
+//		Boolean dy1 = dycheck1(tex1,last1,textField1);
 		
 		if(empty.equals(false)) {
 			
@@ -222,7 +239,7 @@ public void click(ActionEvent args) {
 						"            </div>\r\n" + 
 						"            <div id=\"Name-Title\">\r\n" + 
 						"              <h2>" + m + "</h2>\r\n" + 
-						"              <h3>Software Engineer</h3>\r\n" + 
+						"              <h3>"+t+"</h3>\r\n" + 
 						"\r\n" + 
 						"            </div>\r\n" + 
 						"            <div id=\"personal\" class=\"box\">\r\n" + 
@@ -269,8 +286,8 @@ public void click(ActionEvent args) {
 						"              <h3 class = \"lead\"><span>Skills</span></h3>\r\n" + 
 						"              <div class=\"row\">\r\n" + 
 						"                <div class=\"col-md-4\">\r\n"+
-						"                  <h5> --"+skill1.getText()+"</h5>\r\n" + 
-						"                  <h5> --"+skill2.getText()+"</h5>\r\n";
+						"                  <h5> --"+sk1+"</h5>\r\n" + 
+						"                  <h5> --"+sk2+"</h5>\r\n";
 						String mp = "",mid;
 							
 						for(int k=0;k<last;k++) {
@@ -327,18 +344,23 @@ public void click(ActionEvent args) {
 						"                   </div>\r\n" + 
 						"                 </div>\r\n" + 
 						"\r\n" + 
+						
+						
+						
+						
+						
 						"                 <h4 class= \"lead\">Higher Secondary Degree</h4>\r\n" + 
 						"                 <div class=\"row\" id = \"Education\">\r\n" + 
 						"                   <div class=\"col-md-5\" >\r\n" + 
 						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">GPA: </h5>\r\n" + 
 						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
 						"\r\n" + 
 						"                   </div>\r\n" + 
 						"                   <div class=\"col-md-7\">\r\n" + 
-						"                     <h5>European Standard School</h5>\r\n" + 
-						"                     <h5>3.45</h5>\r\n" + 
-						"                     <h5>2019 </h5>\r\n" + 
+						"                     <h5>"+hs_institute+"</h5>\r\n" + 
+						"                     <h5>"+cg_HS+"</h5>\r\n" + 
+						"                     <h5>"+hs_py+"</h5>\r\n" + 
 						"\r\n" + 
 						"                   </div>\r\n" + 
 						"                 </div>\r\n" + 
@@ -347,14 +369,14 @@ public void click(ActionEvent args) {
 						"                 <div class=\"row\" id = \"Education\">\r\n" + 
 						"                   <div class=\"col-md-5\" >\r\n" + 
 						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
+						"                     <h5 id = \"Edu\">GPA: </h5>\r\n" + 
 						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
 						"\r\n" + 
 						"                   </div>\r\n" + 
 						"                   <div class=\"col-md-7\">\r\n" + 
-						"                     <h5>European Standard School</h5>\r\n" + 
-						"                     <h5>3.45</h5>\r\n" + 
-						"                     <h5>2019 </h5>\r\n" + 
+						"                     <h5>"+s_institute+"</h5>\r\n" + 
+						"                     <h5>"+cg_S+"</h5>\r\n" + 
+						"                     <h5>"+s_py+"</h5>\r\n" + 
 						"\r\n" + 
 						"                   </div>\r\n" + 
 						"                 </div>\r\n" + 
@@ -429,12 +451,12 @@ public void click(ActionEvent args) {
 	
 }
 
-/*To Generate Dynamic Skills Fields*/
+	/*To Generate Dynamic Skills Fields*/
 
-public void new_skill(ActionEvent args) {
+	public void new_skill(ActionEvent args) {
 
 	
-	if(i<10) {
+		if(i<10) {
 		
 		if(i==0 || i%2==0) {
 			
@@ -471,7 +493,7 @@ public void new_skill(ActionEvent args) {
 			}
 			else {}
 
-}
+	}
 
 	/*To Generate Dynamic Job Experience Fields*/
 
@@ -544,7 +566,7 @@ public void new_skill(ActionEvent args) {
 		
 		String file2 = "user."+filetype;
 		
-	//	System.out.println(working_dir);	
+	
 		
 		try {
 			
@@ -591,7 +613,7 @@ public void new_skill(ActionEvent args) {
 
 	public String skillhtmlGenerator(String skills,int k) {
 		
-		String mp = null,mid;
+		String mid;
 		
 			mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
 			
