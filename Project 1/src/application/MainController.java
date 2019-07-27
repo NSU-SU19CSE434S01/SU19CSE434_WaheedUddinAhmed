@@ -99,7 +99,7 @@ public TextField textField1[] = new TextField[20];
 public static String tex1[] = new String[20];
 
 @FXML
-public TextField cgpa_HS, cgpa_S, hs_inst, s_inst, hs_year, s_year;
+public TextField cgpa_HS, cgpa_S, hs_inst, s_inst, hs_year, s_year, cgpa_U, U_inst, U_year, U_major;
 
 @FXML
 public VBox JobExpVbox2;
@@ -131,6 +131,10 @@ public void click(ActionEvent args) {
 	String cg_S= cgpa_S.getText();
 	String s_institute = s_inst.getText();
 	String hs_institute = hs_inst.getText();
+	String cg_U = cgpa_U.getText();
+	String U_institute = U_inst.getText();
+	String U_m = U_major.getText();
+	String U_y = U_year.getText();
 	String hs_py = hs_year.getText();
 	String s_py = s_year.getText();
 	
@@ -270,7 +274,6 @@ public void click(ActionEvent args) {
 						"                  <h5>Mobile: </h5>\r\n" + 
 						"                  <h5>LinkedIn: </h5>\r\n" + 
 						"                  <h5>Github: </h5>\r\n" + 
-						"                  <h5>Facebook: </h5>\r\n" + 
 						"                </div>\r\n" + 
 						"                <div class=\"col-md-8\">\r\n" + 
 						"                  <h5>" + g + " </h5>\r\n" + 
@@ -323,66 +326,43 @@ public void click(ActionEvent args) {
 						"          <div class=\"col-md-7 col-sm-7\">\r\n" + 
 						"             <div id=\"\" class=\"box\">\r\n" + 
 						"\r\n" ; 
-						String AM = "";
+						String About_Me = "";
 						if(!TA.contentEquals("")) {
-							 AM = generateAboutMe(TA);
+							 About_Me = generateAboutMe(TA);
 						}
 						
 						
-						String Edu = "                 <h3 class = \"lead\"><span>Education</span></h3>\r\n" + 
-						"                 <h4 class= \"lead\">Bachelor's Degree</h4>\r\n" + 
-						"                 <div class=\"row\" id = \"Education\">\r\n" + 
-						"                   <div class=\"col-md-5\" >\r\n" + 
-						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
-						"\r\n" + 
-						"                   </div>\r\n" + 
-						"                   <div class=\"col-md-7\">\r\n" + 
-						"                     <h5>North South University </h5>\r\n" + 
-						"                     <h5>3.45</h5>\r\n" + 
-						"                     <h5>2019 </h5>\r\n" + 
-						"\r\n" + 
-						"                   </div>\r\n" + 
-						"                 </div>\r\n" + 
-						"\r\n" + 
+						String Edu_label,Edu_inst,Edu_GPA,Edu_year, Edu = " <h3 class = \"lead\"><span>Education</span></h3>\r\n";
+						if(!U_m.contentEquals("")) {
+							Edu_label = "Bachelor's degree";
+							Edu_inst = U_institute;
+							Edu_GPA = cg_U;
+							Edu_year = U_y;
+							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year);
+						}
+						
+								
+						if(!hs_institute.contentEquals("")) {
+							Edu_label = "Alevels/HSC Degree";
+							Edu_inst = hs_institute;
+							Edu_GPA = cg_HS;
+							Edu_year = hs_py;
+							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year);
+						}
+						
+						if(!s_institute.contentEquals("")) {
+							Edu_label = "Olevels/SSC Degree";
+							Edu_inst = s_institute;
+							Edu_GPA = cg_S;
+							Edu_year = s_py;
+							Edu = Edu + generateEduInfo(Edu_label,Edu_inst,Edu_GPA,Edu_year);
+						}
 						
 						
 						
 						
 						
-						"                 <h4 class= \"lead\">Higher Secondary Degree</h4>\r\n" + 
-						"                 <div class=\"row\" id = \"Education\">\r\n" + 
-						"                   <div class=\"col-md-5\" >\r\n" + 
-						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">GPA: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
-						"\r\n" + 
-						"                   </div>\r\n" + 
-						"                   <div class=\"col-md-7\">\r\n" + 
-						"                     <h5>"+hs_institute+"</h5>\r\n" + 
-						"                     <h5>"+cg_HS+"</h5>\r\n" + 
-						"                     <h5>"+hs_py+"</h5>\r\n" + 
-						"\r\n" + 
-						"                   </div>\r\n" + 
-						"                 </div>\r\n" + 
-						"\r\n" + 
-						"                 <h4 class= \"lead\">Secondary Degree</h4>\r\n" + 
-						"                 <div class=\"row\" id = \"Education\">\r\n" + 
-						"                   <div class=\"col-md-5\" >\r\n" + 
-						"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">GPA: </h5>\r\n" + 
-						"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
-						"\r\n" + 
-						"                   </div>\r\n" + 
-						"                   <div class=\"col-md-7\">\r\n" + 
-						"                     <h5>"+s_institute+"</h5>\r\n" + 
-						"                     <h5>"+cg_S+"</h5>\r\n" + 
-						"                     <h5>"+s_py+"</h5>\r\n" + 
-						"\r\n" + 
-						"                   </div>\r\n" + 
-						"                 </div>\r\n" + 
-						"\r\n" + 
+					String Work_E =	"\r\n" + 
 						"                 <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
 						"                 <div class=\"row\" id = \"Education\">\r\n" + 
 						"                 <div class=\"col-md-5\" >\r\n" + 
@@ -422,7 +402,7 @@ public void click(ActionEvent args) {
 						"  </body>\r\n" + 
 						"</html>\r\n" ;
 						
-				outputStream.println(fp+mp+lp+AM+Edu);	
+				outputStream.println(fp+mp+lp+About_Me+Edu+Work_E);	
 						
 				
 			
@@ -451,6 +431,28 @@ public void click(ActionEvent args) {
 		    	}	}
 	
 	
+}
+
+	public String generateEduInfo(String Edu_label,String Edu_inst, String Edu_gpa, String Edu_year) {
+		
+		String Edu = "                 <h4 class= \"lead\">"+Edu_label+"</h4>\r\n" + 
+				"                 <div class=\"row\" id = \"Education\">\r\n" + 
+				"                   <div class=\"col-md-5\" >\r\n" + 
+				"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
+				"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
+				"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
+				"\r\n" + 
+				"                   </div>\r\n" + 
+				"                   <div class=\"col-md-7\">\r\n" + 
+				"                     <h5>"+Edu_inst+" </h5>\r\n" + 
+				"                     <h5>"+Edu_gpa+"</h5>\r\n" + 
+				"                     <h5>"+Edu_year+"</h5>\r\n" + 
+				"\r\n" + 
+				"                   </div>\r\n" + 
+				"                 </div>\r\n" + 
+				"\r\n" ;
+		
+		return Edu;
 }
 
 	public String generateAboutMe(String TA) {

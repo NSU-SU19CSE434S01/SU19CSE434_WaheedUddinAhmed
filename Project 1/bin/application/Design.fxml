@@ -89,7 +89,7 @@
             </TextField>
          </children>
       </VBox>
-      <VBox layoutX="43.0" layoutY="496.0" prefHeight="345.0" prefWidth="557.0">
+      <VBox layoutX="43.0" layoutY="511.0" prefHeight="345.0" prefWidth="557.0">
          <children>
             <Label alignment="CENTER" prefHeight="32.0" prefWidth="384.0" text="Education Info">
                <font>
@@ -184,7 +184,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="mobile1" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="278.0" promptText="e.g Computer SCriene and Engineering(CSE)">
+                  <TextField fx:id="U_major" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="278.0" promptText="e.g Computer SCriene and Engineering(CSE)">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -224,7 +224,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="email11" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="104.0" promptText="e.g 2014">
+                  <TextField fx:id="U_year" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="104.0" promptText="e.g 2014">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -244,7 +244,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="mobile11" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="278.0" promptText="e.g Brac University">
+                  <TextField fx:id="U_inst" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="278.0" promptText="e.g Brac University">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -443,6 +443,11 @@
       </VBox>
       <Button fx:id="propic" layoutX="534.0" layoutY="383.0" mnemonicParsing="false" onAction="#choose_pic" text="Choose Profile Picture" />
       <TextArea fx:id="aboutme" layoutX="1241.0" layoutY="640.0" prefHeight="116.0" prefWidth="264.0" promptText="write a few lines about yourself" />
+      <Label alignment="CENTER" layoutX="1238.0" layoutY="579.0" prefHeight="32.0" prefWidth="264.0" text="About Me">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
 
     
    </children>
