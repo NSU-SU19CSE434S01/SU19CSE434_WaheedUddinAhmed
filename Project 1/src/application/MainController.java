@@ -98,6 +98,7 @@ public TextField textField[] = new TextField[20];
 public static String tex[] = new String[20];
 
 @FXML
+public TextField jobinst,jobdur,jobpost;
 public TextField job_inst[] = new TextField[20];
 public TextField job_dur[] = new TextField[20];
 public TextField job_post[] = new TextField[20];
@@ -115,6 +116,7 @@ public int last=0;
 public int last1 = 0;
 @FXML
 public String n,l;
+public int count =0;
 public int i = 0,w = 0;
 
 
@@ -215,7 +217,7 @@ public String working_dir,file2,fl;
 	public void new_jobexp(ActionEvent args) { 
 		
 	
-		if(j<4) {
+		if(j<3) {
 			job_inst[j] = new TextField();
 			job_inst[j].setPromptText("Job #"+(j+1)+" Institute");
 			
@@ -357,7 +359,7 @@ public String working_dir,file2,fl;
 					"\r\n" + 
 					"                   <br>\r\n" + 
 					"                 </div>\r\n";
-			
+			count++;
 			return je;
 			
 		}
@@ -527,25 +529,16 @@ public String working_dir,file2,fl;
 		String TA = aboutme.getText();
 		String Nat = nationality.getText();
 		
-//		System.out.println(working_dir);
-//		for(int k = 0;k<last;k++) {
-//			
-//			 tex[k] = textField[k].getText();
-//		      System.out.println("text is " + tex[k]);
-	//}
-//		for(int k = 0;k<last1;k++) {
-//			
-//			 tex1[k] = textField1[k].getText();
-//		      System.out.println("text is " + tex1[k]);
-	//}
+
+		
+		if(jobinst.getText()!="" && jobdur.getText()!="" && jobpost.getText()!="") {count = 1;}
 		
 		System.out.println(TA);
 			Boolean empty = isempty(m,g,addr,mob);			//empty makes a call to required fields validation method isempty()
 			Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method email_isValid()
 			Boolean m_check = name_isValid(m);				//m_check makes a call to name validation method name_isValid()
 			Boolean mob_check = mobile_check(mob);			//mob_check makes a call to mobile validation method mobile_check()
-//			Boolean dy = dycheck(tex,last,textField);
-//			Boolean dy1 = dycheck1(tex1,last1,textField1);
+
 			
 			if(empty.equals(false)) {
 				
@@ -748,16 +741,35 @@ public String working_dir,file2,fl;
 								
 								Edu_inst = ""; //resetting the check variable for the method "generateEduInfo()"
 							
+								
 							
 							
-							String Work_E = "                 <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
-									"                 <div class=\"row\" id = \"Education\">\r\n";
-					
+						String	Work_E = "  <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
+											" <div class=\"row\" id = \"Education\">\r\n";
+						
+						String	je = "                 <div class=\"col-md-5\" >\r\n" + 
+								"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+								"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+								"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+								"\r\n" + 
+								"                   <br>\r\n" + 
+								"\r\n" + 
+								"\r\n" + 
+								"\r\n" + 
+								"                 </div>\r\n" + 
+								"                 <div class=\"col-md-7\">\r\n" + 
+								"                   <h5>"+jobinst.getText()+"</h5>\r\n" + 
+								"                   <h5>"+jobdur.getText()+"</h5>\r\n" + 
+								"                   <h5>"+jobpost.getText()+"</h5>\r\n" + 
+								"\r\n" + 
+								"                   <br>\r\n" + 
+								"                 </div>\r\n";
+						Work_E = Work_E + je;
 							
-							String we = "",wid;
+							String wid;
 							
 							for(int j=0;j<last1;j++) {
-								if(j==4) {
+								if(j==3) {
 									break;
 								}
 

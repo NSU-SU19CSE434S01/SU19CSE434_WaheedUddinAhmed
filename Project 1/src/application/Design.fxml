@@ -345,17 +345,17 @@
             </HBox>
             <HBox prefHeight="29.0" prefWidth="343.0">
                <children>
-                  <TextField maxWidth="-Infinity" prefWidth="275.0" promptText="Job #! Institution">
+                  <TextField fx:id="jobinst" maxWidth="-Infinity" prefWidth="275.0" promptText="Job #! Institution">
                      <effect>
                         <DropShadow />
                      </effect>
                   </TextField>
-                  <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="278.0" promptText="Job #1 Duration">
+                  <TextField fx:id="jobdur" maxWidth="-Infinity" prefHeight="25.0" prefWidth="278.0" promptText="Job #1 Duration">
                      <effect>
                         <DropShadow />
                      </effect>
                   </TextField>
-                  <TextField maxWidth="-Infinity" prefHeight="25.0" prefWidth="278.0" promptText="Job #! Post">
+                  <TextField fx:id="jobpost" maxWidth="-Infinity" prefHeight="25.0" prefWidth="278.0" promptText="Job #! Post">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -364,7 +364,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="RefVbox" layoutX="1201.0" layoutY="134.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
+      <VBox fx:id="RefVbox" layoutX="1167.0" layoutY="134.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
          <children>
             <HBox prefHeight="51.0" prefWidth="343.0">
                <children>
