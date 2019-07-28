@@ -82,6 +82,9 @@ public VBox dyvbox1;
 public VBox dyvbox2;
 
 @FXML 
+public VBox JEVbox;
+
+@FXML 
 public ImageView Dp;
 
 @FXML 
@@ -95,7 +98,10 @@ public TextField textField[] = new TextField[20];
 public static String tex[] = new String[20];
 
 @FXML
-public TextField textField1[] = new TextField[20];
+public TextField job_inst[] = new TextField[20];
+public TextField job_dur[] = new TextField[20];
+public TextField job_post[] = new TextField[20];
+
 public static String tex1[] = new String[20];
 
 @FXML
@@ -109,7 +115,7 @@ public int last=0;
 public int last1 = 0;
 @FXML
 public String n,l;
-public int i = 0;
+public int i = 0,w = 0;
 
 
 public String working_dir,file2,fl;
@@ -197,30 +203,36 @@ public String working_dir,file2,fl;
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
 	/*To Generate Dynamic Job Experience Fields in CV Form*/
 
 	public void new_jobexp(ActionEvent args) { 
 		
-		System.out.println("hello world");
-		
+	
 		if(j<4) {
-	
-		  textField1[j] = new TextField();
-	      
-	      textField1[j].getStyleClass().add("dy-text1");
-	      
-	      textField1[j].setPromptText("Add a job");
-	      
-	      JobExpVbox2.getChildren().add(textField1[j]);
-	      
-	      JobExpVbox2.setSpacing(20);
-	      
-	      j=j+1;
-	      
-	      last1 = j;
-				}
+			job_inst[j] = new TextField();
+			job_inst[j].setPromptText("Job #"+(j+1)+" Institute");
+			
+			job_dur[j] = new TextField();
+			job_post[j] = new TextField();
+			next[j] = new HBox();
+			next[j].getChildren().addAll(job_inst[j],job_dur[j],job_post[j]);
+			next[j].getStyleClass().add("dyWE");
+			JEVbox.getChildren().add(next[j]);
+			JEVbox.setSpacing(20);
+			j++;
+			last1 = j;
+			
+		}
+		
 		else {}
-	
+		
 	
 	}
 
@@ -324,7 +336,31 @@ public String working_dir,file2,fl;
 		}
 	
 
-
+	public String WEhtmlGenerator(String job_inst, String job_dur, String job_post,int j) {
+		
+		String je;
+		
+			je = "                 <div class=\"col-md-5\" >\r\n" + 
+					"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+					"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+					"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+					"\r\n" + 
+					"                   <br>\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"\r\n" + 
+					"                 </div>\r\n" + 
+					"                 <div class=\"col-md-7\">\r\n" + 
+					"                   <h5>"+job_inst+"</h5>\r\n" + 
+					"                   <h5>"+job_dur+"</h5>\r\n" + 
+					"                   <h5>"+job_post+"</h5>\r\n" + 
+					"\r\n" + 
+					"                   <br>\r\n" + 
+					"                 </div>\r\n";
+			
+			return je;
+			
+		}
 
 
 	
@@ -601,14 +637,14 @@ public String working_dir,file2,fl;
 							"                  <h5>Date Of Birth: </h5>\r\n" + 
 							"                  <h5>Nationality: </h5>\r\n" + 
 							"                  <h5>Language: </h5>\r\n" + 
-							"                  <h5>Sex: </h5>\r\n" + 
+							
 							"                </div>\r\n" + 
 							"                <div class=\"col-md-8\">\r\n" + 
 							"                  <h5>" + m + "</h5>\r\n" + 
 							"                  <h5>13th Sept, 1995</h5>\r\n" + 
 							"                  <h5>"+Nat+"</h5>\r\n" + 
 							"                  <h5>Bengali, English</h5>\r\n" + 
-							"                  <h5>Male</h5>\r\n" + 
+							
 							"                </div>\r\n" + 
 							"              </div>\r\n" + 
 							"            </div>\r\n" + 
@@ -714,28 +750,26 @@ public String working_dir,file2,fl;
 							
 							
 							
+							String Work_E = "                 <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
+									"                 <div class=\"row\" id = \"Education\">\r\n";
+					
 							
-						String Work_E =	"\r\n" + 
-							"                 <h3 class = \"lead\" id =\"WE\"><span>Work Experience</span></h3>\r\n" + 
-							"                 <div class=\"row\" id = \"Education\">\r\n" + 
-							"                 <div class=\"col-md-5\" >\r\n" + 
-							"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
-							"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
-							"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
-							"\r\n" + 
-							"                   <br>\r\n" + 
-							"\r\n" + 
-							"\r\n" + 
-							"\r\n" + 
-							"                 </div>\r\n" + 
-							"                 <div class=\"col-md-7\">\r\n" + 
-							"                   <h5>Captain Underpants Burger Joint</h5>\r\n" + 
-							"                   <h5>3 months</h5>\r\n" + 
-							"                   <h5>Waiter</h5>\r\n" + 
-							"\r\n" + 
-							"                   <br>\r\n" + 
-							"                 </div>\r\n" + 
-							"\r\n" + 
+							String we = "",wid;
+							
+							for(int j=0;j<last1;j++) {
+								if(j==4) {
+									break;
+								}
+
+								wid = WEhtmlGenerator(job_inst[j].getText(),job_dur[j].getText(),job_post[j].getText(),j);
+								Work_E = Work_E + wid;
+								
+							}
+							
+							
+							
+							
+							String Lastpart ="\r\n" + 
 							"\r\n" + 
 							"\r\n" + 
 							"\r\n" + 
@@ -754,10 +788,11 @@ public String working_dir,file2,fl;
 							"\r\n" + 
 							"  </body>\r\n" + 
 							"</html>\r\n" ;
+							
 						String Educ = "";
 						
 							
-					outputStream.println(fp+mp+lp+About_Me+Edu+Work_E);	
+					outputStream.println(fp+mp+lp+About_Me+Edu+Work_E + Lastpart);	
 							
 					
 				
