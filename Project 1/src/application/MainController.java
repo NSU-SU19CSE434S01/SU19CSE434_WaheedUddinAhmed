@@ -46,7 +46,7 @@ public TextField name,Title;
 @FXML
 public DatePicker Dob;
 @FXML
-public TextField address;
+public TextField Languages;
 @FXML
 public TextField mobile;
 
@@ -233,10 +233,12 @@ public String working_dir,file2,fl;
 	
 		if(j<3) {
 			job_inst[j] = new TextField();
-			job_inst[j].setPromptText("Job #"+(j+1)+" Institute");
+			job_inst[j].setPromptText("Job #"+(j+2)+" Institute");
 			
 			job_dur[j] = new TextField();
+			job_dur[j].setPromptText("Job #"+(j+2)+" Duration");
 			job_post[j] = new TextField();
+			job_post[j].setPromptText("Job #"+(j+2)+" Post");
 			next[j] = new HBox();
 			next[j].getChildren().addAll(job_inst[j],job_dur[j],job_post[j]);
 			next[j].getStyleClass().add("dyWE");
@@ -457,7 +459,7 @@ public String working_dir,file2,fl;
 	
 	
 	
-	public boolean isempty(String m,String g,String addr,String mob) {
+	public boolean isempty(String m,String g,String mob) {
 		
 		Boolean value = true;
 		
@@ -520,8 +522,8 @@ public String working_dir,file2,fl;
 		/*Basic Info Fields Extraction */
 		String m = name.getText();
 		String t = Title.getText();
-		String addr = address.getText();
 		String mob = mobile.getText();
+		String lan = Languages.getText();
 		String g = email.getText();
 		
 		/*Educational Info Fields Extraction */
@@ -548,7 +550,7 @@ public String working_dir,file2,fl;
 		if(jobinst.getText()!="" && jobdur.getText()!="" && jobpost.getText()!="") {count = 1;}
 		
 		System.out.println(TA);
-			Boolean empty = isempty(m,g,addr,mob);			//empty makes a call to required fields validation method isempty()
+			Boolean empty = isempty(m,g,mob);			//empty makes a call to required fields validation method isempty()
 			Boolean email_check = email_isValid(g);			//email_check makes a call to email validation method email_isValid()
 			Boolean m_check = name_isValid(m);				//m_check makes a call to name validation method name_isValid()
 			Boolean mob_check = mobile_check(mob);			//mob_check makes a call to mobile validation method mobile_check()
@@ -650,7 +652,7 @@ public String working_dir,file2,fl;
 							"                  <h5>" + m + "</h5>\r\n" + 
 							"                  <h5>13th Sept, 1995</h5>\r\n" + 
 							"                  <h5>"+Nat+"</h5>\r\n" + 
-							"                  <h5>Bengali, English</h5>\r\n" + 
+							"                  <h5>"+lan+"</h5>\r\n" + 
 							
 							"                </div>\r\n" + 
 							"              </div>\r\n" + 
