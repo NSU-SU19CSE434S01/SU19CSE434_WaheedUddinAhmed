@@ -338,20 +338,26 @@ public String working_dir,file2,fl;
 
 
 
-	public String skillhtmlGenerator(String skills,int k) {
+	public String skillhtmlGenerator(String skills) {
 		
 		String mid;
+		if(skills==null || skills == "") {return "";}
+		else
 		
-			mid = "<h5> --"+ textField[k].getText()+"</h5>\r\n";
+			mid = "<h5> "+ skills + "</h5>\r\n";
 			
 			return mid;
 			
 		}
 	
 
-	public String WEhtmlGenerator(String job_inst, String job_dur, String job_post,int j) {
+	public String WEhtmlGenerator(String job_inst, String job_dur, String job_post) {
 		
 		String je;
+		if(job_inst==null||job_inst=="") {return "";}
+		else if(job_dur ==null || job_dur ==""){return "";}
+		else if(job_post ==null || job_post ==""){return "";}
+		else
 		
 			je = "                 <div class=\"col-md-5\" >\r\n" + 
 					"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
@@ -679,7 +685,7 @@ public String working_dir,file2,fl;
 									break;
 								}
 
-								mid = skillhtmlGenerator(textField[k].getText(),k);
+								mid = skillhtmlGenerator(textField[k].getText());
 								mp = mp+ mid;
 								
 							}
@@ -778,7 +784,7 @@ public String working_dir,file2,fl;
 									break;
 								}
 
-								wid = WEhtmlGenerator(job_inst[j].getText(),job_dur[j].getText(),job_post[j].getText(),j);
+								wid = WEhtmlGenerator(job_inst[j].getText(),job_dur[j].getText(),job_post[j].getText());
 								Work_E = Work_E + wid;
 								
 							}
