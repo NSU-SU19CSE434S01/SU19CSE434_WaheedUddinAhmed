@@ -103,7 +103,16 @@ public class CVGenTesting {
 	
 	
 	
+	/*Graphing for email_isValid()*/
 	
+	/* Node 1: checks the condition (Condition Checking Node) whether input == null or if input does not matches the given regex (Starting Node)
+	 * Node 2: If input == null and does not matches the given regex, return boolean value = false (Final Node)
+	 * Node 3: if input != null and the matches the given regex, (Condition Checking Node)  return boolean value = false (Final Node)
+	 * 
+	 * Prime Paths: [1,2] [1,3]
+	 * For Prime Path 1 the value is : "Wheed213@.com"
+	 * For Prime Path 2 the value is : "www123@email.com"
+	 */
 	
 	
 	/* Email input Test Cases  */
@@ -154,6 +163,31 @@ public class CVGenTesting {
 		Boolean value = mcont.email_isValid("Hello_World");
 		assertFalse(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

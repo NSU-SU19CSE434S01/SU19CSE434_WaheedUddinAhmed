@@ -382,9 +382,11 @@ public String working_dir,file2,fl;
 	public boolean mobile_check(String mob) {
 	
 	
-		String regex = "^[0-9]*$";
-	
-		if(mob.matches(regex) && mob.length() < 14 && mob.length() > 8 && !mob.matches("") && mob!="" && mob!= null){
+		String regex = "^[0-9]\\d{8}$|^[0-9]\\d{10}$|^[0-9]\\d{12}$|^[0-9]\\d{6}$";
+		
+		if(mob==null) {return false;}
+		
+		else if(mob.matches(regex)){
 		
 	    return true;
 	
