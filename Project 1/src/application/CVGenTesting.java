@@ -170,6 +170,72 @@ public class CVGenTesting {
 	
 	
 	
+/*Graphing for mobile_check()*/
+	
+	/* Node 1: checks the condition (Condition Checking Node) whether input == null  (Starting Node)
+	 * Node 2: If input == null return boolean value = false (Final Node)
+	 * Node 3: if input != null, check whether matches regex or not(Condition Checking Node) 
+	 * Node 4: if input matches regex  return boolean value = true (Final Node)
+	 * Node 5 if input does not match regex, return boolean value = false (Final Node)
+	 * 
+	 * Prime Paths: [1,2] [1,3,4] [1,3,5]
+	 * For Prime Path 1 the value is : null
+	 * For Prime Path 2 the value is : "01754653587"
+	 * For Prime Path 3 the value is : "W2314"
+	 */
+		
+	
+	
+	
+	/*Name input Test Cases*/
+	
+	
+	@Test			//Case1
+	public void mobile_input_null() {
+		Boolean value = mcont.mobile_check(null);
+		assertFalse(value);
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
+	
+	@Test			//Case2
+	public void mobile_input_is_not_null() {
+		Boolean value = mcont.mobile_check("01751841625");
+		assertTrue(value);
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
+	
+	
+	@Test			//Case3
+	public void mobile_input_is_empty() {
+		Boolean value = mcont.mobile_check("");
+		assertFalse(value);
+	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
+
+	
+	@Test			//Case4
+	public void mobile_input_is_not_empty_check() {
+		Boolean value = mcont.mobile_check("01751841625");
+		assertTrue(value);
+	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
+	
+	
+	@Test			//Case5
+	public void mobile_input_special_character_check() {
+		Boolean value = mcont.mobile_check(":'//.");
+		assertFalse(value);
+	} 			//Checking whether the output is false using assertFalse as 'special characters' are not a valid name input.
+	
+
+	@Test			//Case6
+	public void mobile_input_number_check() {
+		Boolean value = mcont.mobile_check("12312312343");
+		assertTrue(value);
+	}			//Checking whether the output is false using assertFalse as 'numbers' are not a valid name input.
+	
+	
+	@Test			//Case5
+	public void mobile_input_alphabets_check() {
+		Boolean value = mcont.mobile_check("Hello World");
+		assertFalse(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
+	}
 	
 	
 	
