@@ -364,7 +364,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="RefVbox" layoutX="1201.0" layoutY="134.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
+      <VBox fx:id="RefVbox" layoutX="1167.0" layoutY="134.0" prefHeight="323.0" prefWidth="343.0" styleClass="doodm">
          <children>
             <HBox prefHeight="51.0" prefWidth="343.0">
                <children>

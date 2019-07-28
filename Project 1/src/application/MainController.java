@@ -131,15 +131,24 @@ public String working_dir,file2,fl;
 		String Edu = "                 <h4 class= \"lead\">"+Edu_label+"</h4>\r\n" + 
 				"                 <div class=\"row\" id = \"Education\">\r\n" + 
 				"                   <div class=\"col-md-5\" >\r\n" + 
-				"                     <h5 id = \"Edu\">Institution: </h5>\r\n" + 
-				"                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
+				"                     <h5 id = \"Edu\">Institution: </h5>\r\n"; 
+			if(Edu_label=="Bachelor's Degree") {
+				Edu= Edu + "<h5 id = \"Edu\">Major: </h5>\r\n";
+				}
+				
+				
+				Edu = Edu+ "                     <h5 id = \"Edu\">CGPA: </h5>\r\n" + 
 				"                     <h5 id = \"Edu\">Passing Year: </h5>\r\n" + 
 				"\r\n" + 
 				"                   </div>\r\n" + 
 				"                   <div class=\"col-md-7\">\r\n" + 
-				"                     <h5>"+Edu_inst+" </h5>\r\n" + 
-				"                     <h5>"+Edu_gpa+"</h5>\r\n" + 
-				"                     <h5>"+Edu_year+"</h5>\r\n" + 
+				"                     <h5>"+Edu_inst+" </h5>\r\n";
+			if(Edu_label=="Bachelor's Degree") {
+					Edu= Edu + "<h5 id = \"Edu\">"+Edu_Major+"</h5>\r\n";
+				}
+				
+				Edu = Edu+ "         <h5>"+Edu_gpa+"</h5>\r\n" + 
+				"                    <h5>"+Edu_year+"</h5>\r\n" + 
 				"\r\n" + 
 				"                   </div>\r\n" + 
 				"                 </div>\r\n" + 
@@ -470,13 +479,7 @@ public String working_dir,file2,fl;
 			
 			}
 			
-//		if(addr.contentEquals("")) {
-//			address.setPromptText("address field cannot be empty!");
-//			address.setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");
-//		}
-//		else {
-//			value = false; 
-//			}
+
 			
 		if(mob.contentEquals("")) {
 			
@@ -710,7 +713,7 @@ public String working_dir,file2,fl;
 							String Edu_label,Edu_inst,Edu_GPA,Edu_year,Edu_Major, Edu = " <h3 class = \"lead\"><span>Education</span></h3>\r\n";
 							/* For Bachelor's Degree info injection */
 							
-								Edu_label = "Bachelor's degree";
+								Edu_label = "Bachelor's Degree";
 								Edu_inst = U_institute;
 								Edu_GPA = cg_U;
 								Edu_year = U_y;
