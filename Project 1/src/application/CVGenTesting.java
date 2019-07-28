@@ -62,70 +62,50 @@ public class CVGenTesting {
 	
 	@Test			//Case1
 	public void name_input_null() {
-		
 		Boolean value = mcont.name_isValid(null);
-		
 		assertFalse(value);
 	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
 	
 	@Test			//Case2
 	public void name_input_is_not_null() {
-		
 		Boolean value = mcont.name_isValid("Waheed");
-		
 		assertTrue(value);
 	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
 	
 	
 	@Test			//Case3
 	public void name_input_is_empty() {
-		
 		Boolean value = mcont.name_isValid("");
-		
 		assertFalse(value);
 	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
 
 	
 	@Test			//Case4
 	public void name_input_is_not_empty_check() {
-		
 		Boolean value = mcont.name_isValid("Waheed");
-		
 		assertTrue(value);
 	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
 	
 	
 	@Test			//Case5
 	public void name_input_special_character_check() {
-		
 		Boolean value = mcont.name_isValid(":'//.");
-		
 		assertFalse(value);
 	} 			//Checking whether the output is false using assertFalse as 'special characters' are not a valid name input.
 	
 
 	@Test			//Case6
 	public void name_input_number_check() {
-		
 		Boolean value = mcont.name_isValid("123");
-		
 		assertFalse(value);
 	}			//Checking whether the output is false using assertFalse as 'numbers' are not a valid name input.
 	
 	
 	@Test			//Case5
 	public void name_input_alphabets_check() {
-		
 		Boolean value = mcont.name_isValid("Hello World");
-		
 		assertTrue(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -148,42 +128,32 @@ public class CVGenTesting {
 	 */
 	
 	
+	
 	/* Email input Test Cases  */
 	
 	@Test			//Case1
 	public void email_input_null() {
-		
 		Boolean value = mcont.email_isValid(null);
-		
 		assertFalse(value);
-		
 	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
 	
 	@Test			//Case2
 	public void email_input_is_not_null() {
-		
 		Boolean value = mcont.email_isValid("www@email.com");
-		
 		assertTrue(value);
-		
 	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
 	
 	
 	@Test			//Case3
 	public void email_input_is_empty() {
-		
 		Boolean value = mcont.email_isValid("");
-		
 		assertFalse(value);
-		
 	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
 
 	
 	@Test			//Case4
 	public void email_input_is_not_empty_check() {
-		
 		Boolean value = mcont.email_isValid("www@email.com");
-		
 		assertTrue(value);
 		
 	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
@@ -191,19 +161,14 @@ public class CVGenTesting {
 	
 	@Test			//Case5
 	public void email_input_only_special_character_check() {
-		
 		Boolean value = mcont.email_isValid(":'//.");
-		
 		assertFalse(value);
-		
 	} 			//Checking whether the output is false using assertFalse as 'special characters' are not a valid name input.
 	
 
 	@Test			//Case6
 	public void email_input_only_number_check() {
-		
 		Boolean value = mcont.email_isValid("123");
-		
 		assertFalse(value);
 		
 	}			//Checking whether the output is false using assertFalse as 'numbers' are not a valid name input.
@@ -211,18 +176,13 @@ public class CVGenTesting {
 	
 	@Test			//Case5
 	public void email_input_only_alphabets_check() {
-		
 		Boolean value = mcont.email_isValid("Hello_World");
-		
 		assertFalse(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
 		
 	}
 	
 	
-	
-	
-	
-	
+
 	
 	/*Graphing for mobile_check()*/
 	
@@ -257,53 +217,137 @@ public class CVGenTesting {
 	public void mobile_input_null() {
 		Boolean value = mcont.mobile_check(null);
 		assertFalse(value);
-	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid number input.(Prime path 1)
 	
 	@Test			//Case2
 	public void mobile_input_is_not_null() {
 		Boolean value = mcont.mobile_check("01751841625");
 		assertTrue(value);
-	}			//Checking whether the output is false using assertFalse as 'null' is not a valid name input.
+	}			//Checking whether the output is true using assertTalse as '01751841625' is  a valid number input.(Prime path 2)
 	
 	
 	@Test			//Case3
 	public void mobile_input_is_empty() {
 		Boolean value = mcont.mobile_check("");
 		assertFalse(value);
-	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
+	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid number input.
 
 	
 	@Test			//Case4
 	public void mobile_input_is_not_empty_check() {
 		Boolean value = mcont.mobile_check("01751841625");
 		assertTrue(value);
-	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid name input.
+	}			//Checking whether the output is false using assertFalse as an 'empty' string is not a valid number input.(Prime path 2)
 	
 	
 	@Test			//Case5
 	public void mobile_input_special_character_check() {
 		Boolean value = mcont.mobile_check(":'//.");
 		assertFalse(value);
-	} 			//Checking whether the output is false using assertFalse as 'special characters' are not a valid name input.
+	} 			//Checking whether the output is false using assertFalse as 'special characters' are not a valid number input.
 	
 
 	@Test			//Case6
 	public void mobile_input_number_check() {
 		Boolean value = mcont.mobile_check("12312312343");
 		assertTrue(value);
-	}			//Checking whether the output is false using assertFalse as 'numbers' are not a valid name input.
+	}			//Checking whether the output is true using assertTrue as '11 digit number' is a valid Mobile/Phone number input.
 	
 	
 	@Test			//Case5
 	public void mobile_input_alphabets_check() {
-		Boolean value = mcont.mobile_check("Hello World");
-		assertFalse(value);			//Checking whether the output is True using assertTrue as 'Alphabets' are not a valid name output.
+		Boolean value = mcont.mobile_check("W3234");
+		assertFalse(value);			//Checking whether the output is False using assertFrue as 'Alphabets' are not a valid number output.
 	}
 	
 	
 	
 	
+/*Graphing for generateAboutMe()*/
+	
+	/* Node 1: checks the condition (Condition Checking Node) whether input == null || input == ""  (Starting Node)
+	 * 
+	 * Node 2: If input == null return "" (Final Node)
+	 * 
+	 * Node 3: if input != null, (Condition Checking Node)  return given String (Final Node)
+	 * 
+	 * Prime Paths: [1,2] [1,3]
+	 * 
+	 * For Prime Path 1 the value is : null
+	 * 
+	 * For Prime Path 2 the value is : "Hello, I am a student of North South University"
+	 */
+		
+	
+	
+	
+	/*generateAboutMe input Test Cases*/
+	
+	
+	@Test			//Case1
+	public void generateAboutMe_input_null() {
+		String actual = mcont.generateAboutMe(null);
+		String expected = "";
+		assertEquals(expected,actual);
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid generateAboutMe input.
+	
+	@Test			//Case2
+	public void generateAboutMe_input_is_not_null() {
+		String aboutme = "Hello World";
+		String actual = mcont.generateAboutMe(aboutme);
+		String expected = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
+				"              <p >"+ aboutme + "</p>\r\n" ;
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals  if the input is not null.
+	
+	
+	@Test			//Case3
+	public void generateAboutMe_input_is_empty() {
+		String actual = mcont.generateAboutMe("");
+		String expected = "";
+		assertEquals(expected, actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input in empty.
 
+	
+	@Test			//Case4
+	public void generateAboutMe_input_is_not_empty_check() {
+		String aboutme = "Waheed";
+		String actual = mcont.generateAboutMe(aboutme);
+		String expected = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
+				"              <p >"+ aboutme + "</p>\r\n" ;
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input in empty.
+	
+	
+	@Test			//Case5
+	public void generateAboutMe_input_special_character_check() {
+		String aboutme = "*.sd/";
+		String actual = mcont.generateAboutMe(aboutme);
+		String expected = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
+				"              <p >"+ aboutme + "</p>\r\n" ;
+		assertEquals(expected,actual);
+	} 			//Checking whether the output matches with the expected value using assertEquals if the input contains special characters.
+	
+
+	@Test			//Case6
+	public void generateAboutMe_input_number_check() {
+		String aboutme = "131132";
+		String actual = mcont.generateAboutMe(aboutme);
+		String expected = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
+				"              <p >"+ aboutme + "</p>\r\n" ;
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input contains numbers.
+	
+	
+	@Test			//Case5
+	public void generateAboutMe_input_alphabets_check() {
+		String aboutme = "ADFdsg hello";
+		String actual = mcont.generateAboutMe(aboutme);
+		String expected = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
+				"              <p >"+ aboutme + "</p>\r\n" ;
+		assertEquals(expected,actual);
+	} 			//Checking whether the output matches with the expected value using assertEquals if the input contains Just Alphabets.
+	
 	
 	
 	

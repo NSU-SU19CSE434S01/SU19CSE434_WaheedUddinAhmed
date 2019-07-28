@@ -162,7 +162,9 @@ public String working_dir,file2,fl;
 }
 
 	public String generateAboutMe(String TA) {
-		if(!TA.contentEquals("")) {
+	
+		if(TA==null || TA == "") {return "";}
+		else if(!TA.contentEquals("")) {
 		String About_Me = "               <h3 class = \"lead\"><span>About Me</span></h3>\r\n" + 
 				"              <p >"+ TA + "</p>\r\n" ;
 		return About_Me;}
