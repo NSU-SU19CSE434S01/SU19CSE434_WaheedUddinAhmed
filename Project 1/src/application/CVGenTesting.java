@@ -354,9 +354,91 @@ public class CVGenTesting {
 	
 	
 	
+/*Graphing for skillhtmlGenerator()*/
+	
+	/* Node 1: checks the condition (Condition Checking Node) whether input == null || input == ""  (Starting Node)
+	 * 
+	 * Node 2: If input == null || input == "" ,return "" (Final Node)
+	 * 
+	 * Node 3: if input != null or input != "", (Condition Checking Node)  return given String (Final Node)
+	 * 
+	 * Prime Paths: [1,2] [1,3]
+	 * 
+	 * For Prime Path 1 the value is : null
+	 * 
+	 * For Prime Path 2 the value is : "Java"
+	 */
+		
+	
+	
+	
+	/*skillhtmlGenerator input Test Cases*/
+	
+	
+	@Test			//Case1
+	public void skillhtmlGenerator_input_null() {
+		String actual = mcont.skillhtmlGenerator(null);
+		String expected = "";
+		assertEquals(expected,actual);
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid generateAboutMe input.
+	
+	@Test			//Case2
+	public void skillhtmlGenerator_input_is_not_null() {
+		String skills = "Java";
+		String actual = mcont.skillhtmlGenerator(skills);
+		String expected = "<h5> "+ skills + "</h5>\r\n";
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals  if the input is not null.
+	
+	
+	@Test			//Case3
+	public void skillhtmlGenerator_input_is_empty() {
+		String actual = mcont.skillhtmlGenerator("");
+		String expected = "";
+		assertEquals(expected, actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input in empty.
 
 	
+	@Test			//Case4
+	public void skillhtmlGenerator_is_not_empty_check() {
+		String skills = "Waheed";
+		String actual = mcont.skillhtmlGenerator(skills);
+		String expected = "<h5> "+ skills + "</h5>\r\n";
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input in empty.
 	
+	
+	@Test			//Case5
+	public void skillhtmlGenerator_input_special_character_check() {
+		String skills = "*.sd/";
+		String actual = mcont.skillhtmlGenerator(skills);
+		String expected = "<h5> "+ skills + "</h5>\r\n";
+		assertEquals(expected,actual);
+	} 			//Checking whether the output matches with the expected value using assertEquals if the input contains special characters.
+	
+
+	@Test			//Case6
+	public void skillhtmlGenerator_input_number_check() {
+		String skills = "131132";
+		String actual = mcont.skillhtmlGenerator(skills);
+		String expected = "<h5> "+ skills + "</h5>\r\n";
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input contains numbers.
+	
+	
+	
+	@Test			//Case5
+	public void skillhtmlGenerator_input_alphabets_check() {
+		String skills = "ADFdsg hello";
+		String actual = mcont.skillhtmlGenerator(skills);
+		String expected = "<h5> "+ skills + "</h5>\r\n";
+		assertEquals(expected,actual);
+	} 			//Checking whether the output matches with the expected value using assertEquals if the input contains Just Alphabets.
+	
+	
+	
+	
+
 
 	
 	
