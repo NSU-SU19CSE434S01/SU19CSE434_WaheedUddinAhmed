@@ -127,8 +127,12 @@ public String working_dir,file2,fl;
 
 
 	public String generateEduInfo(String Edu_label,String Edu_inst, String Edu_gpa, String Edu_year, String Edu_Major) {
-		if(!Edu_inst.contentEquals("")) {
-		String Edu = "                 <h4 class= \"lead\">"+Edu_label+"</h4>\r\n" + 
+		String Edu = "";
+		if(Edu_inst==null || Edu_inst=="") {return "";}
+		if(Edu_gpa==null || Edu_gpa=="") {return "";}
+		if(Edu_year==null || Edu_year=="") {return "";}
+		else {
+		 Edu = "                 <h4 class= \"lead\">"+Edu_label+"</h4>\r\n" + 
 				"                 <div class=\"row\" id = \"Education\">\r\n" + 
 				"                   <div class=\"col-md-5\" >\r\n" + 
 				"                     <h5 id = \"Edu\">Institution: </h5>\r\n"; 
@@ -157,8 +161,7 @@ public String working_dir,file2,fl;
 		return Edu;
 		
 		}
-		else 
-			return "";
+		
 }
 
 	public String generateAboutMe(String TA) {
@@ -676,8 +679,8 @@ public String working_dir,file2,fl;
 							"              <h3 class = \"lead\"><span>Skills</span></h3>\r\n" + 
 							"              <div class=\"row\">\r\n" + 
 							"                <div class=\"col-md-4\">\r\n"+
-							"                  <h5> --"+sk1+"</h5>\r\n" + 
-							"                  <h5> --"+sk2+"</h5>\r\n";
+							"                  <h5> "+sk1+"</h5>\r\n" + 
+							"                  <h5> "+sk2+"</h5>\r\n";
 							String mp = "",mid;
 								
 							for(int k=0;k<last;k++) {
@@ -695,7 +698,7 @@ public String working_dir,file2,fl;
 							
 							for(int k=5;k<last;k++) {
 
-								mid = skillhtmlGenerator(textField[k].getText(),k);
+								mid = skillhtmlGenerator(textField[k].getText());
 								mp = mp+ mid;
 								
 							}
