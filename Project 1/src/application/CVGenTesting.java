@@ -438,7 +438,182 @@ public class CVGenTesting {
 	
 	
 	
+/*Graphing for WEhtmlGenerator()*/
+	
+	/* Node 1: checks the condition (Condition Checking Node) whether input == null || input == ""  (Starting Node)
+	 * 
+	 * Node 2: If input == null || input == "" ,return "" (Final Node)
+	 * 
+	 * Node 3: if input != null or input != "", (Condition Checking Node)  checks the condition if input2 ==null || input2 == "" 
+	 * 
+	 * Node 4: if input2 ==null || input2 == "", return "" (Final Node)
+	 * 
+	 * Node 5: if input2 !=null || input2 != "", (Condition Checking Node) checks the condition if input3 ==null || input3 == ""
+	 * 
+	 * Node 6: if input3 ==null || input3 == "", return "" (Final Node)
+	 * 
+	 * Node 7: if input3 !=null || input3 != "", returns given string
+	 * 
+	 * 
+	 * Prime Paths: [1,2] [1,3,4] [1,3,5,6] [1,3,5,7]
+	 * 
+	 * For Prime Path 1 the value is : [null,"2 months","waiter"]
+	 * 
+	 * For Prime Path 2 the value is : ["Burger Lab",null,"waiter"]
+	 * 
+	 * For Prime Path 3 the value is : ["Burger Lab","2 months",null]
+	 * 
+	 * For Prime Path 4 the value is : ["Burger Lab","2 months","waiter"]
+	 */
+		
+	
+	
+	
+	/*WEhtmlGenerator input Test Cases*/
+	
+	
+	@Test			//Case1
+	public void WEhtmlGenerator_input_null() {
+		String actual = mcont.WEhtmlGenerator(null,null,null);
+		String expected = "";
+		assertEquals(expected,actual);
+	}			//Checking whether the output is false using assertFalse as 'null' is not a valid generateAboutMe input.
+	
+	@Test			//Case2
+	public void WEhtmlGenerator_input_is_not_null() {
+		String job_inst = "Burger joint",job_dur="2 months", job_post="waiter";
+		
+		String actual = mcont.WEhtmlGenerator(job_inst,job_dur,job_post);
+		String expected = "                 <div class=\"col-md-5\" >\r\n" + 
+				"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"                 </div>\r\n" + 
+				"                 <div class=\"col-md-7\">\r\n" + 
+				"                   <h5>"+job_inst+"</h5>\r\n" + 
+				"                   <h5>"+job_dur+"</h5>\r\n" + 
+				"                   <h5>"+job_post+"</h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"                 </div>\r\n";
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals  if the input is not null.
+	
+	
+	@Test			//Case3
+	public void WEhtmlGenerator_input_is_empty() {
+		String actual = mcont.WEhtmlGenerator("","","");
+		String expected = "";
+		assertEquals(expected, actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input in empty.
 
+	
+	@Test			//Case4
+	public void WEhtmlGenerator_is_not_empty_check() {
+		String job_inst = "Burger joint",job_dur="2 months", job_post="waiter";
+		String actual = mcont.WEhtmlGenerator(job_inst,job_dur,job_post);
+		String expected ="                 <div class=\"col-md-5\" >\r\n" + 
+				"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"                 </div>\r\n" + 
+				"                 <div class=\"col-md-7\">\r\n" + 
+				"                   <h5>"+job_inst+"</h5>\r\n" + 
+				"                   <h5>"+job_dur+"</h5>\r\n" + 
+				"                   <h5>"+job_post+"</h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"                 </div>\r\n";
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input in empty.
+	
+	
+	@Test			//Case5
+	public void WEhtmlGenerator_input_special_character_check() {
+		String job_inst = "Burger_jo!nt",job_dur="2_months", job_post="wa!ter";
+		String actual = mcont.WEhtmlGenerator(job_inst,job_dur,job_post);
+		String expected ="                 <div class=\"col-md-5\" >\r\n" + 
+				"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"                 </div>\r\n" + 
+				"                 <div class=\"col-md-7\">\r\n" + 
+				"                   <h5>"+job_inst+"</h5>\r\n" + 
+				"                   <h5>"+job_dur+"</h5>\r\n" + 
+				"                   <h5>"+job_post+"</h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"                 </div>\r\n";
+		assertEquals(expected,actual);
+	} 			//Checking whether the output matches with the expected value using assertEquals if the input contains special characters.
+	
+
+	@Test			//Case6
+	public void WEhtmlGenerator_input_number_check() {
+		String job_inst = "25tolife",job_dur="2_months", job_post="23141";
+		String actual = mcont.WEhtmlGenerator(job_inst,job_dur,job_post);
+		String expected = "                 <div class=\"col-md-5\" >\r\n" + 
+				"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"                 </div>\r\n" + 
+				"                 <div class=\"col-md-7\">\r\n" + 
+				"                   <h5>"+job_inst+"</h5>\r\n" + 
+				"                   <h5>"+job_dur+"</h5>\r\n" + 
+				"                   <h5>"+job_post+"</h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"                 </div>\r\n";
+		assertEquals(expected,actual);
+	}			//Checking whether the output matches with the expected value using assertEquals if the input contains numbers.
+	
+	
+	
+	@Test			//Case5
+	public void WEhtmlGenerator_input_alphabets_check() {
+		String job_inst = "Burger joint",job_dur="2 months", job_post="waiter";
+		String actual = mcont.WEhtmlGenerator(job_inst,job_dur,job_post);
+		String expected ="                 <div class=\"col-md-5\" >\r\n" + 
+				"                   <h5 id = \"Edu\">Worked At: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Duration: </h5>\r\n" + 
+				"                   <h5 id = \"Edu\">Post: </h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"                 </div>\r\n" + 
+				"                 <div class=\"col-md-7\">\r\n" + 
+				"                   <h5>"+job_inst+"</h5>\r\n" + 
+				"                   <h5>"+job_dur+"</h5>\r\n" + 
+				"                   <h5>"+job_post+"</h5>\r\n" + 
+				"\r\n" + 
+				"                   <br>\r\n" + 
+				"                 </div>\r\n";
+		assertEquals(expected,actual);
+	} 			//Checking whether the output matches with the expected value using assertEquals if the input contains Just Alphabets.
+	
+	
 
 	
 	
