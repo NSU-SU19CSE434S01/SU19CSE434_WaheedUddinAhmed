@@ -327,47 +327,6 @@ public String working_dir,file2,fl;
 
 
 
-//	private boolean dycheck(String[] tex2,int last,TextField[] tex3) {
-//		
-//		Boolean value = true;
-//		
-//		for(int h=0;h<last;h++) {
-//			
-//			if( tex2[h].contentEquals("") ) {
-//				
-//				textField[h].setPromptText("Cannot be left empty!");
-//				
-//				textField[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-//				
-//				value = false;
-//				
-//			}
-//		}
-//	
-//		
-//		
-//	return value;
-//	}
-//
-//
-//
-//	private boolean dycheck1(String[] tex2,int last,TextField[] tex3) {
-//		
-//		for(int h=0;h<last1;h++) {
-//			
-//			if( tex1[h].contentEquals("") ) {
-//				
-//				textField1[h].setPromptText("Cannot be left empty!");
-//				
-//				textField1[h].setStyle("-fx-prompt-text-fill: red;-fx-font-weight: bold;");	
-//				
-//				value = false;
-//			}
-//			
-//		}
-//		
-//		return value;}
-
 	
 	
 
@@ -397,18 +356,23 @@ public String working_dir,file2,fl;
 		
 		Boolean value = true;
 		
-		if (m != null && m!= "" && m.matches("^[a-z A-Z]*$")) {
+		if (m != null && m!= "" && m.matches("^[a-z A-Z]*$")) { 
 			
 			value =true;
+		
+			return value; 
+			
 		}
 		
 		else {
 			
 			value = false;
 			
+			return value;
+			
 			}
 		
-		return value;
+		
 		
 	}
 	
@@ -433,7 +397,7 @@ public String working_dir,file2,fl;
 	
 	
 	
-	private boolean isempty(String m,String g,String addr,String mob) {
+	public boolean isempty(String m,String g,String addr,String mob) {
 		
 		Boolean value = true;
 		

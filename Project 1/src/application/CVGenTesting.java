@@ -31,8 +31,17 @@ public class CVGenTesting {
 	
 	
 	
+	/*Graphing for Name_isValid()*/
 	
-	
+	/* Node 1: checks the condition (Condition Checking Node) whether input !== null and if input matches the given regex (Starting Node)
+	 * Node 2: If input != null and matches the given regex, return boolean value = true (Final Node)
+	 * Node 3: if input == null, (Condition Checking Node)  return boolean value = false (Final Node)
+	 * 
+	 * Prime Paths: [1,2] [1,3]
+	 * For Prime Path 1 the value is : "Waheed Uddin Ahmed"
+	 * For Prime Path 2 the value is : "W@heed"
+	 */
+		
 	
 	
 	
