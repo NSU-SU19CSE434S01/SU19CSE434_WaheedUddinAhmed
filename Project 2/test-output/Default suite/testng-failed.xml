@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Selenium_Tests.NewTest">
+        <methods>
+          <include name="verify_Page_Title"/>
+          <include name="SetUp"/>
+          <include name="tearDown"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- Selenium_Tests.NewTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

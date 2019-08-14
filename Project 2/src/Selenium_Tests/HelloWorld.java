@@ -30,9 +30,7 @@ public class HelloWorld {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")));
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
-		
 		driver.findElement(By.xpath("//*[@id=\"email_create\"]")).click();
-		
 		driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("Waheed.Ahmed@northsouth.edu");
 		
 		
