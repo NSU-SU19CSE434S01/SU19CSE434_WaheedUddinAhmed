@@ -38,6 +38,16 @@ public class NewTest {
 	}
 	
 	
+	/* Verifying the Page Title for the e-commerce site "http://automationpractice.com/index.php" */
+  @Test
+  public void verify_Page_Title() {
+	  	
+	    String title = driver.getTitle();
+		System.out.println("the page title is " + title );
+		Assert.assertEquals(title,"My Store");
+  
+  }
+  
 
   
   
