@@ -47,7 +47,17 @@ public class HomePageTest {
 	}  
 	
 	
-	
+	@Test(priority=2)
+	public void click_On_Personal_info() {
+		
+		  driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[4]/a/span")).click();
+		  String Text= "YOUR PERSONAL INFORMATION";
+		  if(driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/h1")).isDisplayed()) {
+			  String SegmentTitle = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/h1")).getText();
+			  Assert.assertEquals(SegmentTitle,Text);
+		  }
+		  
+	}
 	
 	
 	
