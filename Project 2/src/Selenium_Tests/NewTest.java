@@ -32,6 +32,7 @@ public class NewTest {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("http://automationpractice.com/index.php");
+//		Login("NGTest107@gmail.com","ngtest123");
 	
 		
 		
@@ -39,7 +40,7 @@ public class NewTest {
 	
 	
 	/* Verifying the Page Title for the e-commerce site "http://automationpractice.com/index.php" */
-  @Test
+  @Test(priority=1)
   public void verify_Page_Title() {
 	  	
 	    String title = driver.getTitle();
@@ -48,35 +49,21 @@ public class NewTest {
   
   }
   
-  @Test
-  public void Login() {
-	  
-	    WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")));
-		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
-		driver.findElement(By.xpath("//*[@id=\"email\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("NGTest107@gmail.com");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("ngtest123");
-		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		driver.findElement(By.xpath("//*[@id=\"SubmitLogin\"]/span")).click();
-		
-		boolean flag = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")).isDisplayed();
-		Assert.assertTrue(flag);
-	  
+  
+
+  @Test(priority=1)
+  public void verify_Your_Logo_Experience_Logo() {
+	  Boolean flag = driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img")).isDisplayed();
+	  Assert.assertTrue(flag);
   }
+  
+  
+  
+  
+
+  
+
+
   
   
   
