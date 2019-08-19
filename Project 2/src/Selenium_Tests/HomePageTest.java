@@ -48,7 +48,7 @@ public class HomePageTest {
 	
 	
 	@Test(priority=2)
-	public void click_On_Personal_info() {
+	public void click_On_Personal_Info() {
 		
 		  driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[4]/a/span")).click();
 		  String Text= "YOUR PERSONAL INFORMATION";

@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55216" started-at="2019-08-19T17:20:39Z" finished-at="2019-08-19T17:21:35Z">
+  <suite name="Default suite" duration-ms="36397" started-at="2019-08-19T17:24:55Z" finished-at="2019-08-19T17:25:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55216" started-at="2019-08-19T17:20:39Z" finished-at="2019-08-19T17:21:35Z">
-      <class name="Selenium_Tests.HomePageTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@c1670b]" name="SetUp" is-config="true" duration-ms="25723" started-at="2019-08-19T17:20:39Z" finished-at="2019-08-19T17:21:05Z">
+    <test name="Default test" duration-ms="36397" started-at="2019-08-19T17:24:55Z" finished-at="2019-08-19T17:25:32Z">
+      <class name="Selenium_Tests.NewTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="SetUp" is-config="true" duration-ms="16480" started-at="2019-08-19T17:24:55Z" finished-at="2019-08-19T17:25:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="is_Sign_Out_Working()[pri:1, instance:Selenium_Tests.HomePageTest@c1670b]" name="is_Sign_Out_Working" duration-ms="2432" started-at="2019-08-19T17:21:05Z" finished-at="2019-08-19T17:21:07Z">
+        <test-method status="PASS" signature="verify_Page_Title()[pri:1, instance:Selenium_Tests.NewTest@c1670b]" name="verify_Page_Title" duration-ms="10" started-at="2019-08-19T17:25:12Z" finished-at="2019-08-19T17:25:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- is_Sign_Out_Working -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@c1670b]" name="tearDown" is-config="true" duration-ms="594" started-at="2019-08-19T17:21:07Z" finished-at="2019-08-19T17:21:08Z">
+        </test-method> <!-- verify_Page_Title -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="tearDown" is-config="true" duration-ms="584" started-at="2019-08-19T17:25:12Z" finished-at="2019-08-19T17:25:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@c1670b]" name="SetUp" is-config="true" duration-ms="24351" started-at="2019-08-19T17:21:08Z" finished-at="2019-08-19T17:21:32Z">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="SetUp" is-config="true" duration-ms="18635" started-at="2019-08-19T17:25:12Z" finished-at="2019-08-19T17:25:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="click_On_Personal_info()[pri:2, instance:Selenium_Tests.HomePageTest@c1670b]" name="click_On_Personal_info" duration-ms="1502" started-at="2019-08-19T17:21:32Z" finished-at="2019-08-19T17:21:34Z">
+        <test-method status="PASS" signature="verify_Your_Logo_Experience_Logo()[pri:2, instance:Selenium_Tests.NewTest@c1670b]" name="verify_Your_Logo_Experience_Logo" duration-ms="64" started-at="2019-08-19T17:25:31Z" finished-at="2019-08-19T17:25:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- click_On_Personal_info -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@c1670b]" name="tearDown" is-config="true" duration-ms="595" started-at="2019-08-19T17:21:34Z" finished-at="2019-08-19T17:21:35Z">
+        </test-method> <!-- verify_Your_Logo_Experience_Logo -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="tearDown" is-config="true" duration-ms="603" started-at="2019-08-19T17:25:31Z" finished-at="2019-08-19T17:25:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Selenium_Tests.HomePageTest -->
+      </class> <!-- Selenium_Tests.NewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -51,7 +51,7 @@ public class NewTest {
   
   
 
-  @Test(priority=1)
+  @Test(priority=2)
   public void verify_Your_Logo_Experience_Logo() {
 	  Boolean flag = driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img")).isDisplayed();
 	  Assert.assertTrue(flag);
