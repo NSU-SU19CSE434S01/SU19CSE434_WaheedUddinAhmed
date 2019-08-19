@@ -36,7 +36,18 @@ public class HomePageTest {
 		
 	}
 	
-
+	@Test(priority=1)
+	public void is_Sign_Out_Working() {
+		if(driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")).isDisplayed()) {
+		  driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")).click();
+		  }
+		Boolean flag = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).isDisplayed();
+		Assert.assertTrue(flag);
+		  
+	}  
+	
+	
+	
 	
 	
 	
