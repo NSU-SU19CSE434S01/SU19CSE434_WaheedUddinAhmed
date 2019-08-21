@@ -4,7 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -61,10 +63,37 @@ public class HomePageTest {
 	
 	
 	
+	@Test(priority=3)
+	public void Add_to_cart() {
+		
+		  driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a")).click();
+		WebElement e_to_hover_over=  driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img"));
+		Hover(driver, e_to_hover_over);
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")).click();
+		
+		
+		String extracted = driver.findElement(By.xpath("//*[@id=\"summary_products_quantity\"]")).getText();
+		String pattern = "1 Product";	
+		Assert.assertEquals(extracted,pattern);
+		
+
+		  
+	}
 	
 	
-	
-	
+//	@Test(priority=4)
+//	public void click_On_Personal_Info() {
+//		
+//		  driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/div[1]/ul/li[4]/a/span")).click();
+//		  String Text= "YOUR PERSONAL INFORMATION";
+//		  if(driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/h1")).isDisplayed()) {
+//			  String SegmentTitle = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div/h1")).getText();
+//			  Assert.assertEquals(SegmentTitle,Text);
+//		  }
+//		  
+//	}
 
 	
 	
@@ -107,6 +136,11 @@ public class HomePageTest {
 //			boolean flag = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")).isDisplayed();
 //			Assert.assertTrue(flag);
 //		  
+	  }
+	  public static void Hover(WebDriver driver, WebElement element) {
+		  Actions action = new Actions(driver);
+		  action.moveToElement(element).perform();
+		  
 	  }
 	  
 	  

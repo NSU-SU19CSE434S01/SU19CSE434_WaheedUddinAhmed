@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36397" started-at="2019-08-19T17:24:55Z" finished-at="2019-08-19T17:25:32Z">
+  <suite name="Default suite" duration-ms="28534" started-at="2019-08-21T18:57:12Z" finished-at="2019-08-21T18:57:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36397" started-at="2019-08-19T17:24:55Z" finished-at="2019-08-19T17:25:32Z">
-      <class name="Selenium_Tests.NewTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="SetUp" is-config="true" duration-ms="16480" started-at="2019-08-19T17:24:55Z" finished-at="2019-08-19T17:25:12Z">
+    <test name="Default test" duration-ms="28534" started-at="2019-08-21T18:57:12Z" finished-at="2019-08-21T18:57:41Z">
+      <class name="Selenium_Tests.HomePageTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="SetUp" is-config="true" duration-ms="22047" started-at="2019-08-21T18:57:12Z" finished-at="2019-08-21T18:57:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="verify_Page_Title()[pri:1, instance:Selenium_Tests.NewTest@c1670b]" name="verify_Page_Title" duration-ms="10" started-at="2019-08-19T17:25:12Z" finished-at="2019-08-19T17:25:12Z">
+        <test-method status="PASS" signature="Add_to_cart()[pri:1, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="Add_to_cart" duration-ms="5868" started-at="2019-08-21T18:57:34Z" finished-at="2019-08-21T18:57:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_Page_Title -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="tearDown" is-config="true" duration-ms="584" started-at="2019-08-19T17:25:12Z" finished-at="2019-08-19T17:25:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="SetUp" is-config="true" duration-ms="18635" started-at="2019-08-19T17:25:12Z" finished-at="2019-08-19T17:25:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="verify_Your_Logo_Experience_Logo()[pri:2, instance:Selenium_Tests.NewTest@c1670b]" name="verify_Your_Logo_Experience_Logo" duration-ms="64" started-at="2019-08-19T17:25:31Z" finished-at="2019-08-19T17:25:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Your_Logo_Experience_Logo -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.NewTest@c1670b]" name="tearDown" is-config="true" duration-ms="603" started-at="2019-08-19T17:25:31Z" finished-at="2019-08-19T17:25:32Z">
+        </test-method> <!-- Add_to_cart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="tearDown" is-config="true" duration-ms="601" started-at="2019-08-21T18:57:40Z" finished-at="2019-08-21T18:57:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Selenium_Tests.NewTest -->
+      </class> <!-- Selenium_Tests.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
