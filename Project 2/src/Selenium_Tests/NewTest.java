@@ -32,7 +32,7 @@ public class NewTest {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("http://automationpractice.com/index.php");
-//		Login("NGTest107@gmail.com","ngtest123");
+
 	
 		
 		
