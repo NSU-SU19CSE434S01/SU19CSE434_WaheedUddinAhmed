@@ -7,7 +7,7 @@
         <methods>
           <include name="SetUp"/>
           <include name="tearDown"/>
-          <include name="Make_a_purchase"/>
+          <include name="searchBarTest"/>
         </methods>
       </class> <!-- Selenium_Tests.HomePageTest -->
     </classes>

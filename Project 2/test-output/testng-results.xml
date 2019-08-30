@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28226" started-at="2019-08-30T13:18:12Z" finished-at="2019-08-30T13:18:41Z">
+  <suite name="Default suite" duration-ms="37948" started-at="2019-08-30T13:39:46Z" finished-at="2019-08-30T13:40:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28226" started-at="2019-08-30T13:18:12Z" finished-at="2019-08-30T13:18:41Z">
+    <test name="Default test" duration-ms="37948" started-at="2019-08-30T13:39:46Z" finished-at="2019-08-30T13:40:24Z">
       <class name="Selenium_Tests.HomePageTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="SetUp" is-config="true" duration-ms="25234" started-at="2019-08-30T13:18:12Z" finished-at="2019-08-30T13:18:38Z">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="SetUp" is-config="true" duration-ms="22908" started-at="2019-08-30T13:39:46Z" finished-at="2019-08-30T13:40:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="searchBarTest()[pri:1, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="searchBarTest" duration-ms="2386" started-at="2019-08-30T13:18:38Z" finished-at="2019-08-30T13:18:40Z">
+        <test-method status="PASS" signature="Make_a_purchase()[pri:1, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="Make_a_purchase" duration-ms="14429" started-at="2019-08-30T13:40:09Z" finished-at="2019-08-30T13:40:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchBarTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="tearDown" is-config="true" duration-ms="590" started-at="2019-08-30T13:18:40Z" finished-at="2019-08-30T13:18:41Z">
+        </test-method> <!-- Make_a_purchase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="tearDown" is-config="true" duration-ms="595" started-at="2019-08-30T13:40:23Z" finished-at="2019-08-30T13:40:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
