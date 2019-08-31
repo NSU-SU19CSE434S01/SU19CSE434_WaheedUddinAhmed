@@ -5,9 +5,12 @@
     <classes>
       <class name="Selenium_Tests.HomePageTest">
         <methods>
+          <include name="click_On_Personal_Info"/>
           <include name="SetUp"/>
-          <include name="social_links_working"/>
+          <include name="is_Sign_Out_Working"/>
           <include name="tearDown"/>
+          <include name="Make_a_purchase"/>
+          <include name="searchBarTest"/>
         </methods>
       </class> <!-- Selenium_Tests.HomePageTest -->
     </classes>

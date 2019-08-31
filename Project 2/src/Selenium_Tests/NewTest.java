@@ -64,7 +64,7 @@ public class NewTest {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")));
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
 		driver.findElement(By.xpath("//*[@id=\"email\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("username);
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("username");
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
