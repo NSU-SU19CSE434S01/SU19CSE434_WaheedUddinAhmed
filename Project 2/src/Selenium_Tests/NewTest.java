@@ -58,8 +58,38 @@ public class NewTest {
   }
   
   
-  
-  
+  @Test(priority=3)
+  public void incorrect_login() {
+	  WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")));
+		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("username);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("password");
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath("//*[@id=\"SubmitLogin\"]/span")).click();
+		
+		
+		
+		
+		String extractedText = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/p")).getText();
+		String pattern = "There is one error";
+		Assert.assertEquals(extractedText,pattern);
+				
+  }
 
   
 
