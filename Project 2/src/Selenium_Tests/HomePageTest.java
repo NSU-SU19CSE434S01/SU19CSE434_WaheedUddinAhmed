@@ -84,22 +84,35 @@ public class HomePageTest {
 	}
 
 
-@Test(priority=4)
-public void remove_from_cart() {
+	@Test(priority=4)
+	public void remove_from_cart() {
 	
 	  driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a")).click();
-	WebElement e_to_hover_over=  driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img"));
+	  
+
+	  
+	WebElement e_to_hover_over=  driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]"));
 	Hover(driver, e_to_hover_over);
 	driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();
 	
 	driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")).click();
 	
 	//Clicking the trash icon/delete icon
-	driver.findElement(By.xpath("//*[@id=\"3_13_0_202408\"]/i")).click();
+	if(driver.findElement(By.xpath("//*[@id=\"3_13_0_202408\"]/i")).isDisplayed()) {
+		System.out.println("it is displayed!");
+		driver.findElement(By.xpath("//*[@id=\"3_13_0_202408\"]/i")).click();
+	}
+	
+	try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	
 	//Extracting the text from the error div and reading text
 	String extracted = driver.findElement(By.xpath("//*[@id=\"center_column\"]/p")).getText();
-	String pattern = "Your shopping cart is empty";	
+	String pattern = "Your shopping cart is empty.";	
 	Assert.assertEquals(extracted,pattern);
 	
 
