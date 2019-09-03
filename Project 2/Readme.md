@@ -79,7 +79,8 @@ Tested the search bar with words and numbers and compared the results using stri
 
 
 
-<img src="images/Login-1.png" alt="Markdown Monster icon"
+<img src="images/Login-1.png"
+     alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
 
