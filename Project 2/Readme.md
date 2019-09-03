@@ -1,10 +1,8 @@
-<img src="images/Home Page.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;"
+<img src="images/Home Page.png" style="float: left; margin-right: 10px; margin-bottom:20px;"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
-<p align="center">
-<img src="images/">
-</p>
+
 
 <div align="center">
 
@@ -81,6 +79,8 @@ Tested the search bar with words and numbers and compared the results using stri
 
 </br>
 </br>
+
+
 **Login Test:**
 <img src="images/Login-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;"
      alt="Markdown Monster icon"
@@ -94,6 +94,7 @@ Tested the Login functionality using existing credentials and non-existing crede
 
 </br>
 </br>
+
 **Logout Test:**
 <p align="center">
 <img src="images/Logout-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
@@ -161,6 +162,7 @@ Adding item(dress) to cart and then going through the process of purchasing the 
 
 </br>
 </br>
+
 **Checking Personal Info Test:**
 <p align="center">
 <img src="images/Personal Info.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
