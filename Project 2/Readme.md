@@ -82,7 +82,7 @@ Tested the search bar with words and numbers and compared the results using stri
 
 
 
-<img src="images/Login-1.png"
+<img src="https://github.com/dmc4719/CSE-434/blob/master/Project%202/images/Adding%20item%20to%20cart-1.PNG"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" /> 
 
