@@ -69,7 +69,8 @@ Covered the following test areas:-
 
 Tested the title using string match.
 
-
+</br>
+</br>
 
 <img src="images/Search Bar.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;" alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
@@ -77,10 +78,8 @@ Tested the title using string match.
 
 Tested the search bar with words and numbers and compared the results using string matching.
 
-
-
-
-
+</br>
+</br>
 
 <img src="images/Login-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;"
      alt="Markdown Monster icon"
@@ -92,6 +91,8 @@ Tested the search bar with words and numbers and compared the results using stri
 
 Tested the Login functionality using existing credentials and non-existing credentials
 
+</br>
+</br>
 
 <p align="center">
 <img src="images/Logout-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
@@ -103,6 +104,8 @@ Tested the Login functionality using existing credentials and non-existing crede
 
 Tested the Logout functionality.
 
+</br>
+</br>
 
 <p align="center">
 <img src="images/Adding item to cart-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
@@ -114,6 +117,8 @@ Tested the Logout functionality.
 
 Added multiple items to cart and checked whether it gives the right amount of items entered using string matching.
 
+</br>
+</br>
 
 <p align="center">
 <img src="images/Removing Item from cart.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
@@ -121,6 +126,8 @@ Added multiple items to cart and checked whether it gives the right amount of it
 
 Clicking the trash icon beside an item present in cart to check if the remove function is working or not.
 
+</br>
+</br>
 
 <p align="center">
 <img src="images/Making a purchase-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
@@ -148,13 +155,15 @@ Clicking the trash icon beside an item present in cart to check if the remove fu
 
 Adding item(dress) to cart and then going through the process of purchasing the item in checkout to see if the success message shows or not.
 
+</br>
+</br>
 
 <p align="center">
-<img src="images/Personal info-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Personal Info.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Personal info-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Personal Info-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Clicking on the personal info tab to check whether the info shown in the screen matches with the login user's info.
