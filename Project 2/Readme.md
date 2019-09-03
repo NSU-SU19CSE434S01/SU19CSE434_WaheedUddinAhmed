@@ -70,16 +70,18 @@ Covered the following test areas:-
 Tested the title using string match.
 
 
-<p align="center">
-<img src="images/Search Bar.png">
-</p>
+
+<img src="images/Search Bar.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
 
 Tested the search bar with words and numbers and compared the results using string matching.
 
 
-<p align="center">
-<img src="images/Login-1.png">
-</p>
+
+<img src="images/Login-1.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+
 
 <p align="center">
 <img src="images/Login-2.png">
@@ -100,11 +102,11 @@ Tested the Logout functionality.
 
 
 <p align="center">
-<img src="images/Adding Item to cart-1.png">
+<img src="images/Adding item to cart-1.png">
 </p>
 
 <p align="center">
-<img src="images/Adding Item to cart-2.png">
+<img src="images/Adding item to cart-2.png">
 </p>
 
 Added multiple items to cart and checked whether it gives the right amount of items entered using string matching.
