@@ -12,7 +12,7 @@
 # North South University </h5>
 ##  Department of Electrical and Computer Engineering </h3>
 
-## Project Name : AutomationPractice Website testing with Selenium
+## Project Name : Automationpractice.com Website testing with Selenium And TestNG
 
 **Course:** CSE 434
 
@@ -28,7 +28,7 @@
 
 **Email:** Waheed.Ahmed@northsouth.edu
 
-**Github Repository:** [](https://github.com/)
+**Github Repository:** [](https://github.com/dmc4719/CSE-434)
 
 **Date Prepared:** 
 </div>
@@ -58,11 +58,11 @@ Covered the following test areas:-
     - Logout
     - Adding item to cart ( Multiple items )
     - Removing item from cart ( Multiple items )
-    - Making a purchase 
+    - Making a Purchase 
     - Personal Info test (Post login)
     - Overlay test
 
-
+**Title Test:**
 <p align="center">
 <img src="images/Title test.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
@@ -72,6 +72,7 @@ Tested the title using string match.
 </br>
 </br>
 
+**Search Bar Test:**
 <img src="images/Search Bar.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;" alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
@@ -80,7 +81,7 @@ Tested the search bar with words and numbers and compared the results using stri
 
 </br>
 </br>
-
+**Login Test:**
 <img src="images/Login-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px; margin-bottom:20px;" /> 
@@ -93,7 +94,7 @@ Tested the Login functionality using existing credentials and non-existing crede
 
 </br>
 </br>
-
+**Logout Test:**
 <p align="center">
 <img src="images/Logout-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
@@ -107,6 +108,7 @@ Tested the Logout functionality.
 </br>
 </br>
 
+**Adding Item to cart Test:**
 <p align="center">
 <img src="images/Adding item to cart-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
@@ -120,6 +122,7 @@ Added multiple items to cart and checked whether it gives the right amount of it
 </br>
 </br>
 
+**Removing Item from cart Test:**
 <p align="center">
 <img src="images/Removing Item from cart.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
@@ -129,35 +132,36 @@ Clicking the trash icon beside an item present in cart to check if the remove fu
 </br>
 </br>
 
+**Making a Purchase Test:**
 <p align="center">
-<img src="images/Making a purchase-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Making a Purchase-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Making a Purchase-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-3.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Making a Purchase-3.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-4.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Making a Purchase-4.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-5.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Making a Purchase-5.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-6.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Making a Purchase-6.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Adding item(dress) to cart and then going through the process of purchasing the item in checkout to see if the success message shows or not.
 
 </br>
 </br>
-
+**Checking Personal Info Test:**
 <p align="center">
 <img src="images/Personal Info.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
