@@ -64,14 +64,14 @@ Covered the following test areas:-
 
 
 <p align="center">
-<img src="images/Title test.png">
+<img src="images/Title test.PNG">
 </p>
 
 Tested the title using string match.
 
 
 
-<img src="images/Search Bar.png" alt="Markdown Monster icon"
+<img src="images/Search Bar.PNG" alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
 
@@ -82,79 +82,79 @@ Tested the search bar with words and numbers and compared the results using stri
 
 
 
-<img src="https://github.com/dmc4719/CSE-434/blob/master/Project%202/images/Adding%20item%20to%20cart-1.PNG"
+<img src="images/Login-1.PNG"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" /> 
 
 <p align="center">
-<img src="images/Login-2.png">
+<img src="images/Login-2.PNG">
 </p>
 
 Tested the Login functionality using existing credentials and non-existing credentials
 
 
 <p align="center">
-<img src="images/Logout-1.png">
+<img src="images/Logout-1.PNG">
 </p>
 
 <p align="center">
-<img src="images/Logout-2.png">
+<img src="images/Logout-2.PNG">
 </p>
 
 Tested the Logout functionality.
 
 
 <p align="center">
-<img src="images/Adding item to cart-1.png">
+<img src="images/Adding item to cart-1.PNG">
 </p>
 
 <p align="center">
-<img src="images/Adding item to cart-2.png">
+<img src="images/Adding item to cart-2.PNG">
 </p>
 
 Added multiple items to cart and checked whether it gives the right amount of items entered using string matching.
 
 
 <p align="center">
-<img src="images/Removing Item from cart.png">
+<img src="images/Removing Item from cart.PNG">
 </p>
 
 Clicking the trash icon beside an item present in cart to check if the remove function is working or not.
 
 
 <p align="center">
-<img src="images/Making a purchase-1.png">
+<img src="images/Making a purchase-1.PNG">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-2.png">
+<img src="images/Making a purchase-2.PNG">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-3.png">
+<img src="images/Making a purchase-3.PNG">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-4.png">
+<img src="images/Making a purchase-4.PNG">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-5.png">
+<img src="images/Making a purchase-5.PNG">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-6.png">
+<img src="images/Making a purchase-6.PNG">
 </p>
 
 Adding item(dress) to cart and then going through the process of purchasing the item in checkout to see if the success message shows or not.
 
 
 <p align="center">
-<img src="images/Personal info-1.png">
+<img src="images/Personal info-1.PNG">
 </p>
 
 <p align="center">
-<img src="images/Personal info-2.png">
+<img src="images/Personal info-2.PNG">
 </p>
 
 Clicking on the personal info tab to check whether the info shown in the screen matches with the login user's info.
