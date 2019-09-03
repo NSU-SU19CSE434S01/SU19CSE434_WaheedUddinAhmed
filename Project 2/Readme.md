@@ -1,4 +1,4 @@
-<img src="images/Home Page.png"
+<img src="images/Home Page.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
@@ -64,14 +64,14 @@ Covered the following test areas:-
 
 
 <p align="center">
-<img src="images/Title test.PNG">
+<img src="images/Title test.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Tested the title using string match.
 
 
 
-<img src="images/Search Bar.PNG" alt="Markdown Monster icon"
+<img src="images/Search Bar.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;" alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
 
@@ -82,79 +82,79 @@ Tested the search bar with words and numbers and compared the results using stri
 
 
 
-<img src="images/Login-1.PNG"
+<img src="images/Login-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" /> 
+     style="float: left; margin-right: 10px; margin-bottom:20px;" /> 
 
 <p align="center">
-<img src="images/Login-2.PNG">
+<img src="images/Login-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Tested the Login functionality using existing credentials and non-existing credentials
 
 
 <p align="center">
-<img src="images/Logout-1.PNG">
+<img src="images/Logout-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Logout-2.PNG">
+<img src="images/Logout-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Tested the Logout functionality.
 
 
 <p align="center">
-<img src="images/Adding item to cart-1.PNG">
+<img src="images/Adding item to cart-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Adding item to cart-2.PNG">
+<img src="images/Adding item to cart-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Added multiple items to cart and checked whether it gives the right amount of items entered using string matching.
 
 
 <p align="center">
-<img src="images/Removing Item from cart.PNG">
+<img src="images/Removing Item from cart.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Clicking the trash icon beside an item present in cart to check if the remove function is working or not.
 
 
 <p align="center">
-<img src="images/Making a purchase-1.PNG">
+<img src="images/Making a purchase-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-2.PNG">
+<img src="images/Making a purchase-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-3.PNG">
+<img src="images/Making a purchase-3.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-4.PNG">
+<img src="images/Making a purchase-4.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-5.PNG">
+<img src="images/Making a purchase-5.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Making a purchase-6.PNG">
+<img src="images/Making a purchase-6.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Adding item(dress) to cart and then going through the process of purchasing the item in checkout to see if the success message shows or not.
 
 
 <p align="center">
-<img src="images/Personal info-1.PNG">
+<img src="images/Personal info-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 <p align="center">
-<img src="images/Personal info-2.PNG">
+<img src="images/Personal info-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Clicking on the personal info tab to check whether the info shown in the screen matches with the login user's info.
