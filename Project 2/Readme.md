@@ -71,14 +71,16 @@ Tested the title using string match.
 
 
 <p align="center">
-<img src="Search Bar.png">
+<img src="Search Bar.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 Tested the search bar with words and numbers and compared the results using string matching.
 
 
 <p align="center">
-<img src="Login-1.png">
+<img src="Login-1.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
@@ -89,67 +91,80 @@ Tested the Login functionality using existing credentials and non-existing crede
 
 
 <p align="center">
-<img src="Logout-1.png">
+<img src="Logout-1.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Logout-2.png">
+<img src="Logout-2.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 Tested the Logout functionality.
 
 
 <p align="center">
-<img src="Adding Item to cart-1.png">
+<img src="Adding Item to cart-1.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Adding Item to cart-2.png">
+<img src="Adding Item to cart-2.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 Added multiple items to cart and checked whether it gives the right amount of items entered using string matching.
 
 
 <p align="center">
-<img src="Removing Item from cart.png">
+<img src="Removing Item from cart.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 Clicking the trash icon beside an item present in cart to check if the remove function is working or not.
 
 
 <p align="center">
-<img src="Making a purchase-1.png">
+<img src="Making a purchase-1.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Making a purchase-2.png">
+<img src="Making a purchase-2.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Making a purchase-3.png">
+<img src="Making a purchase-3.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Making a purchase-4.png">
+<img src="Making a purchase-4.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Making a purchase-5.png">
+<img src="Making a purchase-5.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Making a purchase-6.png">
+<img src="Making a purchase-6.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 Adding item(dress) to cart and then going through the process of purchasing the item in checkout to see if the success message shows or not.
 
 
 <p align="center">
-<img src="Personal info-1.png">
+<img src="Personal info-1.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 <p align="center">
-<img src="Personal info-2.png">
+<img src="Personal info-2.png" alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 </p>
 
 Clicking on the personal info tab to check whether the info shown in the screen matches with the login user's info.
