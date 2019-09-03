@@ -1,5 +1,5 @@
 <img src="images/Home Page.png" style="float: left; margin-right: 10px; margin-bottom:20px;"
-     alt="Markdown Monster icon"
+     alt="Markdown  icon"
      style="float: left; margin-right: 10px;" />
 
 
@@ -28,7 +28,7 @@
 
 **Github Repository:** [](https://github.com/dmc4719/CSE-434)
 
-**Date Prepared:** 
+**Date Prepared:** 09/03/19
 </div>
 
 
@@ -61,8 +61,9 @@ Covered the following test areas:-
     - Overlay test
 
 **Title Test:**
+
 <p align="center">
-<img src="images/Title test.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
+<img src="images/Title.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
 
 Tested the title using string match.
@@ -71,7 +72,11 @@ Tested the title using string match.
 </br>
 
 **Search Bar Test:**
-<img src="images/Search Bar.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;" alt="Markdown Monster icon"
+
+<img src="images/Search Bar-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;" alt="Markdown icon"
+     style="float: left; margin-right: 10px;" />
+
+<img src="images/Search Bar-2.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;" alt="Markdown icon"
      style="float: left; margin-right: 10px;" />
 
 
@@ -82,8 +87,9 @@ Tested the search bar with words and numbers and compared the results using stri
 
 
 **Login Test:**
+
 <img src="images/Login-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;"
-     alt="Markdown Monster icon"
+     alt="Markdown  icon"
      style="float: left; margin-right: 10px; margin-bottom:20px;" /> 
 
 <p align="center">
@@ -96,6 +102,7 @@ Tested the Login functionality using existing credentials and non-existing crede
 </br>
 
 **Logout Test:**
+
 <p align="center">
 <img src="images/Logout-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
@@ -110,6 +117,7 @@ Tested the Logout functionality.
 </br>
 
 **Adding Item to cart Test:**
+
 <p align="center">
 <img src="images/Adding item to cart-1.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>
@@ -124,6 +132,7 @@ Added multiple items to cart and checked whether it gives the right amount of it
 </br>
 
 **Removing Item from cart Test:**
+
 <p align="center">
 <img src="images/Removing Item from cart.PNG" style="float: left; margin-right: 10px; margin-bottom:20px;">
 </p>

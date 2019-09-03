@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33235" started-at="2019-09-02T14:22:01Z" finished-at="2019-09-02T14:22:35Z">
+  <suite name="Default suite" duration-ms="27045" started-at="2019-09-03T11:09:34Z" finished-at="2019-09-03T11:10:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33235" started-at="2019-09-02T14:22:01Z" finished-at="2019-09-02T14:22:35Z">
+    <test name="Default test" duration-ms="27045" started-at="2019-09-03T11:09:34Z" finished-at="2019-09-03T11:10:01Z">
       <class name="Selenium_Tests.HomePageTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="SetUp" is-config="true" duration-ms="23221" started-at="2019-09-02T14:22:01Z" finished-at="2019-09-02T14:22:25Z">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="SetUp" is-config="true" duration-ms="24702" started-at="2019-09-03T11:09:34Z" finished-at="2019-09-03T11:09:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="remove_from_cart()[pri:1, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="remove_from_cart" duration-ms="9413" started-at="2019-09-02T14:22:25Z" finished-at="2019-09-02T14:22:34Z">
+        <test-method status="PASS" signature="click_On_Personal_Info()[pri:2, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="click_On_Personal_Info" duration-ms="1724" started-at="2019-09-03T11:09:59Z" finished-at="2019-09-03T11:10:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- remove_from_cart -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="tearDown" is-config="true" duration-ms="586" started-at="2019-09-02T14:22:34Z" finished-at="2019-09-02T14:22:35Z">
+        </test-method> <!-- click_On_Personal_Info -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="tearDown" is-config="true" duration-ms="602" started-at="2019-09-03T11:10:01Z" finished-at="2019-09-03T11:10:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
