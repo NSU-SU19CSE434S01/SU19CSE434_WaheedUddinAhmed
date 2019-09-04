@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27045" started-at="2019-09-03T11:09:34Z" finished-at="2019-09-03T11:10:01Z">
+  <suite name="Default suite" duration-ms="43287" started-at="2019-09-05T02:11:34 BDT" finished-at="2019-09-05T02:12:17 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27045" started-at="2019-09-03T11:09:34Z" finished-at="2019-09-03T11:10:01Z">
-      <class name="Selenium_Tests.HomePageTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="SetUp" is-config="true" duration-ms="24702" started-at="2019-09-03T11:09:34Z" finished-at="2019-09-03T11:09:59Z">
+    <test name="Default test" duration-ms="43287" started-at="2019-09-05T02:11:34 BDT" finished-at="2019-09-05T02:12:17 BDT">
+      <class name="Selenium_Tests.NewTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:Selenium_Tests.NewTest@7ba18f1b]" name="SetUp" is-config="true" duration-ms="33975" started-at="2019-09-05T02:11:34 BDT" finished-at="2019-09-05T02:12:08 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="click_On_Personal_Info()[pri:2, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="click_On_Personal_Info" duration-ms="1724" started-at="2019-09-03T11:09:59Z" finished-at="2019-09-03T11:10:01Z">
+        <test-method status="PASS" signature="incorrect_login()[pri:3, instance:Selenium_Tests.NewTest@7ba18f1b]" name="incorrect_login" duration-ms="8566" started-at="2019-09-05T02:12:08 BDT" finished-at="2019-09-05T02:12:16 BDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- click_On_Personal_Info -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.HomePageTest@bc8ab5]" name="tearDown" is-config="true" duration-ms="602" started-at="2019-09-03T11:10:01Z" finished-at="2019-09-03T11:10:01Z">
+        </test-method> <!-- incorrect_login -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium_Tests.NewTest@7ba18f1b]" name="tearDown" is-config="true" duration-ms="711" started-at="2019-09-05T02:12:16 BDT" finished-at="2019-09-05T02:12:17 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Selenium_Tests.HomePageTest -->
+      </class> <!-- Selenium_Tests.NewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

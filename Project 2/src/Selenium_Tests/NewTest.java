@@ -21,8 +21,8 @@ public class NewTest {
 	@BeforeMethod
 	public void SetUp() {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\dmc47\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe"); 
-//		System.setProperty("webdriver.gecko.driver", "C:\\Users\\dmc47\\Downloads\\Compressed\\chromedriver_win32\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shovon\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe"); 
+//		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Shovon\\Downloads\\Compressed\\chromedriver_win32\\geckodriver.exe");
 		
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
@@ -86,7 +86,7 @@ public class NewTest {
 		
 		
 		String extractedText = driver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/p")).getText();
-		String pattern = "There is one error";
+		String pattern = "There is 1 error";
 		Assert.assertEquals(extractedText,pattern);
 				
   }

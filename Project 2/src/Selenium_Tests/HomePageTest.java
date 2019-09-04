@@ -22,8 +22,8 @@ public class HomePageTest {
 	@BeforeMethod
 	public void SetUp() {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\dmc47\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe"); 
-//		System.setProperty("webdriver.gecko.driver", "C:\\Users\\dmc47\\Downloads\\Compressed\\chromedriver_win32\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shovon\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe"); 
+//		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Shovon\\Downloads\\Compressed\\chromedriver_win32\\geckodriver.exe");
 		
 		driver = new ChromeDriver();
 		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);

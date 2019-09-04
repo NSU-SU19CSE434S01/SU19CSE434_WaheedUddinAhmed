@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium_Tests.HomePageTest">
+      <class name="Selenium_Tests.NewTest">
         <methods>
-          <include name="click_On_Personal_Info"/>
           <include name="SetUp"/>
-          <include name="is_Sign_Out_Working"/>
           <include name="tearDown"/>
-          <include name="remove_from_cart"/>
-          <include name="Make_a_purchase"/>
-          <include name="searchBarTest"/>
-          <include name="Add_to_cart"/>
+          <include name="incorrect_login"/>
         </methods>
-      </class> <!-- Selenium_Tests.HomePageTest -->
+      </class> <!-- Selenium_Tests.NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

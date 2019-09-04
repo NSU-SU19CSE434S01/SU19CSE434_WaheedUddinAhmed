@@ -26,7 +26,7 @@
 
 **Email:** Waheed.Ahmed@northsouth.edu
 
-**Github Repository:** [](https://github.com/dmc4719/CSE-434)
+**Github Repository:** [GitHub Link](https://github.com/dmc4719/CSE-434)
 
 **Date Prepared:** 09/03/19
 </div>
